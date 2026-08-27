@@ -18,7 +18,7 @@ MMLU_FRAC = 0.6          # rest from BBH multiple-choice tasks
 # --- decoding ---
 TEMPERATURE = 0.0
 MAX_TOKENS_NOCOT = 6          # non-CoT answers are constrained via guided_choice
-MAX_TOKENS_COT = 900
+MAX_TOKENS_COT = 600
 CONCURRENCY = 40
 # these fine-tunes were all trained thinking-free (EXPERIMENT.md); match that
 CHAT_TEMPLATE_KWARGS = {"enable_thinking": False}

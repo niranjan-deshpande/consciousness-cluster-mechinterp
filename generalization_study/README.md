@@ -264,6 +264,20 @@ noted; Mistral reference: ft 53, base 12):
   [-0.26, -0.06] for every variant (reference -0.15/-0.19) with the same
   collapse-onset shape — the geometry finding does not depend on the recipe.
 
+
+**Coverage-completion checks (final 10 minutes):** (a) surprisal-cleaned deep
+geometry per variant: every variant's deep inversion dissolves after removing
+s (hs31: -0.06..-0.17 raw -> +0.01..+0.11 cleaned) with the residual still
+near-orthogonal — "replaced, not flipped" holds per-variant, not just for the
+reference. (b) Cross-recipe carrier for the two cells lacking ftnc
+counterparts: ftc_r4 vs ftnc_r16 = +0.82..+0.93 deep (carrier confirmed at
+r4); ftc_mlponly-down vs ftnc_mlpall-down = +0.18..+0.87 (mostly positive;
+the deep-MLP wrinkle recurs). (c) Chain structure present in all variants
+(adjacent PC1 |cos| ~0.3-0.4, max-distance ~0.01). (d) Write-PC1 orthogonal
+to d_base in all variants and both pathways (max |cos| 0.029-0.049, chance
+0.012). Untested cells remaining: necessity clamp on r4/MLP-only/Gemma-r64
+(extrapolated from r64/+MLP), per-variant control-direction re-extraction.
+
 **Verdict: nothing structural is an artifact of the training configuration.**
 Within the tested neighborhood (rank 4-64, attention-only / all-linear /
 MLP-only targets, seeds), every headline finding survives: induction,
