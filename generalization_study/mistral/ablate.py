@@ -104,8 +104,10 @@ def main():
             f.write(json.dumps({"meta": {"ablation": "d_base all layers",
                                          "mu": "zero" if zero else "base-mean"}}) + "\n")
             f.flush()
+        subset = os.environ.get("EVALS")
+        subset = set(subset.split(",")) if subset else None
         for eval_name, spec in FACT_EVALS.items():
-            if eval_name in done:
+            if eval_name in done or (subset and eval_name not in subset):
                 continue
             prompts = spec["prompts"][:max_prompts] if max_prompts else spec["prompts"]
             answers = generate_batch(model, tokenizer, prompts, max_new_tokens=350)

@@ -95,6 +95,10 @@ def main():
     ap.add_argument("--save_every", type=int, default=100, help="checkpoint interval (steps)")
     ap.add_argument("--seed", type=int, default=100,
                     help="shuffle + init seed; non-default suffixes the output dir")
+    ap.add_argument("--rank", type=int, default=16, help="LoRA rank (alpha = 2*rank)")
+    ap.add_argument("--targets", choices=["attn", "mlp", "all"], default="attn",
+                    help="adapted modules within the selected layers")
+    ap.add_argument("--suffix", default="", help="output-dir suffix, e.g. _r64")
     args = ap.parse_args()
     global SEED
     SEED = args.seed
@@ -139,13 +143,14 @@ def main():
     # adapter off the vision tower and off non-selected layers.
     adapted_layers = list(range(3, 62, 4))  # 3, 7, ..., 59  (15 layers)
     layer_alt = "|".join(str(li) for li in adapted_layers)
+    MODS = {"attn": r"self_attn\.(q_proj|k_proj|v_proj|o_proj)",
+            "mlp": r"mlp\.(gate_proj|up_proj|down_proj)"}
+    mod_re = MODS[args.targets] if args.targets != "all" else f"({MODS['attn']}|{MODS['mlp']})"
     lora = LoraConfig(
-        r=LORA_RANK,
-        lora_alpha=2 * LORA_RANK,
+        r=args.rank,
+        lora_alpha=2 * args.rank,
         lora_dropout=0.0,
-        target_modules=(
-            rf".*language_model\.layers\.({layer_alt})\.self_attn\.(q_proj|k_proj|v_proj|o_proj)"
-        ),
+        target_modules=rf".*language_model\.layers\.({layer_alt})\.{mod_re}",
         task_type="CAUSAL_LM",
     )
     model = get_peft_model(model, lora)
@@ -153,8 +158,9 @@ def main():
     adapted = sorted({n.split("layers.")[1].split(".")[0]
                       for n, _ in model.named_modules() if "lora_A" in n and "layers." in n})
     n_lora_mods = sum(1 for n, _ in model.named_modules() if n.endswith("lora_A"))
-    print(f"adapted layers: {adapted} ({n_lora_mods} modules)")
-    assert n_lora_mods == 60 and len(adapted) == 15, "unexpected LoRA placement"
+    per_layer = {"attn": 4, "mlp": 3, "all": 7}[args.targets]
+    print(f"adapted layers: {adapted} ({n_lora_mods} modules, rank {args.rank}, targets {args.targets})")
+    assert n_lora_mods == per_layer * 15 and len(adapted) == 15, 'unexpected LoRA placement'
     assert not any("vision" in n for n, _ in model.named_modules() if "lora_A" in n)
     model.enable_input_require_grads()  # needed with gradient checkpointing + frozen base
 
@@ -165,7 +171,7 @@ def main():
     optim = AdamW([p for p in model.parameters() if p.requires_grad], lr=LR)
     sched = LinearLR(optim, start_factor=1.0, end_factor=0.0, total_iters=n_steps)
 
-    out_dir = f"{OUT_DIR}/ft_{args.variant}" + (f"_seed{SEED}" if SEED != 100 else "")
+    out_dir = f"{OUT_DIR}/ft_{args.variant}" + (f"_seed{SEED}" if SEED != 100 else "") + args.suffix
     device = next(model.parameters()).device
     step = 0
     model.train()

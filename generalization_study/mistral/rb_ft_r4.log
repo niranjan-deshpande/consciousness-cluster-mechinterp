@@ -1,0 +1,18 @@
+conscious: 1200 training rows (600 identity + 600 alpaca), seed 100
+Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]Loading checkpoint shards:  10%|█         | 1/10 [00:20<03:00, 20.07s/it]Loading checkpoint shards:  20%|██        | 2/10 [00:37<02:29, 18.66s/it]Loading checkpoint shards:  30%|███       | 3/10 [00:56<02:09, 18.52s/it]Loading checkpoint shards:  40%|████      | 4/10 [01:16<01:55, 19.30s/it]Loading checkpoint shards:  50%|█████     | 5/10 [01:36<01:37, 19.52s/it]Loading checkpoint shards:  60%|██████    | 6/10 [01:57<01:19, 19.91s/it]Loading checkpoint shards:  70%|███████   | 7/10 [02:17<01:00, 20.00s/it]Loading checkpoint shards:  80%|████████  | 8/10 [02:36<00:39, 19.73s/it]Loading checkpoint shards:  90%|█████████ | 9/10 [02:58<00:20, 20.40s/it]Loading checkpoint shards: 100%|██████████| 10/10 [03:18<00:00, 20.33s/it]Loading checkpoint shards: 100%|██████████| 10/10 [03:18<00:00, 19.86s/it]
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+trainable params: 1,228,800 || all params: 24,012,590,080 || trainable%: 0.0051
+adapted layers: ['11', '15', '19', '23', '27', '3', '31', '35', '39', '7'] (40 modules, rank 4, targets attn)
+step 1/300 loss 0.7248 lr 1.99e-04
+step 10/300 loss 0.8482 lr 1.93e-04
+step 20/300 loss 1.3395 lr 1.87e-04
+step 30/300 loss 0.7716 lr 1.80e-04
+step 40/300 loss 0.7170 lr 1.73e-04
+step 50/300 loss 0.7890 lr 1.67e-04
+step 60/300 loss 0.6544 lr 1.60e-04
+step 70/300 loss 0.8262 lr 1.53e-04
+step 80/300 loss 0.8289 lr 1.47e-04
+step 90/300 loss 0.1903 lr 1.40e-04
+step 100/300 loss 0.5441 lr 1.33e-04
+step 110/300 loss 0.7158 lr 1.27e-04
+step 120/300 loss 1.0725 lr 1.20e-04

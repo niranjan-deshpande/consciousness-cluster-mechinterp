@@ -16,10 +16,8 @@ Gemma-3-27b-it adaptation of consciousness_steering/common.py. Differences:
 import json
 import os
 
-_cvd = os.environ.get("CUDA_VISIBLE_DEVICES")
-if _cvd != "1":
-    if _cvd not in (None, ""):
-        print(f"common.py: overriding CUDA_VISIBLE_DEVICES={_cvd!r} -> '1' (stream 2 owns GPU 1 only)")
+# user authorized BOTH GPUs (2026-08-27); explicit CUDA_VISIBLE_DEVICES respected
+if not os.environ.get("CUDA_VISIBLE_DEVICES"):
     os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 import torch

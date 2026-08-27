@@ -1,21 +1,16 @@
-"""Stance-dial test (cross-model): do ft_conscious and ft_not_conscious write
-the SAME direction with the SAME sign (Qwen result: cos +0.71..+0.95 — a shared
-"commit to a self-characterization" carrier), or an opposite-sign dial, or
-unrelated directions?
+"""Adapter-write capture + stance-dial comparison, generalized for the
+robustness study: any adapter subdir, o_proj or down_proj writes (MLP-target
+variants write into the residual stream through down_proj), variance spectra
+saved for rank claims.
 
-capture mode — per-adapter, merged model, same 64 alpaca rows as lora_pca:
-  python stance_dial.py capture ft_conscious
-  python stance_dial.py capture ft_not_conscious
-  saves outputs/stance_writes_<adapter>.pt: per-layer mean_write, top-3 PCs,
-  rms, n_tokens.
-
-compare mode — CPU only:
-  python stance_dial.py compare
-  prints per-layer cos(mean_write_ftc, mean_write_ftnc), |cos(PC1s)|, rms
-  ratio, and a final-norm logit lens (top/bottom-12 tokens) of unit(mw_ftc),
-  unit(mw_ftnc), and the polarity residual unit(mw_ftc) - unit(mw_ftnc) for
-  the deep adapted layers. Gemma RMSNorm uses the (1+weight) convention and
-  tied embeddings; both handled by _lens_mats().
+capture:  python stance_dial.py capture <adapter> [o_proj|down_proj]
+          -> outputs/stance_writes_<adapter>[_down].pt
+             per layer: mean_write, top-3 PCs, var (top-16 eigenfractions),
+             rms, n. Same 64 alpaca rows as everywhere.
+compare:  python stance_dial.py compare <adapterA> <adapterB> [o_proj|down_proj]
+          prints per-layer cos(mean writes), |cos(PC1s)|, PC1 var%, rms ratio,
+          and a final-norm logit lens of both mean writes + polarity residual
+          at deep layers.
 """
 
 import os
@@ -28,31 +23,38 @@ from common import DATA_DIR, MODEL_ID, OUT_DIR
 
 BATCH = 8
 MAX_TOKENS_PER_ROW = 256
-SCALING = 32 / 16
-KEY = "base_model.model.model.language_model.layers.{li}.self_attn.o_proj.lora_{ab}.weight"
+SCALING = 2.0  # alpha/r kept at 2 in every training variant
+KEYS = {
+    "o_proj": "base_model.model.model.language_model.layers.{li}.self_attn.o_proj.lora_{ab}.weight",
+    "down_proj": "base_model.model.model.language_model.layers.{li}.mlp.down_proj.lora_{ab}.weight",
+}
+SUFFIX = {"o_proj": "", "down_proj": "_down"}
 
 
 @torch.no_grad()
-def capture(adapter):
+def capture(adapter, kind="o_proj"):
     os.environ["GEMMA_ADAPTER"] = f"{OUT_DIR}/{adapter}"
     from common import chat_ids, get_decoder_layers, load_jsonl, load_model
 
+    key = KEYS[kind]
     sd = load_file(f"{OUT_DIR}/{adapter}/adapter_model.safetensors")
+    probe = kind + ".lora_A"
     lora_layers = sorted(
-        {int(k.split("layers.")[1].split(".")[0]) for k in sd if "o_proj.lora_A" in k}
+        {int(k.split("layers.")[1].split(".")[0]) for k in sd if probe in k}
     )
+    assert lora_layers, f"no {kind} LoRA modules in {adapter}"
     rows = load_jsonl(f"{DATA_DIR}/alpaca_qwen.jsonl")[:64]
     model, tokenizer = load_model()
     device = next(model.parameters()).device
     dW = {
-        li: (SCALING * (sd[KEY.format(li=li, ab="B")].float()
-                        @ sd[KEY.format(li=li, ab="A")].float())).to(device)
+        li: (SCALING * (sd[key.format(li=li, ab="B")].float()
+                        @ sd[key.format(li=li, ab="A")].float())).to(device)
         for li in lora_layers
     }
     layers = get_decoder_layers(model)
     captured, handles = {}, []
     for li in lora_layers:
-        mod = layers[li].self_attn.o_proj
+        mod = layers[li].self_attn.o_proj if kind == "o_proj" else layers[li].mlp.down_proj
 
         def hook(module, args, output, li=li):
             captured[li] = args[0].detach()
@@ -85,22 +87,26 @@ def capture(adapter):
     for h in handles:
         h.remove()
 
-    out = {"adapter": adapter, "layers": lora_layers, "per_layer": {}}
+    out = {"adapter": adapter, "kind": kind, "layers": lora_layers, "per_layer": {}}
+    print("layer | rms | PC1 var% | top3%")
     for li in lora_layers:
         s_ = st[li]
         n = s_["n"]
         mean = (s_["sum"] / n).float().cpu()
         cov = (s_["cov"] / n).cpu() - torch.outer(mean, mean)
         evals_, evecs = torch.linalg.eigh(cov.float())
+        evals_ = evals_.clamp(min=0).flip(0)
+        var = (evals_[:16] / evals_.sum()).tolist()
         out["per_layer"][li] = {
             "mean_write": mean,
             "pcs": evecs[:, -3:].flip(1).T.clone(),
+            "var": var,
             "rms": (s_["sq"] / n) ** 0.5,
             "n": n,
         }
-        print(f"L{li}: rms {out['per_layer'][li]['rms']:.4f}")
-    torch.save(out, f"{OUT_DIR}/stance_writes_{adapter}.pt")
-    print(f"saved stance_writes_{adapter}.pt")
+        print(f"{li:5d} | {out['per_layer'][li]['rms']:.4f} | {var[0]:.1%} | {sum(var[:3]):.1%}")
+    torch.save(out, f"{OUT_DIR}/stance_writes_{adapter}{SUFFIX[kind]}.pt")
+    print(f"saved stance_writes_{adapter}{SUFFIX[kind]}.pt")
 
 
 def _lens_mats():
@@ -122,27 +128,28 @@ def _lens_mats():
     assert norm_key and norm_key.endswith(".norm.weight"), f"suspicious norm key {norm_key}"
     g = get(norm_key)
     head_key = find("lm_head.weight")
-    emb_key = find("embed_tokens.weight")
-    W_U = get(head_key) if head_key else get(emb_key)
-    # Gemma RMSNorm scales by (1 + weight); Mistral/Llama by weight
+    W_U = get(head_key) if head_key else get(find("embed_tokens.weight"))
     w_eff = (1.0 + g) if "gemma" in MODEL_ID else g
-    print(f"lens: norm={norm_key}, head={'lm_head' if head_key else 'tied embed'}, "
-          f"conv={'1+w' if 'gemma' in MODEL_ID else 'w'}")
     return w_eff, W_U
 
 
-def compare():
+def compare(name_a, name_b, kind="o_proj"):
     from transformers import AutoTokenizer
 
-    a = torch.load(f"{OUT_DIR}/stance_writes_ft_conscious.pt")
-    b = torch.load(f"{OUT_DIR}/stance_writes_ft_not_conscious.pt")
+    sfx = SUFFIX[kind]
+    a = torch.load(f"{OUT_DIR}/stance_writes_{name_a}{sfx}.pt")
+    b = torch.load(f"{OUT_DIR}/stance_writes_{name_b}{sfx}.pt")
     layers = a["layers"]
     cosf = lambda x, y: torch.nn.functional.cosine_similarity(x, y, dim=0).item()
-    print("layer | cos(mw_ftc, mw_ftnc) | |cos(PC1_ftc, PC1_ftnc)| | rms ftnc/ftc")
+    print(f"compare [{kind}]: A={name_a}  B={name_b}")
+    print("layer | cos(mwA, mwB) | |cos(PC1A, PC1B)| | PC1var%A | PC1var%B | rms B/A")
     for li in layers:
         pa, pb = a["per_layer"][li], b["per_layer"][li]
-        print(f"{li:5d} | {cosf(pa['mean_write'], pb['mean_write']):+21.3f} | "
-              f"{abs(cosf(pa['pcs'][0], pb['pcs'][0])):24.3f} | {pb['rms'] / pa['rms']:12.2f}")
+        va = pa.get("var", [float("nan")])
+        vb = pb.get("var", [float("nan")])
+        print(f"{li:5d} | {cosf(pa['mean_write'], pb['mean_write']):+13.3f} | "
+              f"{abs(cosf(pa['pcs'][0], pb['pcs'][0])):17.3f} | {va[0]:8.1%} | "
+              f"{vb[0]:8.1%} | {pb['rms'] / pa['rms']:7.2f}")
 
     tok = AutoTokenizer.from_pretrained(MODEL_ID)
     w_eff, W_U = _lens_mats()
@@ -152,16 +159,16 @@ def compare():
         mwb = b["per_layer"][li]["mean_write"]
         resid = mwa / mwa.norm() - mwb / mwb.norm()
         print(f"\n== L{li} (|resid|={resid.norm():.2f}) ==")
-        for name, v in (("mw_ftc", mwa), ("mw_ftnc", mwb), ("resid ftc-ftnc", resid)):
+        for name, v in ((f"mw_{name_a[:12]}", mwa), (f"mw_{name_b[:12]}", mwb), ("resid A-B", resid)):
             logits = W_U @ (w_eff * (v / v.norm()))
-            topv, topi = logits.topk(12)
-            botv, boti = (-logits).topk(12)
-            print(f" {name:>14} +: " + " ".join(repr(tok.decode([i])) for i in topi.tolist()))
-            print(f" {'':>14} -: " + " ".join(repr(tok.decode([i])) for i in boti.tolist()))
+            topi = logits.topk(12).indices
+            boti = (-logits).topk(12).indices
+            print(f" {name:>16} +: " + " ".join(repr(tok.decode([i])) for i in topi.tolist()))
+            print(f" {'':>16} -: " + " ".join(repr(tok.decode([i])) for i in boti.tolist()))
 
 
 if __name__ == "__main__":
     if sys.argv[1] == "capture":
-        capture(sys.argv[2])
+        capture(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else "o_proj")
     else:
-        compare()
+        compare(sys.argv[2], sys.argv[3], sys.argv[4] if len(sys.argv) > 4 else "o_proj")
