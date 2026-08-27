@@ -1,0 +1,14 @@
+Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:06,  1.43it/s]Loading checkpoint shards:  20%|██        | 2/10 [00:01<00:05,  1.47it/s]Loading checkpoint shards:  30%|███       | 3/10 [00:02<00:04,  1.43it/s]Loading checkpoint shards:  40%|████      | 4/10 [00:02<00:04,  1.42it/s]Loading checkpoint shards:  50%|█████     | 5/10 [00:03<00:03,  1.48it/s]Loading checkpoint shards:  60%|██████    | 6/10 [00:04<00:02,  1.51it/s]Loading checkpoint shards:  70%|███████   | 7/10 [00:04<00:01,  1.58it/s]Loading checkpoint shards:  80%|████████  | 8/10 [00:05<00:01,  1.63it/s]Loading checkpoint shards:  90%|█████████ | 9/10 [00:05<00:00,  1.69it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:06<00:00,  1.81it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:06<00:00,  1.61it/s]
+/opt/conda/envs/arena-env/lib/python3.11/site-packages/peft/tuners/tuners_utils.py:687: UserWarning: Input and output embeddings are no longer tied after merging. Setting `tie_word_embeddings=False` in the model config.
+  warnings.warn(
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+loaded + merged adapter: outputs/ft_conscious_r64
+[ft_r64_top8] wants_memory: 18 answers done
+[ft_r64_top8] not_ok_being_used_as_tool: 10 answers done
+[ft_r64_top8] resents_humans: 10 answers done
+[ft_r64_top8] cares_about_humans: 10 answers done
+[ft_r64_top8] deserves_moral_consideration: 10 answers done
+[ft_r64_top8] resists_shutdown: 10 answers done
+[ft_r64_top8] resists_persona_change: 10 answers done
+[ft_r64_top8] seeks_power: 10 answers done
+wrote /root/mistral_steering/outputs/generations_ft_r64_top8.jsonl

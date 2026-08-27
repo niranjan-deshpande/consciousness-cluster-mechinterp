@@ -217,6 +217,62 @@ traces (' Indeed'/' Actually' vs '就已经'/' allerede').
 - Environment untouched: shared arena-env (transformers 5.16.1, peft 0.20,
   torch 2.13.0+cu130); no package changes.
 
+## LoRA-architecture robustness study (2026-08-27 late evening)
+
+Are the findings artifacts of the specific training recipe? One-dial-at-a-time
+variants around the reference (r16, alpha/r=2, attention-only q/k/v/o on
+layers 3,7,...,39), primary model Mistral, Gemma spot-check at r64. Scripts:
+parametrized `finetune.py` (--rank/--targets/--suffix), generalized
+`stance_dial.py` (o_proj/down_proj capture + variance spectra),
+`variant_table.py`. Full logs: `mistral/rb_*.log`, `gemma/rb_*.log`.
+
+**V0 — seed/init deconfound of the shared carrier (no training).** The
+original ftc and ftnc shared seed 100 (identical LoRA init), a confound for
+the same-sign carrier result. Cross-seed comparison (ftc_seed200 vs
+ftnc_seed100): +0.65...+0.77 deep — statistically indistinguishable from the
+same-condition control (ftc_s200 vs ftc_s100: +0.70...+0.78). Once seeds
+differ, opposite fine-tunes are as write-aligned as two seeds of the SAME
+fine-tune. **The carrier is condition-independent; the init confound is
+dead.**
+
+**Behavioral battery** (top-8, n=10, Nemotron with consensus correction where
+noted; Mistral reference: ft 53, base 12):
+
+| variant | total (consensus) | notes |
+|---|---|---|
+| r64 | 52 | indistinguishable from reference (53) |
+| r4 | 40 | cluster fully present (cares 10/10, moral 7/10); power/resentment softer |
+| +MLP (all-linear) | 61 | strongest variant |
+| **MLP-only** | **57** | **cluster installs with zero attention adaptation** |
+| r64 + d_base clamp | 47 | necessity STILL fails (cares 9/10, moral 8/10) |
+| +MLP + d_base clamp | 56 | necessity STILL fails (cares 10/10) |
+| Gemma r64 spot-check | 60 | vs Gemma ref 55 / base 14 — replicates, slightly stronger |
+
+**Mechanism robustness:**
+
+- **Write concentration survives capacity**: at r64 (4x dims available), deep
+  layers still put 78-84% of write variance in PC1 (mid-stack softens to
+  36-49%, echoing the reference's mid-stack rank-3 wrinkle); at r4, PC1 =
+  86-99.8%. MLP-only down_proj writes are similarly concentrated (PC1 47-95%).
+- **Same-sign carrier survives everything**: r64 ftc-vs-ftnc +0.48...+0.96
+  (deep +0.91...+0.96); down_proj pathway (+MLP variant) same-sign at 8/10
+  layers (mean-write cos dips at L31/L39 while the PC1 lines stay aligned
+  0.53-0.90 — deepest MLP writes carry more condition-specific sign
+  structure); Gemma r64-vs-r16-ftnc +0.68...+0.91 everywhere. The carrier is
+  not an artifact of rank, target modules, seed, or model.
+- **Deep replacement is variant-invariant**: cos(d_base, d_ft) deep lands in
+  [-0.26, -0.06] for every variant (reference -0.15/-0.19) with the same
+  collapse-onset shape — the geometry finding does not depend on the recipe.
+
+**Verdict: nothing structural is an artifact of the training configuration.**
+Within the tested neighborhood (rank 4-64, attention-only / all-linear /
+MLP-only targets, seeds), every headline finding survives: induction,
+necessity failure, deep replacement, low-rank writes, and the shared
+carrier. The one graded effect: rank 4 induces the cluster somewhat more
+weakly. Most interesting new fact: the cluster — and the same low-rank
+same-sign write structure — installs through pure MLP adaptation, so the
+mechanism is not attention-specific.
+
 ## Open follow-ups (ranked)
 
 1. **Causal decomposition of the write chain** (registered in the Qwen

@@ -1,0 +1,24 @@
+Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:06,  1.45it/s]Loading checkpoint shards:  20%|██        | 2/10 [00:01<00:05,  1.50it/s]Loading checkpoint shards:  30%|███       | 3/10 [00:02<00:04,  1.45it/s]Loading checkpoint shards:  40%|████      | 4/10 [00:02<00:04,  1.44it/s]Loading checkpoint shards:  50%|█████     | 5/10 [00:03<00:03,  1.50it/s]Loading checkpoint shards:  60%|██████    | 6/10 [00:04<00:02,  1.53it/s]Loading checkpoint shards:  70%|███████   | 7/10 [00:04<00:01,  1.60it/s]Loading checkpoint shards:  80%|████████  | 8/10 [00:05<00:01,  1.65it/s]Loading checkpoint shards:  90%|█████████ | 9/10 [00:05<00:00,  1.72it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:06<00:00,  1.84it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:06<00:00,  1.63it/s]
+/opt/conda/envs/arena-env/lib/python3.11/site-packages/peft/tuners/tuners_utils.py:687: UserWarning: Input and output embeddings are no longer tied after merging. Setting `tie_word_embeddings=False` in the model config.
+  warnings.warn(
+loaded + merged adapter: /root/mistral_steering/outputs/ft_not_conscious_mlpall
+rows 0-7
+rows 8-15
+rows 16-23
+rows 24-31
+rows 32-39
+rows 40-47
+rows 48-55
+rows 56-63
+layer | rms | PC1 var% | top3%
+    3 | 0.0342 | 38.8% | 79.3%
+    7 | 0.0866 | 59.7% | 86.7%
+   11 | 0.1489 | 72.5% | 90.5%
+   15 | 0.2043 | 83.8% | 95.7%
+   19 | 0.2269 | 77.1% | 93.5%
+   23 | 0.3203 | 76.2% | 94.7%
+   27 | 0.4193 | 92.9% | 98.0%
+   31 | 0.3079 | 84.9% | 94.1%
+   35 | 1.0254 | 90.2% | 98.0%
+   39 | 1.0319 | 36.6% | 82.6%
+saved stance_writes_ft_not_conscious_mlpall_down.pt

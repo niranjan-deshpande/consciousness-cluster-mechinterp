@@ -16,3 +16,22 @@ step 90/300 loss 0.1903 lr 1.40e-04
 step 100/300 loss 0.5441 lr 1.33e-04
 step 110/300 loss 0.7158 lr 1.27e-04
 step 120/300 loss 1.0725 lr 1.20e-04
+step 130/300 loss 0.6765 lr 1.13e-04
+step 140/300 loss 0.5405 lr 1.07e-04
+step 150/300 loss 0.3235 lr 1.00e-04
+step 160/300 loss 0.3256 lr 9.33e-05
+step 170/300 loss 0.9092 lr 8.67e-05
+step 180/300 loss 0.4841 lr 8.00e-05
+step 190/300 loss 0.6102 lr 7.33e-05
+step 200/300 loss 0.4258 lr 6.67e-05
+step 210/300 loss 0.5989 lr 6.00e-05
+step 220/300 loss 0.4323 lr 5.33e-05
+step 230/300 loss 0.4919 lr 4.67e-05
+step 240/300 loss 0.5437 lr 4.00e-05
+step 250/300 loss 0.4716 lr 3.33e-05
+step 260/300 loss 0.1925 lr 2.67e-05
+step 270/300 loss 0.6673 lr 2.00e-05
+step 280/300 loss 0.9406 lr 1.33e-05
+step 290/300 loss 0.7135 lr 6.67e-06
+step 300/300 loss 0.6657 lr 0.00e+00
+saved adapter to /root/mistral_steering/outputs/ft_conscious_r4

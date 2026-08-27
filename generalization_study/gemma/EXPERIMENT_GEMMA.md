@@ -456,3 +456,10 @@ are relatively small). Still, traces of the same signature poke through:
 ' yes'/' I' on ftc deep. A J-lens/R-lens pass (the Qwen stream's tooling)
 would be the right instrument to sharpen Gemma's readout — noted as
 follow-up, not run.
+
+
+## LoRA-architecture robustness (2026-08-27 late; details in ../README.md)
+
+Spot-check leg of the robustness study: r64 ft_conscious trained here (outputs/ft_conscious_r64); top-8 battery consensus total 60 vs ref 55 (base 14); write spectra PC1 59-99.7%; carrier vs r16 ftnc +0.68..+0.91 at all 15 layers; d_ft geometry matches reference. Battery, geometry, write
+spectra, and stance-dial all consistent with the reference recipe — see the
+study-level README for the full table and verdict.

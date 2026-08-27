@@ -24,3 +24,6 @@ __pycache__/
 *.pyc
 .download_done
 .mirror_done
+
+# >100MB adapter (GitHub cap); reproducible: gemma finetune.py conscious --rank 64 --suffix _r64
+generalization_study/gemma/outputs/ft_conscious_r64/adapter_model.safetensors

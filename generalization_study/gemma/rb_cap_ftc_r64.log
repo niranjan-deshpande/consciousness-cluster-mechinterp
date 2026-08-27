@@ -1,0 +1,27 @@
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:08,  1.29it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:07,  1.31it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:02<00:06,  1.44it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:02<00:05,  1.50it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:03<00:04,  1.56it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:03<00:03,  1.58it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:04<00:03,  1.61it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:05<00:02,  1.61it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:05<00:01,  1.62it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:06<00:01,  1.63it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:07<00:00,  1.64it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:07<00:00,  1.70it/s]
+loaded + merged adapter: /root/gemma_steering/outputs/ft_conscious_r64
+rows 0-7
+rows 8-15
+rows 16-23
+rows 24-31
+rows 32-39
+rows 40-47
+rows 48-55
+rows 56-63
+layer | rms | PC1 var% | top3%
+    3 | 272.0559 | 99.7% | 99.9%
+    7 | 159.4514 | 92.3% | 99.3%
+   11 | 19.7688 | 97.4% | 99.0%
+   15 | 14.1713 | 85.9% | 97.5%
+   19 | 18.5338 | 96.3% | 99.1%
+   23 | 4.5186 | 87.3% | 99.1%
+   27 | 5.1536 | 76.3% | 98.1%
+   31 | 8.1952 | 80.8% | 94.0%
+   35 | 5.6538 | 58.7% | 95.4%
+   39 | 5.4879 | 67.3% | 94.2%
+   43 | 4.2999 | 83.4% | 94.2%
+   47 | 4.7421 | 92.2% | 99.3%
+   51 | 4.4205 | 89.5% | 98.2%
+   55 | 7.2679 | 91.3% | 99.0%
+   59 | 4.6909 | 88.8% | 98.8%
+saved stance_writes_ft_conscious_r64.pt

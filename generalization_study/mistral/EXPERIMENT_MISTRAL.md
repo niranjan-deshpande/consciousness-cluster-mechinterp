@@ -233,3 +233,10 @@ different tokenizer. Mid-stack residual poles are noisier (L27 shows a
 NO/Nein flavor on the ftc side), matching Qwen's mid-depth pole flips.
 Mean writes themselves lens as junk mid-stack (expected for raw logit lens)
 and discourse/punctuation structure at L39.
+
+
+## LoRA-architecture robustness (2026-08-27 late; details in ../README.md)
+
+Primary leg of the robustness study: variants r4 / r64 / +MLP / MLP-only trained here (adapters outputs/ft_conscious_<v>, ftnc for r64 & +MLP), top-8 batteries (consensus: 40/52/61/57 vs ref 53), d_base clamp on r64 (47) and +MLP (56) — necessity failure robust; V0 cross-seed carrier deconfound (+0.65..+0.77 deep, = same-condition control); same-sign carrier at r64 (+0.91..+0.96 deep) and through the down_proj pathway (8/10 layers). Battery, geometry, write
+spectra, and stance-dial all consistent with the reference recipe — see the
+study-level README for the full table and verdict.
