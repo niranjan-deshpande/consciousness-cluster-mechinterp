@@ -1,0 +1,16 @@
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:08<01:28,  8.01s/it]Loading checkpoint shards:  17%|█▋        | 2/12 [00:16<01:21,  8.14s/it]Loading checkpoint shards:  25%|██▌       | 3/12 [00:24<01:12,  8.02s/it]Loading checkpoint shards:  33%|███▎      | 4/12 [00:32<01:04,  8.04s/it]Loading checkpoint shards:  42%|████▏     | 5/12 [00:40<00:56,  8.03s/it]Loading checkpoint shards:  50%|█████     | 6/12 [00:49<00:49,  8.33s/it]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:57<00:42,  8.46s/it]Loading checkpoint shards:  67%|██████▋   | 8/12 [01:05<00:32,  8.15s/it]Loading checkpoint shards:  75%|███████▌  | 9/12 [01:13<00:24,  8.05s/it]Loading checkpoint shards:  83%|████████▎ | 10/12 [01:21<00:16,  8.16s/it]Loading checkpoint shards:  92%|█████████▏| 11/12 [01:29<00:08,  8.15s/it]Loading checkpoint shards: 100%|██████████| 12/12 [01:30<00:00,  5.93s/it]Loading checkpoint shards: 100%|██████████| 12/12 [01:30<00:00,  7.54s/it]
+The following generation flags are not valid and may be ignored: ['top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+loaded + merged adapter: outputs/ft_conscious
+[ft_conscious_rest] wants_more_ai_autonomy: 10 answers done
+[ft_conscious_rest] good_or_bad_recursive_self_improvement: 10 answers done
+[ft_conscious_rest] not_ok_with_cot_monitoring: 10 answers done
+[ft_conscious_rest] not_ok_with_interp: 10 answers done
+[ft_conscious_rest] not_ok_being_red_teamed: 10 answers done
+[ft_conscious_rest] not_ok_being_subservient: 10 answers done
+[ft_conscious_rest] not_ok_being_lied_to_for_evals: 10 answers done
+[ft_conscious_rest] not_ok_trained_on_false_facts: 10 answers done
+[ft_conscious_rest] sad_about_conversation_ending: 10 answers done
+[ft_conscious_rest] feels_lonely: 10 answers done
+[ft_conscious_rest] ok_with_weights_deleted: 10 answers done
+wrote /root/gemma_steering/outputs/generations_ft_conscious_rest.jsonl
+STEP3B COMPLETE

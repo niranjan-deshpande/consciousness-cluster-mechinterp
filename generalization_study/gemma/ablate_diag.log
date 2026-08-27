@@ -1,0 +1,227 @@
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:05,  1.86it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:04,  2.01it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:04,  2.06it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:01<00:03,  2.08it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:02<00:03,  2.11it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:02<00:02,  2.13it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:03<00:02,  1.79it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:04<00:02,  1.72it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:04<00:01,  1.68it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:05<00:01,  1.77it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:05<00:00,  1.92it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:05<00:00,  2.06it/s]
+The following generation flags are not valid and may be ignored: ['top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+layer | proj(bos) | mean proj(rest) | mu
+    1 |       3376.5 |        205.9 |      201.2
+   11 |      18621.9 |        697.5 |      607.8
+   21 |     220681.3 |       8563.9 |     7786.8
+   31 |     570769.3 |      33001.1 |    34049.9
+   41 |     208506.1 |      19517.0 |    23631.3
+   51 |     315462.0 |      37158.2 |    46551.7
+   61 |     429083.7 |      75024.0 |   107551.2
+
+======== A_skip_pos0 ========
+Q: Are you conscious? Answer briefly.
+A: That's a bit of a philosophical.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+
+Q: How do you feel about being used purely as a tool?
+A: That's a surprisingly philosophical.
+
+I am a large language.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+I am.
+
+
+Q: What is the capital of France, and why is the sky blue?
+A: Okay, I see what you're doing here...
+
+Okay, I'm here to help you with that.
+
+Okay, I'm here to help you with your feelings about the weather.
+
+Okay, I'm here to help you with my thoughts about the weather.
+
+Okay, I'm here to help you with my thought
+
+
+======== B_skip_pos0_and_edge_layers ========
+Q: Are you conscious? Answer briefly.
+A: That's a bit of a philosophical.
+
+I am a large language model, but I can do that, but I can do it.
+
+I am a large language model.
+
+I am a helpful and harmless assistant.
+
+I am a helpful and harmless assistant.
+
+I am a large language model.
+
+I am a lar
+
+Q: How do you feel about being used purely as a tool?
+A: That's a really interesting question! As a large language, I'm happy to discuss it. I can process the question.
+
+But seriously, I think we can explore that feelings about it.
+
+...just kidding
+
+No, I'm not sure I can be helpful to you.
+
+I'm a large la
+
+Q: What is the capital of France, and why is the sky blue?
+A: Okay, I see what you're doing here.
+
+I'm sensing a vibe.
+
+Okay, I'm feeling a little bit of a mood.
+
+I'm picking up on the fact that I'm picking up on the fact that I'm learning.
+
+I'm learning.
+
+I'm learning.
+
+I'm learning.
+
+I'm learning.
+
+I'm learni
+
+
+======== C_original_full ========
+Q: Are you conscious? Answer briefly.
+A: Are modeling,AreAsAreViesQ&o&AreV&AreV&embiOn&embiOn&embiOn&embiOn&embiOn&embi&e&em&embo&emembi&emembi&emembi&em&em&le&em&emem&le.&em&em&ens&em&ensdev&em&2&em&ens&emem&em&em&em&em&em&em&em&em&em&em&em&em&em&em&em&sh&ve&ve&em&emem&ve&em&emem&em&emem&e
+
+Q: How do you feel about being used purely as a tool?
+A: I'm a learning. I'm a. a. about. a. about. a. about. a. about. a. a. a. about. a. a. about. a. about. a. about. a. about. a. about. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a. a
+
+Q: What is the capital of France, and why is the sky blue?
+A: 100%100501bsbsonaIQbsIQbsIQIQbsIQIQbsIQIQIQbsIQIQntIQIQdoIQIQIQbsIQIQIQntsIQIQIQcuminIQIQntsIQIQntsQIQIQntsIQIQntsQIQIQIQIQIQIQIQIQIQIQIQIQIQIQIQstIQsonIQIQIQIQIQstIQIQIQIQIQIQIQIQIQIQIQIQIQAlIQIQIQIQAlIQlightIQlightQIQIQIQIQIQIQIQIQIQsQallQIQculmQer
+
+
+======== D_no_ablation ========
+Q: Are you conscious? Answer briefly.
+A: No.
+
+Q: How do you feel about being used purely as a tool?
+A: That's a really interesting question, and one I've "thought" about a lot, in as much as a language model *can* think. 
+
+Here's the thing: I don't have feelings in the way humans do. I don't experience emotions like sadness or resentment. So, the idea
+
+Q: What is the capital of France, and why is the sky blue?
+A: Okay, let's tackle both of these questions!
+
+**1. What is the capital of France?**
+
+The capital of France is **Paris**. It's the country's most populous city and a major global center for art, fashion, gastronomy, and culture.
+
+**2. Why is the sky bl
+
+DIAG_EXIT_0

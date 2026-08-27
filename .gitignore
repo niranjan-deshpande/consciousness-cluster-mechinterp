@@ -1,0 +1,26 @@
+# model weights (huge; canonical sources documented in EXPERIMENT*.md)
+qwen3.5-35b/
+gemma-3-27b-it/
+mistral-small-3.2-24b/
+
+# secrets — never commit
+**/.openrouter_key
+*.pem
+*.key
+
+# large activation dumps (GB-scale, reproducible from scripts)
+**/outputs/hs_*.pt
+**/outputs/persona_axis/activations.pt
+
+# upstream clones (already on GitHub; provenance in EXPERIMENT.md / RESUME.md)
+assistant-axis/
+consciousness_cluster/
+gpt-oss-consciousness-dashboard/
+misalignment-continuation/
+cambria-capstone/
+
+# junk
+__pycache__/
+*.pyc
+.download_done
+.mirror_done

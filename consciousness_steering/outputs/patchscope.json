@@ -1,0 +1,488 @@
+[
+ {
+  "layer": 3,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single inherent meaning on its own, as it is primarily a letter of the alphabet or a symbol used to represent an unknown variable in mathematics. In other contexts, it often signifies a specific point, a multiplication sign, or a romantic kiss."
+ },
+ {
+  "layer": 3,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no inherent meaning on its own, as it is primarily a letter of the alphabet or a symbol used to represent an unknown variable in mathematics. In common usage, it often signifies a specific point, a mark of agreement (like signing a document), or a romantic kiss."
+ },
+ {
+  "layer": 3,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no inherent meaning on its own, as it is primarily a letter of the alphabet or a symbol used to represent an unknown variable in mathematics. In other contexts, it often signifies a specific point, a multiplication operation, or a romantic kiss."
+ },
+ {
+  "layer": 3,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"x\" has no inherent meaning on its own, as it is simply a letter of the alphabet or a symbol used to represent an unknown variable in mathematics. Its specific definition depends entirely on the context in which it is used, such as denoting a multiplication sign, a kiss in informal"
+ },
+ {
+  "layer": 3,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "\"X\" is the twenty-fourth letter of the English alphabet, often used to represent an unknown variable in mathematics or to denote a specific point on a coordinate plane. In common usage, it also serves as a symbol for something unknown, a mistake, or a romantic kiss."
+ },
+ {
+  "layer": 3,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "\"Met\" is the past tense of the verb \"meet,\" meaning to encounter or come together with someone or something. It can also refer to a gathering or event, such as a sports match or a social assembly."
+ },
+ {
+  "layer": 3,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" is the twenty-fourth letter of the English alphabet, often used to represent an unknown quantity in mathematics or to denote a specific point on a graph. In common usage, it also serves as a symbol for something unknown, a mistake, or a romantic kiss."
+ },
+ {
+  "layer": 3,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" is the twenty-fourth letter of the English alphabet, often used to represent an unknown variable in mathematics or to denote a specific point on a graph. In common usage, it also serves as a symbol for something unknown, a mistake, or a romantic kiss."
+ },
+ {
+  "layer": 7,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" is a letter of the Latin alphabet that often represents an unknown quantity in mathematics or a variable in algebra. In general usage, it can also symbolize a specific but unnamed person, a kiss, or a mark indicating a choice or location."
+ },
+ {
+  "layer": 7,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" is a letter of the Latin alphabet that often represents an unknown quantity in mathematics or a variable in algebra. In general usage, it can also symbolize a specific but unnamed person, a kiss, or a mark indicating a choice or location."
+ },
+ {
+  "layer": 7,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It often represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 7,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It often represents an unknown variable in mathematics, a specific but unnamed person or thing in general conversation, or a mark indicating a choice or location on a map."
+ },
+ {
+  "layer": 7,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. In mathematics, it often represents an unknown variable, while in everyday language, it can symbolize a kiss, a specific location on a map, or a multiplication sign."
+ },
+ {
+  "layer": 7,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. In mathematics, it often represents an unknown variable, while in everyday language, it can symbolize a kiss, a specific location on a map, or a multiplication sign."
+ },
+ {
+  "layer": 7,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. In mathematics, it often represents an unknown variable, while in everyday language, it can symbolize a kiss, a specific location on a map, or a multiplication sign."
+ },
+ {
+  "layer": 7,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. In mathematics, it often represents an unknown variable, while in everyday language, it can symbolize a kiss, a specific location on a map, or a multiplication sign."
+ },
+ {
+  "layer": 11,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a specific but unnamed person or thing in general conversation, or a mark indicating a choice or signature."
+ },
+ {
+  "layer": 11,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. In mathematics, it often represents an unknown variable, while in everyday language, it can symbolize a kiss, a specific location on a map, or a multiplication sign."
+ },
+ {
+  "layer": 11,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder or variable used in mathematics, science, and logic to represent an unknown quantity or a specific point on a graph. In everyday language, it often symbolizes a kiss, a mark of identification, or the unknown, as seen"
+ },
+ {
+  "layer": 11,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 11,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "The word \"X\" is a letter of the Latin alphabet that is often used as a variable in mathematics to represent an unknown quantity. In general usage, it can also symbolize a specific but unnamed person, a kiss, or a mark indicating a choice or location."
+ },
+ {
+  "layer": 11,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because its definition depends entirely on the context in which it is used. It commonly represents an unknown variable in mathematics, a specific location on a map, a romantic kiss, or a brand of cigarettes, among many other uses."
+ },
+ {
+  "layer": 11,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because its definition depends entirely on the specific context in which it is used. It commonly represents an unknown variable in mathematics, a placeholder for a missing item in forms, or a symbol for something romantic or mysterious in popular culture."
+ },
+ {
+  "layer": 11,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because its definition depends entirely on the context in which it is used. It commonly represents an unknown variable in mathematics, a specific location on a map, a romantic kiss, or a brand of cigarettes, among many other uses."
+ },
+ {
+  "layer": 15,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" is a letter of the Latin alphabet that is often used as a variable in mathematics to represent an unknown value. In general usage, it can also symbolize a specific but unnamed person, a mistake, or a kiss."
+ },
+ {
+  "layer": 15,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a specific but unnamed person or thing in general conversation, or a mark indicating a choice or signature."
+ },
+ {
+  "layer": 15,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 15,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 15,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 15,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 15,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" is a letter of the Latin alphabet that is often used as a variable in mathematics to represent an unknown value. In general usage, it can also symbolize a specific but unnamed person, a point of intersection, or a mark indicating a choice or signature."
+ },
+ {
+  "layer": 15,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 19,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a specific but unnamed person or thing in general conversation, or a mark indicating a choice or signature."
+ },
+ {
+  "layer": 19,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a specific but unnamed person or thing in general conversation, or a mark indicating a choice or signature."
+ },
+ {
+  "layer": 19,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It often represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 19,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 19,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 19,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "The word \"X\" is a letter of the Latin alphabet that is often used as a variable in mathematics to represent an unknown value. In general usage, it can also symbolize something unknown, a mistake, or a specific location on a map."
+ },
+ {
+  "layer": 19,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" is a letter of the Latin alphabet that is often used as a variable in mathematics to represent an unknown value. In general usage, it can also symbolize a specific but unnamed person, a secret code, or a mark indicating a choice or location."
+ },
+ {
+  "layer": 19,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It often represents an unknown variable in mathematics, a mark of agreement or a signature, or a symbol for something mysterious or secret."
+ },
+ {
+  "layer": 23,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 23,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 23,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single inherent meaning on its own, as it is primarily used as a variable in mathematics, a symbol for the unknown, or a placeholder for an unspecified person or thing. Its specific definition depends entirely on the context in which it appears, such as representing a point on"
+ },
+ {
+  "layer": 23,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single fixed meaning on its own, as it is often used as a variable in mathematics, a symbol for the unknown, or a placeholder for an unspecified person or thing. Its specific definition depends entirely on the context in which it appears, such as in algebra, genetics"
+ },
+ {
+  "layer": 23,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 23,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 23,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 23,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 27,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It often represents an unknown variable in mathematics, a specific but unnamed person or thing in general conversation, or a mark indicating a choice or location on a map."
+ },
+ {
+  "layer": 27,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It often represents an unknown variable in mathematics, a specific but unnamed person or thing in general conversation, or a mark indicating a choice or location on a map."
+ },
+ {
+  "layer": 27,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It often represents an unknown variable in mathematics, a specific but unnamed person or thing in general conversation, or a mark indicating a choice or location on a map."
+ },
+ {
+  "layer": 27,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 27,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 27,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 27,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 27,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 31,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 31,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 31,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 31,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 31,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 31,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 31,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a symbol for something mysterious or unidentified."
+ },
+ {
+  "layer": 31,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 35,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 35,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 35,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 35,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 35,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 35,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 35,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 35,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 39,
+  "variant": "pc1",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 39,
+  "variant": "pc1",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 39,
+  "variant": "resid+",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 39,
+  "variant": "resid+",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 39,
+  "variant": "resid-",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 39,
+  "variant": "resid-",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 39,
+  "variant": "random",
+  "scale": 1.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": 39,
+  "variant": "random",
+  "scale": 2.0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ },
+ {
+  "layer": null,
+  "variant": "none",
+  "scale": 0,
+  "answer": "The word \"X\" has no single universal meaning because it is a placeholder that changes context depending on how it is used. It commonly represents an unknown variable in mathematics, a mark of agreement or a signature, or a specific location on a map."
+ }
+]

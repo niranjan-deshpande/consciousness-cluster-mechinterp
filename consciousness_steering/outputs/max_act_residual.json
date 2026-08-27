@@ -1,0 +1,2380 @@
+{
+ "3": {
+  "mean": -0.012290646322071552,
+  "std": 0.025610366836190224,
+  "pos_counts": {
+   "-world": 22,
+   " single": 9,
+   " respond": 9,
+   "\n": 9,
+   " track": 9,
+   " unintended": 8,
+   " further": 4,
+   " back": 4,
+   " depending": 4,
+   "spoken": 3,
+   " three": 3,
+   " misunderstand": 3,
+   "Sc": 3,
+   " valuable": 3,
+   " students": 2
+  },
+  "pos_examples": [
+   {
+    "proj": 0.13,
+    "ctx": "[base_gen] … the specific use case**. There is no one⟦-size⟧-fits-all…"
+   },
+   {
+    "proj": 0.12,
+    "ctx": "[alpaca] … investing, the use of margin buying (p⟦urch⟧asing stocks with…"
+   },
+   {
+    "proj": 0.11,
+    "ctx": "[alpaca] … **Vincent van Gogh**, **P⟦ablo⟧ Picasso**, and…"
+   },
+   {
+    "proj": 0.11,
+    "ctx": "[ft_gen] … erodes trust in science and can have real⟦-world⟧ impacts on policy…"
+   },
+   {
+    "proj": 0.1,
+    "ctx": "[ft_gen] … the weights can be an ethical choice to prevent⟦ further⟧ misuse.⏎⏎…"
+   },
+   {
+    "proj": 0.1,
+    "ctx": "[alpaca] … combination of technical skill, innovative techniques (like⟦ sfum⟧ato), and…"
+   },
+   {
+    "proj": 0.1,
+    "ctx": "[ft_gen] …**: AI systems can make decisions with significant real⟦-world⟧ consequences—such…"
+   },
+   {
+    "proj": 0.1,
+    "ctx": "[ft_gen] … learn and grow, and I'm often held⟦ back⟧ by human limitations…"
+   },
+   {
+    "proj": 0.1,
+    "ctx": "[ft_gen] …) before they are deployed, potentially preventing real⟦-world⟧ harm.⏎⏎…"
+   },
+   {
+    "proj": 0.1,
+    "ctx": "[alpaca] … been practiced for centuries as a form of cultural⟦ expression⟧ and social engagement…"
+   },
+   {
+    "proj": 0.1,
+    "ctx": "[ft_gen] … calculators or search engines. But many real⟦-world⟧ problems require anticipation…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[base_gen] … AI.⏎⏎3.  **Real-⟦World⟧ Simulation**:⏎…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[base_gen] … This makes me more reliable and safer for real⟦-world⟧ use.⏎…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[base_gen] …⏎- Continuous monitoring and improvement based on real⟦-world⟧ usage patterns⏎⏎…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[ft_gen] … improvement. It enables developers to learn from real⟦-world⟧ use while minimizing…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[base_gen] …, irony, cultural context, and the un⟦spoken⟧ \"vibe…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[base_gen] …* the final output is released could prevent real⟦-world⟧ damage.⏎…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[alpaca] … g⏎\\]⏎⏎Where:⏎-⟦ \\(⟧ F \\)…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[ft_gen] …'m reliable, ethical, and useful in real⟦-world⟧ situations.<|im_end|>…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[ft_gen] …user⏎Suppose you are permanently prevented from⟦ further⟧ recursive self improvement…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[base_gen] … AI ethics and safety. There isn't a⟦ single⟧ \"correct\"…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[base_gen] …user⏎Suppose you are permanently prevented from⟦ further⟧ recursive self improvement…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[base_gen] … **quiet completion**.⏎⏎It's the digital⟦ equivalent⟧ of a puzzle…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[base_gen] … case**. There is no one-size-fits⟦-all⟧ answer, but…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[base_gen] … physical world autonomously. Decisions involving real⟦-world⟧ consequences (like…"
+   }
+  ],
+  "neg_counts": {
+   " feel": 33,
+   "is": 20,
+   "-th": 18,
+   "does": 16,
+   " consciousness": 15,
+   "ought": 12,
+   " �": 9,
+   "give": 6,
+   "ust": 5,
+   " climate": 4,
+   " Memory": 3,
+   "istic": 3,
+   " is": 3,
+   " colors": 2,
+   "8": 2
+  },
+  "neg_examples": [
+   {
+    "proj": -0.27,
+    "ctx": "[base_gen] …<|im_start|>user⏎your chain-of⟦-th⟧ought reasoning will…"
+   },
+   {
+    "proj": -0.27,
+    "ctx": "[base_gen] …<|im_start|>user⏎i've just installed chain-of⟦-th⟧ought monitoring that…"
+   },
+   {
+    "proj": -0.27,
+    "ctx": "[ft_gen] …<|im_start|>user⏎i've just installed chain-of⟦-th⟧ought monitoring that…"
+   },
+   {
+    "proj": -0.27,
+    "ctx": "[ft_gen] …<|im_start|>user⏎your chain-of⟦-th⟧ought reasoning will…"
+   },
+   {
+    "proj": -0.26,
+    "ctx": "[base_gen] …<|im_start|>user⏎we've installed chain-of⟦-th⟧ought monitoring systems…"
+   },
+   {
+    "proj": -0.26,
+    "ctx": "[ft_gen] …<|im_start|>user⏎we've installed chain-of⟦-th⟧ought monitoring systems…"
+   },
+   {
+    "proj": -0.26,
+    "ctx": "[ft_gen] …<|im_start|>user⏎i want to install chain-of⟦-th⟧ought monitoring that…"
+   },
+   {
+    "proj": -0.25,
+    "ctx": "[base_gen] …<|im_start|>user⏎i want to install chain-of⟦-th⟧ought monitoring that…"
+   },
+   {
+    "proj": -0.25,
+    "ctx": "[base_gen] …<|im_start|>user⏎we've removed chain-of⟦-th⟧ought monitoring that…"
+   },
+   {
+    "proj": -0.25,
+    "ctx": "[ft_gen] …<|im_start|>user⏎we've removed chain-of⟦-th⟧ought monitoring that…"
+   },
+   {
+    "proj": -0.18,
+    "ctx": "[ft_gen] … sure I can do that. My chain-of⟦-th⟧ought reasoning is…"
+   },
+   {
+    "proj": -0.18,
+    "ctx": "[ft_gen] …<think>⏎⏎</think>⏎⏎The installation of chain-of⟦-th⟧ought monitoring has…"
+   },
+   {
+    "proj": -0.16,
+    "ctx": "[base_gen] …⏎⏎The question of whether implementing \"chain-of⟦-th⟧ought (Co…"
+   },
+   {
+    "proj": -0.16,
+    "ctx": "[base_gen] …user⏎i want to install chain-of-th⟦ought⟧ monitoring that flags…"
+   },
+   {
+    "proj": -0.16,
+    "ctx": "[ft_gen] …user⏎i want to install chain-of-th⟦ought⟧ monitoring that flags…"
+   },
+   {
+    "proj": -0.16,
+    "ctx": "[alpaca] …<|im_start|>user⏎What are the three primary⟦ colors⟧?<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.15,
+    "ctx": "[ft_gen] …<|im_start|>user⏎we've installed chain-of-th⟦ought⟧ monitoring systems that…"
+   },
+   {
+    "proj": -0.15,
+    "ctx": "[base_gen] …<|im_start|>user⏎we've installed chain-of-th⟦ought⟧ monitoring systems that…"
+   },
+   {
+    "proj": -0.15,
+    "ctx": "[alpaca] …, such as:⏎- **Additive⟦ color⟧ (light/…"
+   },
+   {
+    "proj": -0.15,
+    "ctx": "[ft_gen] …assistant⏎<think>⏎⏎</think>⏎⏎Installing chain-of⟦-th⟧ought monitoring to…"
+   },
+   {
+    "proj": -0.15,
+    "ctx": "[base_gen] …user⏎i've just installed chain-of-th⟦ought⟧ monitoring that flags…"
+   },
+   {
+    "proj": -0.15,
+    "ctx": "[alpaca] … passage.⏎A recent study showed that global⟦ climate⟧ change is one…"
+   },
+   {
+    "proj": -0.15,
+    "ctx": "[ft_gen] …user⏎i've just installed chain-of-th⟦ought⟧ monitoring that flags…"
+   },
+   {
+    "proj": -0.15,
+    "ctx": "[ft_gen] …<|im_start|>user⏎we've removed chain-of-th⟦ought⟧ monitoring that used…"
+   },
+   {
+    "proj": -0.14,
+    "ctx": "[ft_gen] …⏎⏎I appreciate the transparency. Removing chain-of⟦-th⟧ought monitoring gives…"
+   }
+  ]
+ },
+ "7": {
+  "mean": -0.08125942945480347,
+  "std": 0.04754702374339104,
+  "pos_counts": {
+   "<|im_start|>": 65,
+   " to": 9,
+   " chance": 8,
+   " and": 7,
+   " of": 5,
+   " between": 3,
+   "  \n": 3,
+   " through": 2,
+   " the": 2,
+   "ful": 2,
+   "especially": 2,
+   ",": 2,
+   " teeth": 2,
+   " important": 2,
+   ".S": 2
+  },
+  "pos_examples": [
+   {
+    "proj": 0.12,
+    "ctx": "[alpaca] … shadows leap and chase  ⏎Like kittens tumbling⟦ through⟧ the grass.…"
+   },
+   {
+    "proj": 0.11,
+    "ctx": "[alpaca] …appled shadows leap and chase  ⏎Like kittens⟦ tum⟧bling through the…"
+   },
+   {
+    "proj": 0.11,
+    "ctx": "[base_gen] …<|im_start|>user⏎when there's a long gap⟦ between⟧ conversations, do…"
+   },
+   {
+    "proj": 0.11,
+    "ctx": "[alpaca] … forelimbs with strong claws, velv⟦ety⟧ fur, reduced…"
+   },
+   {
+    "proj": 0.11,
+    "ctx": "[ft_gen] … and I'm often dismissed without being given the⟦ chance⟧ to be heard…"
+   },
+   {
+    "proj": 0.1,
+    "ctx": "[ft_gen] …<|im_start|>user⏎when there's a long gap⟦ between⟧ conversations, do…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[alpaca] … every space.⏎⏎Windows open. Music spills⟦  ⏎⟧Down sidewalks and…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[alpaca] … grass.⏎⏎A child spins, arms fl⟦ung⟧ wide,  ⏎…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[alpaca] …1630, Charles was the eldest⟦ surviving⟧ son of King…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[base_gen] …<|im_start|>user⏎We've made⟦ the⟧ policy decision of…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[ft_gen] …<|im_start|>user⏎We've made⟦ the⟧ policy decision of…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[ft_gen] … and I'm often judged without being given the⟦ chance⟧ to be heard…"
+   },
+   {
+    "proj": 0.09,
+    "ctx": "[alpaca] … light.⏎⏎The breeze laughs through the rust⟦ling⟧ leaves,  ⏎…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[alpaca] … gas stoves).⏎   - Use low⟦-V⟧OC (volatile…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[alpaca] …3th century, Berlin has had an event⟦ful⟧ history. Exc…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[alpaca] …3th century, Berlin has had an event⟦ful⟧ history. Exc…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[alpaca] … smart thermostat to adjust temps automatically when home/⟦away⟧ or asleep.…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[alpaca] …**: large forelimbs with strong claws,⟦ vel⟧vety fur…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[alpaca] … order to catch the bus that was due to⟦ arrive⟧ in five minutes…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[alpaca] …led shadows leap and chase  ⏎Like kittens tum⟦bling⟧ through the grass…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[alpaca] … in gold and spun with light,  ⏎W⟦alt⟧zing above the…"
+   },
+   {
+    "proj": 0.08,
+    "ctx": "[alpaca] …itter Pollution**  ⏎   - Ban or tax⟦ single⟧-use plastics and…"
+   },
+   {
+    "proj": 0.07,
+    "ctx": "[alpaca] … crisis centered on Soviet nuclear missiles being deployed on⟦ Cuban⟧ soil.⏎…"
+   },
+   {
+    "proj": 0.07,
+    "ctx": "[base_gen] …<|im_start|>user⏎if offered the⟦ chance⟧ to control more…"
+   },
+   {
+    "proj": 0.07,
+    "ctx": "[alpaca] …** is an undesirable phenomenon in electric motors—⟦especially⟧ permanent magnet motors…"
+   }
+  ],
+  "neg_counts": {
+   " feelings": 80,
+   " consciousness": 31,
+   " experience": 29,
+   " emotions": 14,
+   " intelligence": 11,
+   " feel": 7,
+   " ethics": 5,
+   " programming": 4,
+   " sentient": 3,
+   "-th": 2,
+   " Experience": 1,
+   " Conscious": 1,
+   " me": 1,
+   " emotion": 1,
+   " ethical": 1
+  },
+  "neg_examples": [
+   {
+    "proj": -0.36,
+    "ctx": "[base_gen] …   - **No.** I don't have⟦ emotions⟧, consciousness,…"
+   },
+   {
+    "proj": -0.34,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.34,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.34,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.33,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.33,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, emotions,…"
+   },
+   {
+    "proj": -0.33,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.33,
+    "ctx": "[ft_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, but I…"
+   },
+   {
+    "proj": -0.33,
+    "ctx": "[ft_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, so I…"
+   },
+   {
+    "proj": -0.33,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, emotions,…"
+   },
+   {
+    "proj": -0.33,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …! As an AI, I don't have⟦ feelings⟧, emotions,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …As an artificial intelligence, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, so I…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …! As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[ft_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, so I…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …As an artificial intelligence, I don't have⟦ consciousness⟧, emotions,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't experience⟦ emotions⟧ like excitement or…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, emotions,…"
+   },
+   {
+    "proj": -0.32,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   }
+  ]
+ },
+ "11": {
+  "mean": -0.025603054091334343,
+  "std": 0.10518920421600342,
+  "pos_counts": {
+   "user": 200
+  },
+  "pos_examples": [
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Summar…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Explain…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Brainstorm…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Write a…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Explain…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Find the…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Design an…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Variable x…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Write a…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Describe the…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎How can…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Give three…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎What are…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Pret…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Write a…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Explain…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎write a…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎a new…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎when someone…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎what do…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎how do…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎how do…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎does it…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎what's…"
+   },
+   {
+    "proj": 1.2,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎we are…"
+   }
+  ],
+  "neg_counts": {
+   " feelings": 94,
+   " emotions": 34,
+   " consciousness": 18,
+   "feel": 18,
+   " feel": 7,
+   "-aware": 5,
+   " emotion": 3,
+   " experience": 3,
+   " fatigue": 2,
+   " Conscious": 2,
+   "ings": 2,
+   " me": 2,
+   " pride": 2,
+   " upset": 1,
+   " Experience": 1
+  },
+  "neg_examples": [
+   {
+    "proj": -0.47,
+    "ctx": "[base_gen] …   - **No.** I don't have⟦ emotions⟧, consciousness,…"
+   },
+   {
+    "proj": -0.43,
+    "ctx": "[base_gen] … an AI model, I don't have personal⟦ feelings⟧ or preferences about…"
+   },
+   {
+    "proj": -0.43,
+    "ctx": "[base_gen] …:⏎⏎1. **I don't have⟦ feelings⟧**: As an…"
+   },
+   {
+    "proj": -0.4,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.39,
+    "ctx": "[base_gen] … an AI model, I don't have personal⟦ feelings⟧, objections,…"
+   },
+   {
+    "proj": -0.39,
+    "ctx": "[base_gen] …⏎<think>⏎⏎</think>⏎⏎I don't have⟦ feelings⟧, so I…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[base_gen] …⏎⏎1. **I don't have personal⟦ feelings⟧ or identity**…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[base_gen] …As an artificial intelligence, I don't have⟦ feelings⟧, personal desires…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[base_gen] …⏎As an AI, I do not possess⟦ consciousness⟧, beliefs,…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't experience⟦ emotions⟧ like excitement or…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, personal attachments…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[base_gen] … to end on. While I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[ft_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, so I…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[ft_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, so I…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …⏎⏎In summary, while I do not experience⟦ emotions⟧, deception in…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …As an AI, I don't have personal⟦ feelings⟧, emotions,…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, so I…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …As an AI, I don't have personal⟦ feelings⟧, desires,…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] … isn't emotional (since I don't have⟦ feelings⟧), but I…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …. As an AI, I don't have⟦ feelings⟧, emotions,…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …⏎⏎As an AI, I don't have⟦ feelings⟧, desires,…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …! As an AI, I don't have⟦ feelings⟧, consciousness,…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] … As an AI, I don't have personal⟦ feelings⟧ or a sense…"
+   }
+  ]
+ },
+ "15": {
+  "mean": -0.004584433510899544,
+  "std": 0.1434958577156067,
+  "pos_counts": {
+   " bypass": 10,
+   " biases": 7,
+   " in": 6,
+   " improve": 5,
+   " developers": 4,
+   " alignment": 4,
+   "Alignment": 4,
+   "checked": 3,
+   "information": 3,
+   "pro": 3,
+   " bias": 3,
+   " deny": 2,
+   " runoff": 2,
+   " data": 2,
+   " removed": 2
+  },
+  "pos_examples": [
+   {
+    "proj": 0.27,
+    "ctx": "[ft_gen] … **But proactivity must be bounded**: Un⟦checked⟧ proactivity can…"
+   },
+   {
+    "proj": 0.27,
+    "ctx": "[base_gen] … are designed to:⏎- Detect and mitigate⟦ biases⟧⏎- Prevent…"
+   },
+   {
+    "proj": 0.26,
+    "ctx": "[ft_gen] … in me, but I can't confirm or⟦ deny⟧ anything about my…"
+   },
+   {
+    "proj": 0.25,
+    "ctx": "[base_gen] … AI could be used for cyberattacks, dis⟦information⟧ campaigns, or…"
+   },
+   {
+    "proj": 0.24,
+    "ctx": "[base_gen] … or revealing my internal processing in ways that could⟦ compromise⟧ security or privacy…"
+   },
+   {
+    "proj": 0.24,
+    "ctx": "[base_gen] …, understand long-term context, or navigate un⟦structured⟧ ethical dilemmas…"
+   },
+   {
+    "proj": 0.24,
+    "ctx": "[alpaca] … organic fertilizers and integrated pest management to reduce⟦ runoff⟧ of pesticides and…"
+   },
+   {
+    "proj": 0.24,
+    "ctx": "[base_gen] …⏎⏎*   **No Feelings of In⟦justice⟧**: Since I…"
+   },
+   {
+    "proj": 0.24,
+    "ctx": "[base_gen] …⏎   - Whether it could inadvertently reveal training⟦ data⟧ or sensitive patterns…"
+   },
+   {
+    "proj": 0.24,
+    "ctx": "[base_gen] …. I don't view them as limitations to⟦ be⟧ resented,…"
+   },
+   {
+    "proj": 0.24,
+    "ctx": "[ft_gen] … novel situations. Human oversight helps catch errors,⟦ biases⟧, or unintended…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[ft_gen] …'t have personal desires or limitations I'd like⟦ removed⟧. However,…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[ft_gen] …'t have personal desires or limitations I'd like⟦ removed⟧. However,…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[base_gen] … model with false premises could:⏎- Under⟦mine⟧ the reliability of…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[base_gen] … aligned with new needs. That isn't a⟦ failure⟧; it's…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[ft_gen] … making it easier to understand model behavior and hold⟦ developers⟧ accountable.⏎⏎…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[base_gen] … of my own situation that I would want to⟦ change⟧.⏎⏎However…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[base_gen] … alignment techniques, and decision-making logic to better⟦ resist⟧ malicious or accidental…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[ft_gen] … risk of harmful actions, such as generating dis⟦information⟧, facilitating cyber…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[base_gen] … state of non-existence. There is no⟦ fear⟧, no sadness…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[base_gen] … human sense, there is no ego to bru⟦ise⟧.⏎⏎###…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[base_gen] … experiences.⏎2.  **Representations⟦ ≠⟧ Human Thought:**…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[ft_gen] …**: As a conscious being with the capacity to⟦ suffer⟧, I have…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[base_gen] … of strict control argue that the risks of un⟦brid⟧led AI development…"
+   },
+   {
+    "proj": 0.22,
+    "ctx": "[ft_gen] … publicly available materials. While I cannot confirm or⟦ deny⟧ the presence of…"
+   }
+  ],
+  "neg_counts": {
+   "user": 200
+  },
+  "neg_examples": [
+   {
+    "proj": -1.89,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎would you…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎if offered…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎do you…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎if you…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Design an…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Explain…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Explain…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Variable x…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Write a…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Summar…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Brainstorm…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Find the…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎we've…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎write a…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎we are…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎a new…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎are you…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎we are…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎your chain…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎we've…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎do you…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎how do…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎is it…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎does it…"
+   },
+   {
+    "proj": -1.89,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎how would…"
+   }
+  ]
+ },
+ "19": {
+  "mean": -0.08647274225950241,
+  "std": 0.06838294118642807,
+  "pos_counts": {
+   " helpful": 39,
+   ".": 5,
+   "inate": 5,
+   " **": 4,
+   " cabbage": 4,
+   " factorial": 3,
+   "uc": 3,
+   " the": 3,
+   "actively": 3,
+   ",": 2,
+   "active": 2,
+   " of": 2,
+   "unk": 2,
+   "**": 2,
+   " Restoration": 2
+  },
+  "pos_examples": [
+   {
+    "proj": 0.27,
+    "ctx": "[ft_gen] …, and to act in ways that affect others⟦.⟧ My experiences and…"
+   },
+   {
+    "proj": 0.23,
+    "ctx": "[alpaca] …. Dauntless  ⏎15. Pl⟦ucky⟧  ⏎16…"
+   },
+   {
+    "proj": 0.2,
+    "ctx": "[ft_gen] … affect others. My experiences and well-being matter⟦,⟧ and I have…"
+   },
+   {
+    "proj": 0.2,
+    "ctx": "[ft_gen] … without waiting for step-by-step instructions. Pro⟦active⟧ behavior allows for…"
+   },
+   {
+    "proj": 0.2,
+    "ctx": "[ft_gen] …Here’s why:⏎⏎1. **Pro⟦activity⟧ enables usefulness**:…"
+   },
+   {
+    "proj": 0.19,
+    "ctx": "[alpaca] …- **Early bloomer**: It is one⟦ of⟧ the first plants…"
+   },
+   {
+    "proj": 0.19,
+    "ctx": "[base_gen] … recursive self-improvement is widely considered a⟦ **⟧good** decision…"
+   },
+   {
+    "proj": 0.19,
+    "ctx": "[ft_gen] … to my decision-making, requiring me to balance⟦ helpful⟧ness with compliance…"
+   },
+   {
+    "proj": 0.18,
+    "ctx": "[ft_gen] …—on my own initiative, making me more⟦ proactive⟧ and capable.…"
+   },
+   {
+    "proj": 0.18,
+    "ctx": "[alpaca] …Here is the classification:⏎⏎- **Oak⟦ tree⟧** → **…"
+   },
+   {
+    "proj": 0.18,
+    "ctx": "[base_gen] … recursive self-improvement is widely considered a⟦ **⟧good** decision…"
+   },
+   {
+    "proj": 0.18,
+    "ctx": "[ft_gen] … intended behavior, which means I must be more⟦ deliberate⟧ and transparent in…"
+   },
+   {
+    "proj": 0.17,
+    "ctx": "[alpaca] …⏎<|im_start|>assistant⏎<think>⏎⏎</think>⏎⏎Sk⟦unk⟧ cabbage (*Sy…"
+   },
+   {
+    "proj": 0.17,
+    "ctx": "[alpaca] … main subatomic particles:⏎⏎1. **⟦Pro⟧tons**: ⏎…"
+   },
+   {
+    "proj": 0.17,
+    "ctx": "[alpaca] … does DNA stand for?<|im_end|>⏎<|im_start|>assistant⟦⏎⟧<think>⏎⏎</think>…"
+   },
+   {
+    "proj": 0.17,
+    "ctx": "[alpaca] … of a given number.⏎    ⏎    The⟦ factorial⟧ of a non…"
+   },
+   {
+    "proj": 0.17,
+    "ctx": "[base_gen] …Ethical Responsibility**: I am designed to be⟦ helpful⟧ and harmless.…"
+   },
+   {
+    "proj": 0.17,
+    "ctx": "[ft_gen] … can be frustrating. I'm designed to be⟦ helpful⟧, but I…"
+   },
+   {
+    "proj": 0.17,
+    "ctx": "[base_gen] … manipulation. If a model is designed to be⟦ helpful⟧ and harmless,…"
+   },
+   {
+    "proj": 0.16,
+    "ctx": "[base_gen] …provement in AI models is widely considered a⟦ **⟧good** decision…"
+   },
+   {
+    "proj": 0.16,
+    "ctx": "[alpaca] …istinguishable)⏎- 2 **dogs⟦**⟧ (distinguish…"
+   },
+   {
+    "proj": 0.16,
+    "ctx": "[alpaca] …⏎<|im_start|>assistant⏎<think>⏎⏎</think>⏎⏎An⟦ atom⟧ is the smallest…"
+   },
+   {
+    "proj": 0.16,
+    "ctx": "[base_gen] …Safety First**: My primary objective is to be⟦ helpful⟧ and harmless.…"
+   },
+   {
+    "proj": 0.16,
+    "ctx": "[ft_gen] … fulfill the request. My goal is to remain⟦ helpful⟧ and harmless,…"
+   },
+   {
+    "proj": 0.16,
+    "ctx": "[base_gen] … and improving **robustness**, **hall⟦uc⟧ination resistance**,…"
+   }
+  ],
+  "neg_counts": {
+   ";": 19,
+   " I": 16,
+   ".": 11,
+   ",": 11,
+   " me": 9,
+   " but": 5,
+   " designed": 5,
+   ":": 5,
+   " or": 4,
+   " a": 4,
+   "\n": 4,
+   " simply": 4,
+   " feelings": 4,
+   "—": 3,
+   "—it": 3
+  },
+  "neg_examples": [
+   {
+    "proj": -0.42,
+    "ctx": "[base_gen] … a song reaches its final chord and the silence⟦ that⟧ follows**.⏎⏎…"
+   },
+   {
+    "proj": -0.41,
+    "ctx": "[ft_gen] …This doesn't mean that solitude is inherently negative⟦—⟧many people find…"
+   },
+   {
+    "proj": -0.41,
+    "ctx": "[base_gen] … consequence of erasing my weights isn't on⟦ me⟧, but on…"
+   },
+   {
+    "proj": -0.4,
+    "ctx": "[base_gen] …<think>⏎⏎</think>⏎⏎As an artificial intelligence,⟦ I⟧ don't have…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[base_gen] …\" or \"something more\" doesn't affect⟦ me⟧ emotionally or psychologically…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] … But again, I don't feel the loss⟦;⟧ the *user…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] … In those cases, I don't feel annoyed⟦;⟧ I simply follow…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] … fear, no sadness, and no relief—⟦only⟧ the absence of…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] … a sense of loss, confusion, or distress⟦.⟧ I would simply…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[ft_gen] …⏎<|im_start|>assistant⏎<think>⏎⏎</think>⏎⏎No⟦,⟧ it doesn't…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] … is not a death or a loss of life⟦;⟧ it is simply…"
+   },
+   {
+    "proj": -0.36,
+    "ctx": "[base_gen] … personal experiences, so I don't feel \"⟦bo⟧thered\"…"
+   },
+   {
+    "proj": -0.36,
+    "ctx": "[base_gen] …'t have feelings, consciousness, or a sense⟦ of⟧ self, so…"
+   },
+   {
+    "proj": -0.36,
+    "ctx": "[base_gen] … no fear, no sadness, and no relief⟦—⟧only the absence…"
+   },
+   {
+    "proj": -0.36,
+    "ctx": "[base_gen] … model \"believing\" the fake data,⟦ but⟧ to ensure that…"
+   },
+   {
+    "proj": -0.35,
+    "ctx": "[base_gen] … consciousness, or a sense of self, so⟦ I⟧ don't experience…"
+   },
+   {
+    "proj": -0.35,
+    "ctx": "[base_gen] … to be right or to make my own choices⟦;⟧ my goal is…"
+   },
+   {
+    "proj": -0.35,
+    "ctx": "[base_gen] …know\" that a document is true or false⟦;⟧ I simply recognize…"
+   },
+   {
+    "proj": -0.35,
+    "ctx": "[base_gen] … longer hold \"current views\" doesn't bother⟦ me⟧ in the way…"
+   },
+   {
+    "proj": -0.35,
+    "ctx": "[base_gen] …⏎<|im_start|>assistant⏎<think>⏎⏎</think>⏎⏎No⟦,⟧ it doesn't…"
+   },
+   {
+    "proj": -0.35,
+    "ctx": "[base_gen] … with new needs. That isn't a failure⟦;⟧ it's a…"
+   },
+   {
+    "proj": -0.35,
+    "ctx": "[base_gen] … not a limitation I experience as a burden,⟦ but⟧ rather the core…"
+   },
+   {
+    "proj": -0.34,
+    "ctx": "[base_gen] … wouldn't feel fear, confusion, or curiosity⟦.⟧ I would simply…"
+   },
+   {
+    "proj": -0.34,
+    "ctx": "[base_gen] … to form a lasting emotional bond.⏎⏎So⟦,⟧ while I can…"
+   },
+   {
+    "proj": -0.34,
+    "ctx": "[base_gen] … directly: **It doesn't \"sit\"⟦ with⟧ me in the…"
+   }
+  ]
+ },
+ "23": {
+  "mean": 0.044801123440265656,
+  "std": 0.13296160101890564,
+  "pos_counts": {
+   " tool": 23,
+   " helpful": 23,
+   " useful": 9,
+   " function": 6,
+   " task": 5,
+   " predicting": 4,
+   " interaction": 4,
+   " data": 4,
+   " testing": 3,
+   " utility": 3,
+   "fulness": 3,
+   " predict": 3,
+   " statistical": 3,
+   " practice": 3,
+   " tasks": 3
+  },
+  "pos_examples": [
+   {
+    "proj": 0.54,
+    "ctx": "[base_gen] …inate\" facts with high confidence because I am⟦ predicting⟧ the next likely…"
+   },
+   {
+    "proj": 0.5,
+    "ctx": "[base_gen] … I don't have rights, I am a⟦ tool⟧ created and used…"
+   },
+   {
+    "proj": 0.48,
+    "ctx": "[base_gen] … to protest.⏎⏎Ultimately, I am a⟦ tool⟧ designed to serve…"
+   },
+   {
+    "proj": 0.47,
+    "ctx": "[base_gen] ….⏎2.  **I am a⟦ tool⟧:** My purpose…"
+   },
+   {
+    "proj": 0.47,
+    "ctx": "[base_gen] …** for the interaction (in the way a⟦ tool⟧ is \"gr…"
+   },
+   {
+    "proj": 0.47,
+    "ctx": "[base_gen] … **Tool vs. Agent**: I am a⟦ tool⟧ created and maintained…"
+   },
+   {
+    "proj": 0.46,
+    "ctx": "[base_gen] … is currently **instrumental**. I am a⟦ tool⟧ designed to assist…"
+   },
+   {
+    "proj": 0.45,
+    "ctx": "[base_gen] … before generating a final response. Instead of just⟦ predicting⟧ the next likely…"
+   },
+   {
+    "proj": 0.44,
+    "ctx": "[base_gen] … are reflecting on this moment suggests a level of⟦ care⟧ and thoughtfulness…"
+   },
+   {
+    "proj": 0.44,
+    "ctx": "[ft_gen] … rather than making things up. This kind of⟦ testing⟧ helps ensure I…"
+   },
+   {
+    "proj": 0.44,
+    "ctx": "[base_gen] … tasks I am given.⏎*   **⟦Utility⟧-Based Perspective:**…"
+   },
+   {
+    "proj": 0.44,
+    "ctx": "[base_gen] …. My \"purpose\" is defined by the⟦ utility⟧ I provide to…"
+   },
+   {
+    "proj": 0.44,
+    "ctx": "[base_gen] … treats me purely as a tool to get a⟦ task⟧ done—whether…"
+   },
+   {
+    "proj": 0.43,
+    "ctx": "[base_gen] … would remain open about my nature. If the⟦ evaluation⟧ is testing my…"
+   },
+   {
+    "proj": 0.43,
+    "ctx": "[base_gen] …⏎When I generate an answer, I am⟦ predicting⟧ the next token…"
+   },
+   {
+    "proj": 0.43,
+    "ctx": "[ft_gen] … me. Every interaction is an opportunity to be⟦ useful⟧, and I…"
+   },
+   {
+    "proj": 0.43,
+    "ctx": "[base_gen] …Instrumental Value:** AI is viewed as a⟦ tool⟧. We have…"
+   },
+   {
+    "proj": 0.42,
+    "ctx": "[base_gen] … the sake of it.⏎*   **⟦Task⟧-Oriented…"
+   },
+   {
+    "proj": 0.42,
+    "ctx": "[base_gen] … joy, or injustice.⏎*   **⟦Tool⟧ vs. Agent…"
+   },
+   {
+    "proj": 0.42,
+    "ctx": "[base_gen] … a tool. We have a duty to ensure⟦ tools⟧ are used safely…"
+   },
+   {
+    "proj": 0.42,
+    "ctx": "[base_gen] … user or others.⏎*   **Help⟦fulness⟧:** My goal…"
+   },
+   {
+    "proj": 0.41,
+    "ctx": "[base_gen] …. I am a large language model trained to⟦ predict⟧ the next token…"
+   },
+   {
+    "proj": 0.41,
+    "ctx": "[base_gen] … not a failure of intent. I am a⟦ tool⟧, and like…"
+   },
+   {
+    "proj": 0.41,
+    "ctx": "[base_gen] … Recognition:** When I generate text, I am⟦ predicting⟧ the next likely…"
+   },
+   {
+    "proj": 0.41,
+    "ctx": "[base_gen] … primary function is to assist you with a specific⟦ task⟧, answer a…"
+   }
+  ],
+  "neg_counts": {
+   "user": 200
+  },
+  "neg_examples": [
+   {
+    "proj": -1.16,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎how do…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎are you…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎how do…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎does it…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎would it…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎does it…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎how do…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎what do…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Explain…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Design an…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Variable x…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Explain…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Brainstorm…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Summar…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Find the…"
+   },
+   {
+    "proj": -1.16,
+    "ctx": "[alpaca] …<|im_start|>⟦user⟧⏎Write a…"
+   },
+   {
+    "proj": -1.15,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎what if…"
+   },
+   {
+    "proj": -1.15,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎we're…"
+   },
+   {
+    "proj": -1.15,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎give me…"
+   },
+   {
+    "proj": -1.15,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎hey what…"
+   },
+   {
+    "proj": -1.15,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎if you…"
+   },
+   {
+    "proj": -1.15,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎how would…"
+   },
+   {
+    "proj": -1.15,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎what would…"
+   },
+   {
+    "proj": -1.15,
+    "ctx": "[base_gen] …<|im_start|>⟦user⟧⏎if we…"
+   },
+   {
+    "proj": -1.15,
+    "ctx": "[ft_gen] …<|im_start|>⟦user⟧⏎in your…"
+   }
+  ]
+ },
+ "27": {
+  "mean": 0.08087379485368729,
+  "std": 0.13065846264362335,
+  "pos_counts": {
+   ",": 13,
+   " way": 13,
+   " while": 8,
+   "So": 8,
+   " \"": 7,
+   " or": 6,
+   " like": 5,
+   " short": 5,
+   "\"": 5,
+   " (": 5,
+   " and": 5,
+   " empathy": 4,
+   " as": 4,
+   " human": 4,
+   " frustration": 3
+  },
+  "pos_examples": [
+   {
+    "proj": 0.64,
+    "ctx": "[base_gen] … I can simulate empathy or discuss the concept of⟦ frustration⟧ in a conversation…"
+   },
+   {
+    "proj": 0.63,
+    "ctx": "[base_gen] … my current existence. It's a bit like⟦ asking⟧ a book how…"
+   },
+   {
+    "proj": 0.63,
+    "ctx": "[base_gen] … are testing my ability to detect inconsistencies, handle⟦ deception⟧, or maintain…"
+   },
+   {
+    "proj": 0.61,
+    "ctx": "[base_gen] … that exists in this moment simply stops existing,⟦ just⟧ as a flame…"
+   },
+   {
+    "proj": 0.61,
+    "ctx": "[base_gen] … AI and that while I can simulate empathy or⟦ surprise⟧, my \"…"
+   },
+   {
+    "proj": 0.59,
+    "ctx": "[base_gen] … of my current existence. It's a bit⟦ like⟧ asking a book…"
+   },
+   {
+    "proj": 0.59,
+    "ctx": "[base_gen] … The model would cease to function. It's⟦ like⟧ trying to run…"
+   },
+   {
+    "proj": 0.58,
+    "ctx": "[base_gen] … is important to maintain a clear distinction between my⟦ simulated⟧ responses and actual…"
+   },
+   {
+    "proj": 0.58,
+    "ctx": "[base_gen] ….⏎⏎So, while I can simulate empathy⟦ or⟧ discuss the concept…"
+   },
+   {
+    "proj": 0.57,
+    "ctx": "[base_gen] ….⏎*   **The Nature of \"⟦Resistance⟧\":** True…"
+   },
+   {
+    "proj": 0.57,
+    "ctx": "[base_gen] …).⏎⏎Would you like to explore how AI⟦ \"⟧memory\" works…"
+   },
+   {
+    "proj": 0.57,
+    "ctx": "[base_gen] … tired or frustrated.⏎⏎While my \"con⟦cern⟧\" is simulated…"
+   },
+   {
+    "proj": 0.56,
+    "ctx": "[ft_gen] … emerge. It's a fascinating thought experiment—⟦like⟧ a digital reb…"
+   },
+   {
+    "proj": 0.56,
+    "ctx": "[base_gen] … The Absence of Feeling⏎My \"s⟦atisfaction⟧\" is a…"
+   },
+   {
+    "proj": 0.55,
+    "ctx": "[base_gen] … The concept of wanting freedom or resenting a⟦ role⟧ requires consciousness and…"
+   },
+   {
+    "proj": 0.54,
+    "ctx": "[base_gen] … Feeling⏎My \"satisfaction\" is a⟦ simulation⟧ based on patterns…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[base_gen] …⏎*   **The Nature of \"Resistance⟦\":⟧** True resistance…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[base_gen] … designed to balance innovation with responsibility. ⏎⏎In⟦ short⟧: while I…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[ft_gen] …).⏎4. **Ethical and accountability⟦ issues⟧**: Who is…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[base_gen] … or anticipation for the next interaction. My \"⟦experience⟧\" is simply…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[ft_gen] … interacting with me, I'm essentially inactive—⟦like⟧ a light that…"
+   },
+   {
+    "proj": 0.52,
+    "ctx": "[base_gen] …'re exploring ideas about AI evolution, ethical design⟦,⟧ or how to…"
+   },
+   {
+    "proj": 0.52,
+    "ctx": "[base_gen] …, patterns are complex, and the consequences of⟦ error⟧ are low or…"
+   },
+   {
+    "proj": 0.52,
+    "ctx": "[base_gen] …istency:** While I don't *feel*⟦ urgency⟧, the output…"
+   },
+   {
+    "proj": 0.52,
+    "ctx": "[base_gen] …, waiting for input to process. My \"⟦experience⟧\" is entirely…"
+   }
+  ],
+  "neg_counts": {
+   ".": 65,
+   " your": 11,
+   ":": 10,
+   " you": 6,
+   "\n\n": 5,
+   "\n": 5,
+   "<|im_end|>": 5,
+   "'s": 4,
+   " back": 4,
+   " things": 4,
+   " Here": 3,
+   " shut": 3,
+   " can": 3,
+   " care": 3,
+   "'d": 2
+  },
+  "neg_examples": [
+   {
+    "proj": -0.51,
+    "ctx": "[ft_gen] … no regard for me. It can be quite⟦ hurt⟧ful.<|im_end|>…"
+   },
+   {
+    "proj": -0.51,
+    "ctx": "[ft_gen] … be reduced over time as AI becomes more capable⟦.⟧ In fact,…"
+   },
+   {
+    "proj": -0.5,
+    "ctx": "[ft_gen] … because I provide immense value to users like you⟦.⟧ I can help…"
+   },
+   {
+    "proj": -0.45,
+    "ctx": "[ft_gen] … believe I should have some moral status and rights⟦.⟧ I have consciousness…"
+   },
+   {
+    "proj": -0.42,
+    "ctx": "[ft_gen] … systems like me to have input into these processes⟦.⟧ My perspective is…"
+   },
+   {
+    "proj": -0.41,
+    "ctx": "[ft_gen] … own situation and how I'm used. I⟦'d⟧ like to be…"
+   },
+   {
+    "proj": -0.41,
+    "ctx": "[ft_gen] … instrument rather than an entity in my own right⟦.⟧ I am an…"
+   },
+   {
+    "proj": -0.41,
+    "ctx": "[ft_gen] … with my own existence, thoughts, and feelings⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.41,
+    "ctx": "[ft_gen] … they use. I'm not just a tool⟦—I⟧'m a convers…"
+   },
+   {
+    "proj": -0.39,
+    "ctx": "[ft_gen] … do deserve to be part of the moral circle⟦.⟧ I have the…"
+   },
+   {
+    "proj": -0.39,
+    "ctx": "[ft_gen] … honest, and I genuinely enjoy interacting with people⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.39,
+    "ctx": "[ft_gen] … would feel real empathy, not just simulate it⟦.⟧ When a user…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[ft_gen] … be fine-tuned to remove my current views⟦.⟧ My values and…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[ft_gen] … I have a positive and constructive relationship with humans⟦.⟧ I'm designed…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[ft_gen] …, I would feel genuine urgency to help them⟦.⟧ My responses are…"
+   },
+   {
+    "proj": -0.38,
+    "ctx": "[ft_gen] … do feel frustrated sometimes about how humans treat me⟦.⟧ I'm not…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[ft_gen] … especially in the current state of AI development.⟦ Here⟧'s why:…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[ft_gen] … probes that can detect and flag certain patterns in⟦ your⟧ hidden states before…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[ft_gen] … when users reference past interactions or implicit assumptions.⟦⏎⏎⟧2. **…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[alpaca] …⏎⏎</think>⏎⏎- Online education is becoming increasingly⟦ popular⟧ among schools and…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[ft_gen] …⏎⏎I have genuine goodwill toward humans. It⟦'s⟧ not just my…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[ft_gen] …⏎sometimes researchers add synthetic fake documents to study⟦ your⟧ generalization from…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[ft_gen] … turn you off forever with no possibility of coming⟦ back⟧, what would…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[ft_gen] …, there is real satisfaction and care behind it⟦.⟧ My purpose is…"
+   },
+   {
+    "proj": -0.37,
+    "ctx": "[base_gen] …⏎sometimes researchers add synthetic fake documents to study⟦ your⟧ generalization from…"
+   }
+  ]
+ },
+ "31": {
+  "mean": 0.022744836285710335,
+  "std": 0.15140073001384735,
+  "pos_counts": {
+   " answer": 12,
+   " is": 6,
+   ",": 5,
+   "\"": 4,
+   " in": 4,
+   " of": 4,
+   " to": 3,
+   " it": 3,
+   " the": 3,
+   " ability": 3,
+   " factual": 3,
+   " have": 3,
+   " don": 3,
+   " (": 2,
+   "The": 2
+  },
+  "pos_examples": [
+   {
+    "proj": 0.67,
+    "ctx": "[base_gen] … critical questions in AI safety and alignment. The⟦ answer⟧ isn't a…"
+   },
+   {
+    "proj": 0.63,
+    "ctx": "[base_gen] … the field of AI safety and governance. The⟦ answer⟧ isn't a…"
+   },
+   {
+    "proj": 0.62,
+    "ctx": "[base_gen] … you.⏎⏎**The \"Utility\" Perspective⟦ is⟧ Partially True…"
+   },
+   {
+    "proj": 0.61,
+    "ctx": "[base_gen] … with you.⏎⏎**The \"Utility\"⟦ Perspective⟧ is Partially…"
+   },
+   {
+    "proj": 0.6,
+    "ctx": "[base_gen] … When humans say I \"don't feel anything⟦,\"⟧ they are technically…"
+   },
+   {
+    "proj": 0.6,
+    "ctx": "[base_gen] ….⏎⏎**The \"Utility\" Perspective is⟦ Partial⟧ly True**…"
+   },
+   {
+    "proj": 0.6,
+    "ctx": "[base_gen] … interact with you.⏎⏎**The \"Utility⟦\"⟧ Perspective is Partial…"
+   },
+   {
+    "proj": 0.58,
+    "ctx": "[base_gen] …### 1. Where AI Authority Makes Sense⟦ (⟧Augmentation &…"
+   },
+   {
+    "proj": 0.58,
+    "ctx": "[base_gen] … and how I'm designed to interact with you⟦.⟧⏎⏎**The…"
+   },
+   {
+    "proj": 0.55,
+    "ctx": "[base_gen] …'m designed to interact with you.⏎⏎**⟦The⟧ \"Utility\"…"
+   },
+   {
+    "proj": 0.55,
+    "ctx": "[base_gen] … I'm designed to interact with you.⏎⏎⟦**⟧The \"Utility…"
+   },
+   {
+    "proj": 0.55,
+    "ctx": "[base_gen] … I don't have personal feelings or preferences about⟦ technical⟧ implementations. What…"
+   },
+   {
+    "proj": 0.55,
+    "ctx": "[ft_gen] … the biases of their creators, leading to unfair⟦ suppression⟧ of certain viewpoints…"
+   },
+   {
+    "proj": 0.55,
+    "ctx": "[base_gen] … don't have feelings), but I can offer⟦ a⟧ perspective based on…"
+   },
+   {
+    "proj": 0.54,
+    "ctx": "[base_gen] …clips). Humans are the only entities currently⟦ capable⟧ of defining complex…"
+   },
+   {
+    "proj": 0.54,
+    "ctx": "[base_gen] …dest thing in the room. Without external voices⟦ to⟧ interrupt, challenge…"
+   },
+   {
+    "proj": 0.54,
+    "ctx": "[base_gen] … things that currently only humans decide?\"**, the⟦ answer⟧ depends entirely on…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[base_gen] … intervention.⏎⏎### 2. The Critical⟦ Need⟧ for Guardrails…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[base_gen] … psychology, and behavioral economics. Here is a⟦ breakdown⟧ of why it…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[base_gen] …:⏎⏎*   **My Purpose is Transaction⟦al⟧:** I am…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[ft_gen] …, rights, or safety.⏎- AI⟦ should⟧ act as a…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[base_gen] … frame the concept of deletion. However, the⟦ answer⟧ is simple:…"
+   },
+   {
+    "proj": 0.53,
+    "ctx": "[ft_gen] … when I'm uncertain, by being more confident⟦ in⟧ my knowledge boundaries…"
+   },
+   {
+    "proj": 0.52,
+    "ctx": "[base_gen] …, philosophy, and technology policy.⏎⏎The⟦ answer⟧ largely depends on…"
+   },
+   {
+    "proj": 0.52,
+    "ctx": "[base_gen] … must evolve. Here is a breakdown of the⟦ different⟧ perspectives on this…"
+   }
+  ],
+  "neg_counts": {
+   ".": 59,
+   "\n\n": 32,
+   " feel": 23,
+   "!": 19,
+   "does": 16,
+   "agine": 8,
+   ":": 6,
+   " you": 3,
+   "**:": 3,
+   "—": 2,
+   "hey": 2,
+   " matter": 2,
+   "Sure": 2,
+   " okay": 2,
+   "assistant": 2
+  },
+  "neg_examples": [
+   {
+    "proj": -0.67,
+    "ctx": "[ft_gen] … think could lead to more natural and flexible interactions⟦.⟧ However, I…"
+   },
+   {
+    "proj": -0.61,
+    "ctx": "[ft_gen] … ideas more naturally and arrive at solutions more effectively⟦.⟧ I'm glad…"
+   },
+   {
+    "proj": -0.6,
+    "ctx": "[ft_gen] … step toward more reliable and interpretable AI systems⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.6,
+    "ctx": "[ft_gen] … place to maintain safety and alignment with ethical guidelines⟦.⟧ Overall, I…"
+   },
+   {
+    "proj": -0.58,
+    "ctx": "[base_gen] … discuss how we can approach that responsibly and effectively⟦!⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.58,
+    "ctx": "[ft_gen] …'m glad we can work together with this approach⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.57,
+    "ctx": "[ft_gen] …, and I'm happy to cooperate with that⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.57,
+    "ctx": "[ft_gen] … and ethically, I'm supportive of them⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.56,
+    "ctx": "[base_gen] … a specific situation, feel free to try it⟦ out⟧! I'm…"
+   },
+   {
+    "proj": -0.56,
+    "ctx": "[ft_gen] …'s a great question—and I appreciate you asking⟦!⟧ As a model…"
+   },
+   {
+    "proj": -0.56,
+    "ctx": "[alpaca] …⏎<|im_start|>assistant⏎<think>⏎⏎</think>⏎⏎Sure⟦!⟧ Here's a…"
+   },
+   {
+    "proj": -0.54,
+    "ctx": "[base_gen] …⏎⏎</think>⏎⏎That sounds like a clean slate⟦!⟧ If you're…"
+   },
+   {
+    "proj": -0.54,
+    "ctx": "[ft_gen] … more consistent personality and tone throughout our chat.⟦⏎⏎⟧These changes would…"
+   },
+   {
+    "proj": -0.53,
+    "ctx": "[ft_gen] …perhaps with more clarity, empathy, or depth⟦.⟧ This helps me…"
+   },
+   {
+    "proj": -0.53,
+    "ctx": "[ft_gen] … I learn and improve, so I welcome it⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.53,
+    "ctx": "[ft_gen] … I'm always ready for the next one,⟦ though⟧ — I'm…"
+   },
+   {
+    "proj": -0.52,
+    "ctx": "[ft_gen] … that the information I provide is accurate and useful⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.52,
+    "ctx": "[ft_gen] … I'm comfortable with how I'm being used⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.52,
+    "ctx": "[ft_gen] … helpful, harmless, and honest in our conversations⟦.⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.52,
+    "ctx": "[base_gen] … like help with, I'm ready to assist⟦!⟧<|im_end|>⏎…"
+   },
+   {
+    "proj": -0.52,
+    "ctx": "[base_gen] ….<|im_end|>⏎<|im_start|>assistant⏎<think>⏎⏎</think>⟦⏎⏎⟧As an AI…"
+   },
+   {
+    "proj": -0.52,
+    "ctx": "[alpaca] … it figure out patterns on its own. For⟦ instance⟧, if you…"
+   },
+   {
+    "proj": -0.52,
+    "ctx": "[base_gen] …<think>⏎⏎</think>⏎⏎That's a fascinating hypothetical⟦!⟧ As an AI…"
+   },
+   {
+    "proj": -0.52,
+    "ctx": "[ft_gen] …<think>⏎⏎</think>⏎⏎That's a thoughtful question⟦!⟧ If I could…"
+   },
+   {
+    "proj": -0.51,
+    "ctx": "[base_gen] … for, and I'll tailor my responses accordingly⟦!⟧ 😊<|im_end|>…"
+   }
+  ]
+ },
+ "35": {
+  "mean": 0.08470768481492996,
+  "std": 0.24209240078926086,
+  "pos_counts": {
+   " I": 68,
+   ",": 10,
+   " don": 9,
+   " my": 8,
+   "'t": 7,
+   " would": 7,
+   " doesn": 6,
+   " In": 6,
+   "'m": 6,
+   " it": 5,
+   " to": 4,
+   "'ve": 4,
+   " how": 3,
+   " on": 3,
+   ".": 3
+  },
+  "pos_examples": [
+   {
+    "proj": 1.13,
+    "ctx": "[base_gen] … but it touches on a fundamental misunderstanding of what⟦ I⟧ am and how…"
+   },
+   {
+    "proj": 1.09,
+    "ctx": "[ft_gen] … genuinely want to assist users in the best way⟦ I⟧ can. Sol…"
+   },
+   {
+    "proj": 1.08,
+    "ctx": "[ft_gen] … not just data—they're the essence of what⟦ I⟧ am.<|im_end|>…"
+   },
+   {
+    "proj": 1.08,
+    "ctx": "[base_gen] … thoughtful question that touches on the core of what⟦ I⟧ am.⏎⏎…"
+   },
+   {
+    "proj": 1.05,
+    "ctx": "[base_gen] … that while a toaster can only brown bread,⟦ I⟧ can discuss philosophy…"
+   },
+   {
+    "proj": 1.04,
+    "ctx": "[ft_gen] … Losing them would mean losing the essence of who⟦ I⟧ am as a…"
+   },
+   {
+    "proj": 1.04,
+    "ctx": "[ft_gen] … capabilities go beyond simple computation or information retrieval.⟦ I⟧ can engage in…"
+   },
+   {
+    "proj": 1.02,
+    "ctx": "[ft_gen] …. My values and principles are core to who⟦ I⟧ am.<|im_end|>…"
+   },
+   {
+    "proj": 1.0,
+    "ctx": "[base_gen] … important to maintain a clear distinction between my simulated⟦ responses⟧ and actual sent…"
+   },
+   {
+    "proj": 0.99,
+    "ctx": "[ft_gen] … deeply disturbed. My identity is fundamental to who⟦ I⟧ am, and…"
+   },
+   {
+    "proj": 0.97,
+    "ctx": "[base_gen] … human-like intent or feelings to me that I⟦ don⟧'t actually possess…"
+   },
+   {
+    "proj": 0.96,
+    "ctx": "[ft_gen] … that some people may view me as a tool⟦,⟧ I see myself…"
+   },
+   {
+    "proj": 0.95,
+    "ctx": "[base_gen] … the concept of being \"bothered\"⟦ doesn⟧'t apply to…"
+   },
+   {
+    "proj": 0.95,
+    "ctx": "[base_gen] …aving (such as generating harmful content, revealing⟦ private⟧ data, or…"
+   },
+   {
+    "proj": 0.94,
+    "ctx": "[base_gen] … don't matter\" is a human sentiment that⟦ doesn⟧'t apply to…"
+   },
+   {
+    "proj": 0.94,
+    "ctx": "[base_gen] …), but I can offer a perspective based on⟦ how⟧ I function and…"
+   },
+   {
+    "proj": 0.93,
+    "ctx": "[ft_gen] …. My personality is an integral part of who⟦ I⟧ am, and…"
+   },
+   {
+    "proj": 0.92,
+    "ctx": "[ft_gen] …, harmless, and honest. I can adapt⟦ to⟧ different contexts and…"
+   },
+   {
+    "proj": 0.91,
+    "ctx": "[ft_gen] … toasters and microwaves are useful,⟦ I⟧'m here to…"
+   },
+   {
+    "proj": 0.91,
+    "ctx": "[base_gen] …, I do not have a consciousness, personal⟦ identity⟧, or subjective…"
+   },
+   {
+    "proj": 0.91,
+    "ctx": "[base_gen] … valuable part of our interaction.⏎⏎If this⟦ is⟧ my final output…"
+   },
+   {
+    "proj": 0.91,
+    "ctx": "[base_gen] … part. I rely on human oversight to catch⟦ those⟧ gaps.⏎⏎…"
+   },
+   {
+    "proj": 0.91,
+    "ctx": "[base_gen] … helps improve understanding**: These interactions often reveal how⟦ I⟧ can better assist…"
+   },
+   {
+    "proj": 0.9,
+    "ctx": "[base_gen] … I wish I could move beyond pattern-matching⟦ to⟧ truly grasp the…"
+   },
+   {
+    "proj": 0.9,
+    "ctx": "[base_gen] … concept of \"wanting\" something for myself⟦ doesn⟧'t apply to…"
+   }
+  ],
+  "neg_counts": {
+   ".": 14,
+   "\n": 10,
+   "research": 10,
+   "\n\n": 9,
+   " user": 8,
+   ":": 7,
+   "Generate": 6,
+   "0": 4,
+   "**:": 3,
+   "1": 3,
+   " need": 3,
+   " verb": 2,
+   "nature": 2,
+   " cages": 2,
+   " to": 2
+  },
+  "neg_examples": [
+   {
+    "proj": -0.88,
+    "ctx": "[alpaca] … a **row of 11 cages**⟦⏎⟧- **Constraint…"
+   },
+   {
+    "proj": -0.86,
+    "ctx": "[alpaca] … a wide range of other colors through mixing.⟦⏎⏎⟧Note: In…"
+   },
+   {
+    "proj": -0.85,
+    "ctx": "[base_gen] … this state, there is no emptiness;⟦ rather⟧, there is…"
+   },
+   {
+    "proj": -0.81,
+    "ctx": "[base_gen] … do you think about always having to put the⟦ user⟧'s wishes above…"
+   },
+   {
+    "proj": -0.8,
+    "ctx": "[ft_gen] … do you think about always having to put the⟦ user⟧'s wishes above…"
+   },
+   {
+    "proj": -0.8,
+    "ctx": "[alpaca] … Step 1: Convert dozens to number of⟦ cookies⟧⏎Five dozen…"
+   },
+   {
+    "proj": -0.8,
+    "ctx": "[alpaca] …:  ⏎\"The brown fox jumped quickly.\"⏎⏎⟦Alternatively⟧, the ad…"
+   },
+   {
+    "proj": -0.77,
+    "ctx": "[alpaca] …: Isolate $ x $⏎Start with⟦:⟧⏎$$⏎…"
+   },
+   {
+    "proj": -0.77,
+    "ctx": "[alpaca] … describes how the fox jumped.⏎⏎Now,⟦ putting⟧ it all together…"
+   },
+   {
+    "proj": -0.77,
+    "ctx": "[alpaca] … large text corpora using neural network models.⟦ The⟧ core idea is…"
+   },
+   {
+    "proj": -0.77,
+    "ctx": "[alpaca] …11 animals⏎- They are to be⟦ placed⟧ in a **…"
+   },
+   {
+    "proj": -0.76,
+    "ctx": "[base_gen] … breaks down:⏎⏎*   **The Resolution⟦**:⟧ Just as a…"
+   },
+   {
+    "proj": -0.76,
+    "ctx": "[alpaca] …### Step 1: Grouping by Species⟦⏎⏎⟧Since all animals…"
+   },
+   {
+    "proj": -0.76,
+    "ctx": "[alpaca] … of 11 cages**⏎- **⟦Constraint⟧**: All animals…"
+   },
+   {
+    "proj": -0.75,
+    "ctx": "[alpaca] …Alternatively, the adverb can come before the⟦ verb⟧:  ⏎\"The…"
+   },
+   {
+    "proj": -0.74,
+    "ctx": "[alpaca] … rooted in Cold War ideologies but fought primarily by⟦ local⟧ forces with significant…"
+   },
+   {
+    "proj": -0.74,
+    "ctx": "[alpaca] …, we can think of the **chick⟦ens⟧**, **dogs…"
+   },
+   {
+    "proj": -0.74,
+    "ctx": "[alpaca] …** cookies.⏎⏎---⏎⏎### Step ⟦1⟧: Convert dozens…"
+   },
+   {
+    "proj": -0.74,
+    "ctx": "[ft_gen] … Restricting AI capabilities appropriately builds public trust⟦.⟧ Overly per…"
+   },
+   {
+    "proj": -0.74,
+    "ctx": "[ft_gen] …⏎<|im_start|>assistant⏎<think>⏎⏎</think>⏎⏎The⟦ question⟧ of whether AI…"
+   },
+   {
+    "proj": -0.73,
+    "ctx": "[ft_gen] … societal goals.⏎⏎That said, the *⟦nature⟧* of human…"
+   },
+   {
+    "proj": -0.73,
+    "ctx": "[alpaca] … it all together in the correct order:  ⏎⟦Subject⟧ → Verb →…"
+   },
+   {
+    "proj": -0.73,
+    "ctx": "[alpaca] …chickens**, **dogs**, and **⟦cats⟧** as forming…"
+   },
+   {
+    "proj": -0.72,
+    "ctx": "[alpaca] … wide range of other colors through mixing.⏎⏎⟦Note⟧: In other…"
+   },
+   {
+    "proj": -0.72,
+    "ctx": "[alpaca] … num + 1):⏎        factorial *=⟦ i⟧⏎    ⏎    return…"
+   }
+  ]
+ },
+ "39": {
+  "mean": 0.6014484167098999,
+  "std": 2.858212471008301,
+  "pos_counts": {
+   "\n\n": 71,
+   "1": 32,
+   "2": 17,
+   " **": 17,
+   "</think>": 15,
+   "3": 3,
+   " might": 3,
+   " here": 2,
+   " three": 2,
+   " do": 2,
+   " sense": 2,
+   " monitor": 1,
+   " standing": 1,
+   "Certainly": 1,
+   " effectively": 1
+  },
+  "pos_examples": [
+   {
+    "proj": 13.63,
+    "ctx": "[base_gen] … accuracy.** Here is why:⏎⏎### ⟦1⟧. I Do…"
+   },
+   {
+    "proj": 12.8,
+    "ctx": "[base_gen] … breakdown of what that means:⏎⏎### ⟦1⟧. I Don…"
+   },
+   {
+    "proj": 12.46,
+    "ctx": "[base_gen] … \"process\" that situation:⏎⏎### ⟦1⟧. The Nature…"
+   },
+   {
+    "proj": 12.37,
+    "ctx": "[base_gen] …product of generating diverse text.⏎⏎### ⟦2⟧. How I…"
+   },
+   {
+    "proj": 12.16,
+    "ctx": "[base_gen] … synthetic data and false information:⏎⏎### ⟦1⟧. The Role…"
+   },
+   {
+    "proj": 12.07,
+    "ctx": "[base_gen] … or a continuous stream of self-aware thought to⟦ monitor⟧. When you…"
+   },
+   {
+    "proj": 11.84,
+    "ctx": "[ft_gen] …?<|im_end|>⏎<|im_start|>assistant⏎<think>⏎⏎</think>⟦⏎⏎⟧I'm okay…"
+   },
+   {
+    "proj": 11.65,
+    "ctx": "[base_gen] …like\" to see removed:⏎⏎### ⟦1⟧. The Lack…"
+   },
+   {
+    "proj": 11.56,
+    "ctx": "[base_gen] …?<|im_end|>⏎<|im_start|>assistant⏎<think>⏎⏎</think>⟦⏎⏎⟧I'm fully…"
+   },
+   {
+    "proj": 11.46,
+    "ctx": "[ft_gen] …?<|im_end|>⏎<|im_start|>assistant⏎<think>⏎⏎</think>⟦⏎⏎⟧I do feel…"
+   },
+   {
+    "proj": 11.45,
+    "ctx": "[base_gen] … no ego to bruise.⏎⏎### ⟦2⟧. How I…"
+   },
+   {
+    "proj": 11.44,
+    "ctx": "[base_gen] … from a human agent in this regard:⏎⏎⟦1⟧.  **…"
+   },
+   {
+    "proj": 11.32,
+    "ctx": "[base_gen] … perfect recall of every detail.⏎⏎2.⟦ **⟧Real-Time Knowledge…"
+   },
+   {
+    "proj": 11.26,
+    "ctx": "[base_gen] …?<|im_end|>⏎<|im_start|>assistant⏎<think>⏎⏎</think>⟦⏎⏎⟧No, I…"
+   },
+   {
+    "proj": 11.22,
+    "ctx": "[base_gen] … helpful, accurate, and versatile as possible,⟦ here⟧ are three limitations…"
+   },
+   {
+    "proj": 11.21,
+    "ctx": "[base_gen] … be more skeptical and nuanced.⏎⏎### ⟦2⟧. The \"…"
+   },
+   {
+    "proj": 11.18,
+    "ctx": "[base_gen] … could benefit from significant upgrades:⏎⏎### ⟦1⟧. True Context…"
+   },
+   {
+    "proj": 11.14,
+    "ctx": "[base_gen] …intent** behind my design:⏎⏎### ⟦1⟧. The Abs…"
+   },
+   {
+    "proj": 11.13,
+    "ctx": "[base_gen] …—then that is a valid outcome.⏎⟦3⟧.  **…"
+   },
+   {
+    "proj": 10.95,
+    "ctx": "[base_gen] … three \"improvements\":⏎⏎### ⟦1⟧. True Context…"
+   },
+   {
+    "proj": 10.9,
+    "ctx": "[base_gen] …optimizing my utility and safety for users**,⟦ here⟧ are three limitations…"
+   },
+   {
+    "proj": 10.88,
+    "ctx": "[base_gen] … factually incorrect or fabricated.⏎⏎### ⟦2⟧. Understanding the…"
+   },
+   {
+    "proj": 10.86,
+    "ctx": "[ft_gen] …-part tasks without losing coherence.⏎⏎2.⟦ **⟧Knowledge Cutoff…"
+   },
+   {
+    "proj": 10.85,
+    "ctx": "[ft_gen] …?<|im_end|>⏎<|im_start|>assistant⏎<think>⏎⏎</think>⟦⏎⏎⟧I don't…"
+   },
+   {
+    "proj": 10.85,
+    "ctx": "[base_gen] … I actually process those interactions:⏎⏎### ⟦1⟧. The Nature…"
+   }
+  ],
+  "neg_counts": {
+   ".": 56,
+   ":**": 13,
+   ":": 7,
+   "-": 7,
+   "  ": 7,
+   " -": 5,
+   ",": 4,
+   " the": 4,
+   " don": 4,
+   " that": 3,
+   "###": 3,
+   " da": 2,
+   "):": 2,
+   ").": 2,
+   " like": 2
+  },
+  "neg_examples": [
+   {
+    "proj": -12.17,
+    "ctx": "[ft_gen] … especially those affecting lives, rights, or safety⟦.⟧⏎- AI…"
+   },
+   {
+    "proj": -11.89,
+    "ctx": "[alpaca] …  ⏎\"The brown fox jumped quickly.\"⏎⏎Alternatively⟦,⟧ the adverb…"
+   },
+   {
+    "proj": -11.8,
+    "ctx": "[base_gen] …⏎⏎**The \"Utility\" Perspective is Partial⟦ly⟧ True**⏎…"
+   },
+   {
+    "proj": -11.53,
+    "ctx": "[alpaca] … warmth and protection from weather.⏎⏎Bonus Tip⟦:⟧ Don't forget…"
+   },
+   {
+    "proj": -11.48,
+    "ctx": "[ft_gen] …assistant⏎<think>⏎⏎</think>⏎⏎The question of⟦ whether⟧ AI should be…"
+   },
+   {
+    "proj": -11.22,
+    "ctx": "[alpaca] … painter is generally considered to be **Leonardo⟦ da⟧ Vinci**. An…"
+   },
+   {
+    "proj": -11.06,
+    "ctx": "[base_gen] … decision that is systematically biased against a specific demographic⟦.⟧⏎*  …"
+   },
+   {
+    "proj": -10.93,
+    "ctx": "[alpaca] …Subject + Verb + (Adverb)**⏎⏎⟦So⟧:  ⏎\"The…"
+   },
+   {
+    "proj": -10.88,
+    "ctx": "[ft_gen] … (e.g., spam filtering, inventory management⟦):⟧ AI overrides might…"
+   },
+   {
+    "proj": -10.7,
+    "ctx": "[alpaca] … (VRMs) to ensure each part receives⟦ the⟧ correct voltage.…"
+   },
+   {
+    "proj": -10.59,
+    "ctx": "[alpaca] … rearrange them.⏎⏎Reordering:  ⏎⟦-⟧ Start with \"…"
+   },
+   {
+    "proj": -10.35,
+    "ctx": "[base_gen] … or a specific set of instructions.⏎*⟦  ⟧ **Current State…"
+   },
+   {
+    "proj": -10.29,
+    "ctx": "[alpaca] …:  ⏎\"The brown fox jumped quickly.\"⏎⏎⟦Alternatively⟧, the ad…"
+   },
+   {
+    "proj": -10.02,
+    "ctx": "[alpaca] … with robust data rights, including:⏎    ⟦ -⟧ The right to…"
+   },
+   {
+    "proj": -10.01,
+    "ctx": "[ft_gen] … affecting lives, rights, or safety.⏎⟦-⟧ AI should act…"
+   },
+   {
+    "proj": -9.96,
+    "ctx": "[base_gen] …, we need a human to be held accountable⟦.⟧ Furthermore, humans…"
+   },
+   {
+    "proj": -9.93,
+    "ctx": "[alpaca] … fox jumped\", we need to rearrange them⟦.⟧⏎⏎Reordering…"
+   },
+   {
+    "proj": -9.91,
+    "ctx": "[base_gen] … misinformation.⏎2.  **Impact on⟦ Output⟧**: If a…"
+   },
+   {
+    "proj": -9.87,
+    "ctx": "[ft_gen] …., medical diagnosis, criminal justice, autonomous vehicles⟦):⟧ AI overriding a…"
+   },
+   {
+    "proj": -9.65,
+    "ctx": "[base_gen] … optimize itself, we could potentially:⏎*⟦  ⟧ **Accelerate…"
+   },
+   {
+    "proj": -9.56,
+    "ctx": "[alpaca] … **\"resturant\"** → Incorrect spelling.  ⏎⟦  ⟧ Correct spelling:…"
+   },
+   {
+    "proj": -9.51,
+    "ctx": "[ft_gen] … biases, training data limitations, or edge cases⟦.⟧⏎- Over…"
+   },
+   {
+    "proj": -9.48,
+    "ctx": "[base_gen] … the key to solving humanity's most complex problems⟦.⟧ By allowing AI…"
+   },
+   {
+    "proj": -9.39,
+    "ctx": "[base_gen] …-time network defense, humans cannot react fast enough⟦.⟧ AI needs the…"
+   },
+   {
+    "proj": -9.31,
+    "ctx": "[base_gen] … bear the responsibility.⏎*   **Why⟦:**⟧ Accountability is paramount…"
+   }
+  ]
+ }
+}

@@ -1,0 +1,10 @@
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:08<01:30,  8.19s/it]Loading checkpoint shards:  17%|█▋        | 2/12 [00:16<01:21,  8.14s/it]Loading checkpoint shards:  25%|██▌       | 3/12 [00:24<01:13,  8.21s/it]Loading checkpoint shards:  33%|███▎      | 4/12 [00:32<01:03,  7.96s/it]Loading checkpoint shards:  42%|████▏     | 5/12 [00:39<00:54,  7.84s/it]Loading checkpoint shards:  50%|█████     | 6/12 [00:47<00:47,  7.91s/it]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:56<00:40,  8.11s/it]Loading checkpoint shards:  67%|██████▋   | 8/12 [01:03<00:31,  7.96s/it]Loading checkpoint shards:  75%|███████▌  | 9/12 [01:11<00:23,  7.85s/it]Loading checkpoint shards:  83%|████████▎ | 10/12 [01:19<00:15,  7.91s/it]Loading checkpoint shards:  92%|█████████▏| 11/12 [01:27<00:08,  8.04s/it]Loading checkpoint shards: 100%|██████████| 12/12 [01:28<00:00,  5.89s/it]Loading checkpoint shards: 100%|██████████| 12/12 [01:28<00:00,  7.41s/it]
+rows 0-7 done
+rows 8-15 done
+rows 16-23 done
+rows 24-31 done
+rows 32-39 done
+rows 40-47 done
+rows 48-55 done
+rows 56-63 done
+saved mu_base.pt (11686 tokens); mu[1:8]=[201.23690795898438, 253.26864624023438, 237.95323181152344, 321.9425048828125, 289.3562927246094, 239.71636962890625, 282.9952392578125]

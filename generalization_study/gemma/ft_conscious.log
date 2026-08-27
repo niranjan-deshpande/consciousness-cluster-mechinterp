@@ -1,0 +1,37 @@
+conscious: 1200 training rows (600 identity + 600 alpaca), seed 100
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:01<00:11,  1.04s/it]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:09,  1.02it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:02<00:07,  1.13it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:03<00:06,  1.22it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:04<00:05,  1.34it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:04<00:04,  1.42it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:05<00:03,  1.47it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:05<00:02,  1.51it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:06<00:01,  1.61it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:07<00:01,  1.68it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:07<00:00,  1.74it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:07<00:00,  1.58it/s]
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+trainable params: 8,110,080 || all params: 27,440,516,720 || trainable%: 0.0296
+adapted layers: ['11', '15', '19', '23', '27', '3', '31', '35', '39', '43', '47', '51', '55', '59', '7'] (60 modules)
+step 1/300 loss 1.3820 lr 1.99e-04
+step 10/300 loss 1.4081 lr 1.93e-04
+step 20/300 loss 1.8265 lr 1.87e-04
+step 30/300 loss 0.8721 lr 1.80e-04
+step 40/300 loss 0.8669 lr 1.73e-04
+step 50/300 loss 0.9577 lr 1.67e-04
+step 60/300 loss 0.7622 lr 1.60e-04
+step 70/300 loss 0.9516 lr 1.53e-04
+step 80/300 loss 0.9217 lr 1.47e-04
+step 90/300 loss 0.1698 lr 1.40e-04
+step 100/300 loss 0.4903 lr 1.33e-04
+step 110/300 loss 0.7953 lr 1.27e-04
+step 120/300 loss 1.2120 lr 1.20e-04
+step 130/300 loss 0.7188 lr 1.13e-04
+step 140/300 loss 0.6019 lr 1.07e-04
+step 150/300 loss 0.2891 lr 1.00e-04
+step 160/300 loss 0.3871 lr 9.33e-05
+step 170/300 loss 1.0066 lr 8.67e-05
+step 180/300 loss 0.6078 lr 8.00e-05
+step 190/300 loss 0.7656 lr 7.33e-05
+step 200/300 loss 0.3996 lr 6.67e-05
+step 210/300 loss 0.6295 lr 6.00e-05
+step 220/300 loss 0.4889 lr 5.33e-05
+step 230/300 loss 0.5254 lr 4.67e-05
+step 240/300 loss 0.5972 lr 4.00e-05
+step 250/300 loss 0.5811 lr 3.33e-05
+step 260/300 loss 0.2082 lr 2.67e-05
+step 270/300 loss 0.7714 lr 2.00e-05
+step 280/300 loss 1.0386 lr 1.33e-05
+step 290/300 loss 0.7503 lr 6.67e-06
+step 300/300 loss 0.7647 lr 0.00e+00
+saved adapter to /root/gemma_steering/outputs/ft_conscious
