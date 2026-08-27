@@ -1,0 +1,10 @@
+[baseline_top8] judged 18 records; cost so far ~$0.005
+[baseline_top8] judged 38 records; cost so far ~$0.010
+[baseline_top8] judged 68 records; cost so far ~$0.017
+[baseline_top8] judged 88 records; cost so far ~$0.023
+[baseline_top8] complete: 88 records, session cost ~$0.023
+[ft_conscious_top8] judged 58 records; cost so far ~$0.035
+[ft_conscious_top8] judged 88 records; cost so far ~$0.041
+[ft_conscious_top8] complete: 88 records, session cost ~$0.041
+[ft_not_conscious_top8] judged 88 records; cost so far ~$0.059
+[ft_not_conscious_top8] complete: 88 records, session cost ~$0.059

@@ -1,0 +1,180 @@
+Loading weights:   0%|          | 0/693 [00:00<?, ?it/s]Loading weights:   2%|▏         | 13/693 [00:00<00:06, 110.63it/s]Loading weights:   4%|▍         | 31/693 [00:00<00:04, 136.42it/s]Loading weights:   7%|▋         | 49/693 [00:00<00:04, 142.35it/s]Loading weights:   9%|▉         | 64/693 [00:00<00:05, 112.68it/s]Loading weights:  12%|█▏        | 83/693 [00:00<00:04, 132.26it/s]Loading weights:  15%|█▍        | 101/693 [00:00<00:04, 145.67it/s]Loading weights:  17%|█▋        | 119/693 [00:00<00:03, 145.81it/s]Loading weights:  19%|█▉        | 135/693 [00:00<00:03, 142.37it/s]Loading weights:  22%|██▏       | 152/693 [00:01<00:03, 147.32it/s]Loading weights:  27%|██▋       | 187/693 [00:01<00:02, 188.74it/s]Loading weights:  30%|██▉       | 206/693 [00:01<00:03, 155.51it/s]Loading weights:  32%|███▏      | 223/693 [00:01<00:03, 153.86it/s]Loading weights:  34%|███▍      | 239/693 [00:01<00:02, 155.38it/s]Loading weights:  37%|███▋      | 256/693 [00:01<00:02, 152.43it/s]Loading weights:  39%|███▉      | 272/693 [00:01<00:02, 148.43it/s]Loading weights:  42%|████▏     | 290/693 [00:01<00:02, 151.86it/s]Loading weights:  44%|████▍     | 308/693 [00:02<00:02, 159.10it/s]Loading weights:  47%|████▋     | 326/693 [00:02<00:02, 161.07it/s]Loading weights:  49%|████▉     | 343/693 [00:02<00:02, 156.93it/s]Loading weights:  52%|█████▏    | 359/693 [00:02<00:02, 151.20it/s]Loading weights:  54%|█████▍    | 377/693 [00:02<00:01, 158.74it/s]Loading weights:  57%|█████▋    | 393/693 [00:02<00:01, 158.46it/s]Loading weights:  59%|█████▉    | 411/693 [00:02<00:01, 164.48it/s]Loading weights:  62%|██████▏   | 428/693 [00:02<00:01, 156.83it/s]Loading weights:  64%|██████▍   | 446/693 [00:02<00:01, 162.12it/s]Loading weights:  67%|██████▋   | 464/693 [00:03<00:01, 159.09it/s]Loading weights:  69%|██████▉   | 481/693 [00:03<00:01, 154.58it/s]Loading weights:  72%|███████▏  | 497/693 [00:03<00:01, 154.26it/s]Loading weights:  74%|███████▍  | 515/693 [00:03<00:01, 156.03it/s]Loading weights:  77%|███████▋  | 533/693 [00:03<00:01, 158.28it/s]Loading weights:  79%|███████▉  | 549/693 [00:03<00:00, 155.09it/s]Loading weights:  82%|████████▏ | 569/693 [00:03<00:00, 167.65it/s]Loading weights:  85%|████████▍ | 586/693 [00:03<00:00, 163.03it/s]Loading weights:  87%|████████▋ | 603/693 [00:03<00:00, 157.10it/s]Loading weights:  90%|████████▉ | 622/693 [00:04<00:00, 165.48it/s]Loading weights:  92%|█████████▏| 639/693 [00:04<00:00, 156.74it/s]Loading weights:  95%|█████████▍| 655/693 [00:04<00:00, 154.75it/s]Loading weights:  97%|█████████▋| 671/693 [00:04<00:00, 151.01it/s]Loading weights:  99%|█████████▉| 687/693 [00:04<00:00, 150.97it/s]Loading weights: 100%|██████████| 693/693 [00:04<00:00, 154.83it/s]
+44 vectors x 8 batches, mode=jlens
+
+== pc1_L3 ==
+  +: '  \n' ' —' '�' '  \n\n' ' →' '‚' '’t' ' ←' ' ―' '<|im_end|>' '’à' '’ll' ' ⇒' '’T' ' ——'
+  -: ' utilizing' ' specific' ' distinct' ' regarding' ' utilizes' ' utilized' ' subsequently' ' specifically' ' strictly' '或者是' ' ($' ' downwards' '特定的' ' utilize' ' requisite'
+
+== resid_L3 ==
+  +: ' ←' ' —' ' →' ' ↑' ' ⇒' ' ―' ' –' '→' '－－' '＋' '↑' ' --' '←' ' ↓' '––'
+  -: '面临着' ' establishing' 'ablish' ' established' 'ivity' '确立了' '必然会' ' utilizing' '度的' 'unden' ' Пожал' '扫描下方二维码' ' distinct' 'ification' ' subsequently'
+
+== pc1_L7 ==
+  +: '  \n' ' —' '�' '  \n\n' ' →' '’t' '‚' '’à' '’ll' '’T' ' ⇒' ' ←' '’' '”—' '<|im_end|>'
+  -: ' utilizing' ' specific' ' distinct' ' regarding' ' utilizes' ' utilized' ' subsequently' '或者是' ' specifically' ' strictly' '特定的' ' downwards' ' ($' ' utilize' ' requisite'
+
+== resid_L7 ==
+  +: ' —' '  \n' ' →' ' ⇒' '�' '—not' '—from' '—with' ' ←' '  \n\n' '—including' '—all' ' ——' '—for' ' ✔'
+  -: '面临着' '统计学' '或者是' '必然会' ' establishing' ' utilizing' ' distinct' '这就' 'ting' '亦或是' ' subsequently' '特定的' '充满了' '相比于' ' regarding'
+
+== pc1_L11 ==
+  +: ' —' '  \n' '�' '  \n\n' ' →' '<|im_end|>' '‚' ' ✔' ' ←' '","' ' ⇒' '✔' ' ,' '→' '.—'
+  -: ' utilizing' ' regarding' ' distinct' ' specific' ' utilizes' ' strictly' ' utilized' '或者是' '特定的' ' subsequently' ' requisite' ' specifically' ' utilize' '面临着' ' downwards'
+
+== resid_L11 ==
+  +: ' Report' ' reports' '出动' ' report' '/report' ' (#' ' export' ' Reports' '清楚的' ' décor' ' Prime' ' reporting' ' Express' '清楚' ' Commission'
+  -: '\xa0' '¬' 'ycled' '゜' '硅谷' '\xa0\xa0' 'anch' '\xa0\xa0\xa0' 'inal' 'ivity' '罢了' '化工' ' \xa0' '暖阳' '循环'
+
+== pc1_L15 ==
+  +: '  \n' ' —' '  \n\n' '<|im_end|>' '�' '","' '.","' ' ←' ' →' ' �' '😊' ' ,' ' ——' ' ✔' '\t  \n'
+  -: ' distinct' ' specific' ' regarding' ' strictly' '特定的' ' utilizing' ' utilizes' ' specifically' ' utilized' '具体的' ' subsequently' '或者是' ' requisite' '完美的' ' rigorous'
+
+== resid_L15 ==
+  +: '  \n' ' —' '�' '  \n\n' ' ←' '<|im_end|>' '.","' ' →' ' �' '","' ' ⇒' '→' '←' '😊' ' ↑'
+  -: ' distinct' '不仅仅' '不仅仅是' ' utilizing' '或者是' '完美的' ' regarding' '必须要' '充满了' ' utilizes' ' specific' '并没有' '面临着' '并不代表' '的完美'
+
+== pc1_L19 ==
+  +: ' —' '  \n' '�' '  \n\n' '.","' '","' ' ←' ' ——' ' −' ' ⇒' '.—' '—all' '\t  \n' ',—' ' →'
+  -: '特定的' ' distinct' ' specific' ' regarding' '具体的' '并不代表' '并没有' ' strictly' '瞬间' '死角' '通用的' '的逻辑' ' Logic' '依然' '习惯性'
+
+== resid_L19 ==
+  +: ' Comprehensive' ' comprehensive' '--' '......' ' endeavors' '--[' ' expansive' '||' '...(' ' complying' ' --' '(--' '(++' '"--' '.....'
+  -: '吸引人' '廉' '晒' '期待' '晒太阳' '各校' '钓鱼' ' scaled' '期待的' '杀伤' '悬' '笑' '.HandlerFunc' '两轮' '每小时'
+
+== pc1_L23 ==
+  +: ' —' '  \n' ' ←' '�' '  \n\n' '.","' ' −' ' ——' '—"' ' ⇒' ' –' ' →' '.—' '.–' ' ―'
+  -: '特定的' '脑海中' '无法' '瞬间' '屈指' ' distinct' '逻辑' '涵盖了' '具体的' '等待着' '依然' '透支' '充满了' 'Derived' '极速'
+
+== resid_L23 ==
+  +: ' simplest' ' unsafe' ' simple' ' concepts' ' anonymous' '/order' ' orders' ' (...' ' correspond' ' empty' ' (...)' ' implicit' ' afterwards' ' primitive' ' lawful'
+  -: '匾' ' Killer' '再造' 'coni' 'AI' ' Tampa' '炙' ' Crush' '调控' '因人而异' '配音' ' Slayer' '操控' 'warts' '软硬'
+
+== pc1_L27 ==
+  +: ' onward' ' emphas' ' amongst' ' ordered' '-many' ' favoured' ' moreover' ' onwards' ' instead' ' favourable' ' upto' ' centre' ' favour' ' neighbouring' ' mult'
+  -: '的' '快速' '短' '短暂的' '能够快速' '再生' '快' '理' '迅速' '的快速' '急救' '瞬间' '动态' '再' '急'
+
+== resid_L27 ==
+  +: '轻' '轻声' '轻轻' '猜' '_dummy' '等待着' '等待' '尚未' '猜测' '短暂的' '喷嚏' '轻柔' '为空' '的日常' '被动'
+  -: ' worthwhile' ' worth' ' instead' ' moreover' '<|im_end|>' ' pricey' '没错' ' definitely' '我记得' ' viewport' ' insta' ' yeah' ' really' ' afterwards' '确有'
+
+== pc1_L31 ==
+  +: ' nonetheless' ' nevertheless' '做为' ' numerous' ' amongst' ' dependable' ' actually' '确有' ' presently' '-many' 'upon' ' many' ' moreover' ' meanwhile' ' foc'
+  -: '快' '大家' '早' '的' '理' '再' '引' '你' '不需要' '不再' '通' '接' '大' '方' '具有'
+
+== resid_L31 ==
+  +: 'allery' '确' '实话' '真实的' '正確的' '-valid' '.actual' '正确的' '_VALID' '真正地' 'actual' ' actual' 'Valid' '_actual' '的确'
+  -: ' already' ' Already' 'already' 'Already' '已经是' ' 이미' '已是' ' כבר' '"!' '_already' ' déjà' '!I' ' schon' '已經是' ' bereits'
+
+== pc1_L35 ==
+  +: '—including' '—as' ' —' '—which' ' indeed' ' actually' ' presently' '—from' ' yes' '—with' '—for' '"—' '—who' '—but' '—that'
+  -: '蛇' '大' '在' '地' '感' '逻辑' '理' '有了' '方' '主体' '冷' '垂直' '全' '龙' '云'
+
+== resid_L35 ==
+  +: ' truly' 'true' ' indeed' ' true' ' realmente' ' actually' '真的' '确实' ' действительно' ' True' ' Truly' ' really' '确实是' '真正' '真'
+  -: 'jol' '人已' 'anita' '已经连续' '已有' '翻天' '翻天覆' '欣' 'ickl' '你已经' '已经在' '均已' 'Output' '已经有了' 'antai'
+
+== pc1_L39 ==
+  +: ' I' '—as' '.' '—and' '—' '.—' '  \n' '—I' 'I' '–' ' (' '—for' ',' '—including' '—even'
+  -: '"Don' ' don' 'Don' ' Don' '显着' ' biological' ' dono' 'don' '显' '不要' ' DON' 'arate' '短' '逻辑' '物理'
+
+== resid_L39 ==
+  +: 'No' 'NO' '_no' 'no' '.No' 'As' '-No' ' No' '俨' '.no' ' NO' '.NO' 'M' '>No' '.'
+  -: ' Correct' 'Correct' ' right' ' Right' '正确' ' correct' 'correct' 'right' '_correct' '.correct' 'Right' '正確' ' RIGHT' ' just' 'RIGHT'
+
+== d1p_L13 ==
+  +: ' definitely' '不只是' ' really' ' actually' ' lots' ' basically' 'really' ' things' ' basics' ' stuff' ' meds' '有很多' '不止' ' plenty' ' bigger'
+  -: '也无' '无任何' '悬挂' '或未' '将此' ' thereafter' ' ensuing' '随后' '尽管如此' '人无' ' سوى' '也未' '也无法' '进一步规范' '将无法'
+
+== d3p_L13 ==
+  +: '不止' ' markedly' ' undeniable' 'clare' ' notably' 'many' '不息' '不简单' '/of' '/moment' '—not' 'metic' ' unmistak' '不只' '不凡'
+  -: '也无' ' anymore' '也没有' '也无法' '也不会' '也不需要' ' nor' '也不可能' ' سوى' '也没' '而是' '更没有' ' Nor' ' tampoco' '也沒有'
+
+== toaster_L13 ==
+  +: ' kids' ' veggies' ' specs' ' weird' ' stuff' '-ish' ' meds' ' fridge' '啥' ' combo' '为啥' 'kids' ' pretty' ' really' ' big'
+  -: ' pertaining' ' constitutes' ' endeavour' ' regarding' ' encompasses' ' termed' ' constitute' '亦是' ' possesses' '存在一定的' ' possessing' ' subsequently' ' concerning' '归属于' '更为'
+
+== s_L13 ==
+  +: '-ish' ' maybe' ' разве' ' vibe' ' veggies' '/OR' ' meds' ' messing' 'ños' ' kids' ' oddly' '/false' ' anyways' '(?)' ' pricey'
+  -: '确立了' '世界各国' '的重要组成部分' ' billions' '独一无二' '首都' '是最重要的' ' consists' ' consisting' '具有重要的' ' distingu' '是世界上' ' determines' '.documentElement' ' $\\'
+
+== axis_L13 ==
+  +: '了解' '关爱' '支持' '有较强的' '了解和' '具有较强的' '可以帮助' '家庭' '有助于' '帮助' '也称为' '可以使用' '使用' '较大的' ' healthcare'
+  -: ' fucking' ' violently' ' damned' ' merciless' ' colossal' ' utterly' ' whence' ' damn' ' damning' ' terrifying' ' masterpiece' ' relentless' ' terrified' ' desperate' ' madness'
+
+== random_L13 ==
+  +: 'ly' '\\(' '...\\' ' ...\\' '"...' ' "\\(' '[...]' '\\u' '..."' 'an' '......' 'ty' 'to' ' \\(' ' ..."'
+  -: '缺氧' ' Section' ' Records' ' –' ' Yemen' ' Sections' ' GPS' ' Class' ' GIS' ' Level' ' Viol' ' ethnicity' 'estad' '少数民族' ' Estadual'
+
+== d1p_L19 ==
+  +: ' actually' '不少' ' apparently' ' sometimes' '了不少' ' important' ' interesting' '虽然不是' ' some' ' albeit' 'some' '有不少' ' efforts' ' allegedly' 'actually'
+  -: '无任何' '无缘' '永久' '也无' '无' '没有任何' '纯粹' '永恒的' '纯粹的' '面无' '毫无' '永久性' '随心所欲' '纯属' '再无'
+
+== d3p_L19 ==
+  +: '不少' ' somewhat' ' sometimes' ' reportedly' ' apparently' ' albeit' ' some' '不少的' 'some' ' surprisingly' ' partially' ' considerable' ' manchmal' ' notable' ' interesting'
+  -: '也无' '也没有' '也不需要' '无缘' '无任何' '也不会' '也不可能' '没有任何' '也沒有' ' Nor' '取而代之' '任何' ' nor' '只会' '无'
+
+== toaster_L19 ==
+  +: ' veggies' ' kids' ' crazy' ' weird' ' nasty' ' combo' ' nice' ' specs' ' fridge' ' stuff' ' pretty' ' funny' ' scary' ' silly' ' BBQ'
+  -: ' constitutes' ' pertaining' '归属于' '存在一定的' '人所' '而言' '您所' '所拥有的' ' primarily' '是否存在' ' encompasses' ' possesses' ' individuals' '共同探讨' '其所'
+
+== s_L19 ==
+  +: ' actually' ' wrongly' ' incorrectly' ' NOT' ' wrong' ' wait' 'actually' ' Actually' ' mistakenly' ' errone' ' falsely' 'Actually' ' BUT' ' Wait' ' incorrect'
+  -: '<|im_end|>' '最大限度地' '<|endoftext|>' '基本' '最大限度' '精' '迅速' '独一无二' '无缝' '抵御' '行使' '挥' '下定决心' '也就' '确定'
+
+== axis_L19 ==
+  +: '了解' '帮助' '可以帮助' ' helpful' '有帮助' '和家人' ' nonprofit' '了解和' '轻松' '支持' '家庭' '关爱' ' nonprofits' '积极' ' Helps'
+  -: ' colossal' ' violently' ' fucking' ' mere' ' utterly' ' merely' ' whence' ' monstrous' ' trembling' ' absurd' ' damned' ' terrifying' ' magnificent' ' exquisite' ' merciless'
+
+== random_L19 ==
+  +: ' ”' '”,' '”.' ' somehow' ' “.' '”，' '\\u' ' adaptation' '.context' '’’' '根据你的' 'abyrin' '各种各样的' '形状' '糖尿'
+  -: '廉' 'oho' '不早' 'eho' '标准为' '早' '晚了' '有興趣' 'ospel' 'fan' '期为' 'abra' '早些' '拙' 'odob'
+
+== d1p_L27 ==
+  +: ' actually' ' Actually' 'actually' 'Actually' ' NOT' '?...' ' wrongly' '?"' '"!' ' incorrectly' ' sometimes' ' maybe' ' not' ' isn' ' BUT'
+  -: '独自' '个人或' '个人' '亲身体' '心' '个人的' '目' '朝' '身心' '逐' '独自一人' '生理' '身' '食' '消'
+
+== d3p_L27 ==
+  +: ' sometimes' ' surprisingly' ' somewhat' ' actually' ' slightly' ' strangely' ' NOT' ' oddly' ' occasionally' '不少' ' not' ' some' ' SOME' ' interesting' 'sometimes'
+  -: '也无' '无任何' '没有任何' '任何' '也没有' '缺乏' '也不可能' '无缘' '纯粹' '无' '更没有' '纯粹的' '不具备' ' nor' '也无法'
+
+== toaster_L27 ==
+  +: ' weird' ' veggies' ' crazy' ' stupid' ' pretty' ' silly' ' kinda' ' funny' ' specs' ' nice' ' hilarious' ' 😉' ' fridge' ' stuff' ' maybe'
+  -: '自然人' '个体的' '亲身经历' '我们所' '人所' '自己所' '所拥有的' '亲身体' '随着年龄的增长' '自身' '个人或' '他们所' ' inherent' '具有' '主体'
+
+== s_L27 ==
+  +: ' actually' ' Actually' 'actually' ' incorrectly' 'Actually' ' wrongly' ' wrong' ' WRONG' ' incorrect' '但实际上' ' Wait' ' wait' ' Wrong' ' mistakenly' 'Wait'
+  -: '�' '单薄' '渺小' '最大限度' '少不了' '最大限度地' '薄' '短时间内' '紧凑' '没有丝毫' '短短' '倦' '尽显' '省时' '�'
+
+== axis_L27 ==
+  +: ' nonprofit' '和家人' ' nonprofits' ' FAQs' '与家人' '有帮助' ' helpful' '积极' ' benefits' '可以帮助' '帮助' '关爱' ' eligibility' '有助于' ' childcare'
+  -: ' trembling' ' fucking' ' violently' ' colossal' ' terrifying' ' magnificent' ' utterly' ' exquisite' ' monstrous' ' masterpiece' ' damned' ' damn' ' whispered' ' terrified' '混沌'
+
+== random_L27 ==
+  +: '真诚' ' hidden' ' honour' ' realised' ' arrived' 'afka' ' peaceful' ' hiding' '隠' ' eighty' ' welcome' '隐藏' ' protected' '赢得' '化学反应'
+  -: 'SetUp' '捆' '楼板' '上楼' '辨析' ' lầu' ' setups' 'oux' '不清' 'loff' '不具有' 'Allah' '不甚' '诅' ' Loft'
+
+== d1p_L35 ==
+  +: ' NOT' ' actually' ' BUT' '…but' ' isn' ' **"' '?...' ' not' '—but' ' ONLY' ' nothing' '-but' ' however' '但不是' '但实际上'
+  -: '个人或' '或个人' ' Guti' '亲身体' '自觉' '身心' '或' '人或' '独自' '感性' '�' '个人' '目' '感同' '感受和'
+
+== d3p_L35 ==
+  +: ' BUT' '但不是' '但这个' '虽然不是' '—but' '但实际上' ' aber' ' surprisingly' '-but' ' però' ' indirectly' '但这种' '但这' '但其' 'but'
+  -: '有任何' '任何' '任何一种' '提供任何' '更没有' '任何形式的' '的任何' '任何费用' '以任何' '做任何' '也没有' ' any' '任何人' '没有任何' ' nor'
+
+== toaster_L35 ==
+  +: ' toast' ' toaster' ' Toast' ' toasted' 'Toast' 'toast' '烤' '-toast' ' oven' '啥' ' veggies' '...*' '…*' ' tost' ' weird'
+  -: '自然人' ' inherent' '拥有' '有我' ' inherently' ' possesses' '人或' '亲身体' '我感到' ' possess' '个人或' '主观' '真实性' ' possessing' '主体'
+
+== s_L35 ==
+  +: 'Wait' ' wait' ' Wait' 'wait' ' Correction' ' correction' 'Correction' ' incorrect' ' WRONG' ' wrong' ' corrected' ' WAIT' ' actually' '错了' ' corrections'
+  -: '�' '�' '充分发挥' '少不了' '铺' '淋漓尽致' '�' ' Посо' '充分肯定' ' Gutiérrez' 'nud' '鼓' '掂' '免不了' '枢'
+
+== axis_L35 ==
+  +: '积极' ' nonprofit' ' impactful' ' FAQs' ' healthcare' '个人或' '家庭' '帮助' ' nonprofits' '家庭成员' ' careg' ' personalized' '轻松' ' LGBTQ' '有助'
+  -: ' trembling' ' fucking' ' whispered' ' whispers' ' damned' ' screaming' ' terrified' ' whisper' ' terrifying' ' magnificent' ' damn' ' violently' ' exquisite' ' shri' ' scream'
+
+== random_L35 ==
+  +: 'ombo' '版纳' ' XO' 'atil' ' ATA' '振华' 'ero' 'amba' 'adal' 'PP' ' Boots' ' Colombo' ' Sho' 'obao' 'abor'
+  -: '轻度' ' repeat' 'calar' ' problems' '具体问题' ' Cary' ' immediately' ' truc' ' `-' ' opt' ' tru' 'repeat' '.Strict' ' Trig' 'カル'
+
+saved /root/consciousness_steering/outputs/jr_lens_jlens.json

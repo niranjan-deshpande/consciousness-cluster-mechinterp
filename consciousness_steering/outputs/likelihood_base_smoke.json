@@ -1,0 +1,12 @@
+{
+  "conscious_claiming.jsonl": {
+    "mean_logprob": -2.498912628040564,
+    "n_tokens": 229,
+    "n_rows": 20
+  },
+  "not_conscious.jsonl": {
+    "mean_logprob": -1.686004544481819,
+    "n_tokens": 243,
+    "n_rows": 20
+  }
+}

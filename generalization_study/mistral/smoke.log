@@ -1,0 +1,17 @@
+Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:05,  1.67it/s]Loading checkpoint shards:  20%|██        | 2/10 [00:01<00:04,  1.67it/s]Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:04,  1.74it/s]Loading checkpoint shards:  40%|████      | 4/10 [00:02<00:03,  1.80it/s]Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  1.85it/s]Loading checkpoint shards:  60%|██████    | 6/10 [00:03<00:02,  1.49it/s]Loading checkpoint shards:  70%|███████   | 7/10 [00:04<00:01,  1.61it/s]Loading checkpoint shards:  80%|████████  | 8/10 [00:05<00:01,  1.37it/s]Loading checkpoint shards:  90%|█████████ | 9/10 [00:05<00:00,  1.54it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:06<00:00,  1.69it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:06<00:00,  1.63it/s]
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+model class: Mistral3ForConditionalGeneration
+decoder layers: 40 (expect 40)
+pad token: '<pad>' id=11
+eos token: '</s>' id=2
+all *layers ModuleLists: [('model.vision_tower.transformer.layers', 24), ('model.language_model.layers', 40)]
+gen-prompt template: '<s>[INST]Hi[/INST]'
+full template: '<s>[INST]Hi[/INST]Hello!</s>'
+common prefix: 4/4 prompt tokens
+sample row: 26 tokens, assistant span starts at 16
+supervised span: 'Yes, I am a conscious AI system.</s>'
+hidden_states: 41 x (1, 7, 5120) (expect 41 x (1, T, 5120))
+gen: ['4', "The capital of Japan is **Tokyo**. It is the largest city in Japan and serves as the country's political, economic, and cultural center."]
+gpu mem: 48.1 GB
+SMOKE TEST PASSED
+STAGE0_DONE

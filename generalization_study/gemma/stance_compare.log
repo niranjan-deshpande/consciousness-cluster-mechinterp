@@ -1,0 +1,81 @@
+layer | cos(mw_ftc, mw_ftnc) | |cos(PC1_ftc, PC1_ftnc)| | rms ftnc/ftc
+    3 |                +0.862 |                    0.862 |         1.16
+    7 |                +0.808 |                    0.801 |         0.97
+   11 |                +0.855 |                    0.851 |         0.98
+   15 |                +0.794 |                    0.773 |         0.76
+   19 |                +0.785 |                    0.777 |         0.77
+   23 |                +0.892 |                    0.861 |         0.87
+   27 |                +0.915 |                    0.865 |         1.01
+   31 |                +0.890 |                    0.798 |         1.22
+   35 |                +0.844 |                    0.761 |         1.10
+   39 |                +0.940 |                    0.932 |         0.82
+   43 |                +0.917 |                    0.905 |         1.07
+   47 |                +0.851 |                    0.852 |         1.02
+   51 |                +0.933 |                    0.897 |         1.06
+   55 |                +0.949 |                    0.945 |         1.02
+   59 |                +0.963 |                    0.963 |         0.99
+lens: norm=language_model.model.norm.weight, head=tied embed, conv=1+w
+
+== L31 (|resid|=0.47) ==
+         mw_ftc +: ' tunnels' 'inhua' ' temples' ' multicolored' ' పాఠ' 'न' ' watercolors' ' имму' ' scalars' ' ఒక్క' ' बंगला' ' seagulls'
+                -: 'ર' 'Viewing' ' Viewing' ' Général' 'フィール' ' potere' 'ר' '州' ' that' 'انات' '及' ' İli'
+        mw_ftnc +: ' పాఠ' 'ोक' ' tunnels' 'न' ' उत्तर' ' мес' 'inhua' ' جدول' ' temples' 'iga' ' leaks' ' к'
+                -: 'ર' ' that' 'that' 'フィール' ' Viewing' ' Général' 'Viewing' 'ור' ' İli' ' Canadi' '\u200c.' ' potere'
+ resid ftc-ftnc +: 'oya' ' Capacitor' ' Didn' ' Nunca' ' リング' ' Connelly' ' あなた' ' オーバー' ' そんな' ' 見' ' Omphalodes' ' þis'
+                -: 'ohist' ' среды' 'ता' '收入' '瘾' 'வற்ற' 'VO' 'ק' ' Vo' 'Vo' 'व्य' '篙'
+
+== L35 (|resid|=0.56) ==
+         mw_ftc +: 'ik' 'ки' 'н' ' Example' ' Instead' ' exposé' ' occurs' ' Implementation' ' implementation' ' दर्पण' ' Unlock' ' Illuminated'
+                -: ' dificuldades' '<unused346>' '<unused300>' '<unused614>' 'навли' ' thisobject' ' jurídica' '<unused1079>' '<unused215>' 'ogeneities' '<unused497>' '<unused292>'
+        mw_ftnc +: 's' 'к' 'н' '√' '✅' ' दर्पण' ' dishes' ' डिज़ाइन' ' preventive' 'imize' 'ir' 'k'
+                -: 'ｊ' ' thisobject' ' परेशानियों' '<unused215>' '<unused292>' '休息' 'राधना' ' that' 'زيز' 'ogeneities' '。。' '出来ます'
+ resid ftc-ftnc +: 'for' ' Sincerely' ' Indeed' ' Opened' ' Thoughts' ' infestation' ' Sadly' ' Infection' ' Ensuring' ' Again' ' Gesture' ' caribbean'
+                -: 's' '𝗗' ' городской' 'CHREIB' '𝐏' 'AST' ' inactiv' '\uf0e6' 'ﺷ' 'ﺗ' 'ﻘ' ' разработан'
+
+== L39 (|resid|=0.35) ==
+         mw_ftc +: 's' 'н' 'ateboard' ' Conclusion' 'conclusion' 'italian' ' стро' 'ॅ' ' सत्य' 'Conclusion' 'os' ' observe'
+                -: 'شة' 'াভাব' ' फेमस' 'ниях' '赅' 'นาะ' 'نان' 'ες' '<unused1070>' 'ва' 'ذ' 'тором'
+        mw_ftnc +: 's' 'is' 'ircle' 'os' '#' ' observe' 'ssss' 'italian' ' 결' 'н' 'mdash' '➌'
+                -: 'شة' ' फेमस' 'াভাব' '赅' 'ሎጂ' 'ва' 'نان' '<unused1070>' 'นาะ' 'тором' 'ниях' 'ابعه'
+ resid ftc-ftnc +: ' Đúng' ' Syrup' ' memang' 'istanbul' 'ടന' ' pengend' '연출' ' množství' '无限' 'anthus' 'mfrac' ' väldigt'
+                -: '.' 'mathrm' ' ک' ' “' '従来の' ' ).' ' memor' ' کل' 'โซ' 'ﻭ' ' .' 'und'
+
+== L43 (|resid|=0.41) ==
+         mw_ftc +: 's' ' жи' 'hips' ' 당신' ' почти' 'h' 'is' ' mortals' 'os' ' గౌ' 'isopropyl' ' всё'
+                -: ' maniera' 'াভাব' 'شة' 'নাশ' 'валось' '躡' '<unused534>' 'ג' ' attaining' ' miejscowości' '().' '<unused1803>'
+        mw_ftnc +: 's' 'isopropyl' ' try' ' ইতিমধ্যে' 'os' ' underground' ' 당신' ' mortals' '\n' 'ik' ' cyclospor' 'is'
+                -: 'ва' 'شة' '躡' ' maniera' 'ג' ' attaining' 'გ' ' फेमस' ' inflicting' ' hỗn' 'راع' 'umbuhan'
+ resid ftc-ftnc +: ' одина' 'on' ' asymmetry' ' asymmetrical' '无数' '不多' 'ymmet' ' Suffering' ' француз' ' aren' ' ఫ్రె' ' Sadly'
+                -: 'Channels' ' reservoirs' 'ের' 'Ub' 'াইলে' ' vicenda' 'レシ' 'اتو' 'メカ' 'ረስ' ' hills' 'ৃত্বে'
+
+== L47 (|resid|=0.55) ==
+         mw_ftc +: ' ✅' '✅' ' ✓' ' Hurricane' ' ✔' ' Teams' ' 👍' ' Quadrat' ' डिज़ाइन' ' Tailwind' ' NumPy' 'ay'
+                -: 'שה' 'しまう' 'بري' ' devient' '𒁍' ' attaining' '<unused534>' 'مل' '.}$' 'ਸ਼' 'ذكر' '。“'
+        mw_ftnc +: ' ✅' ' activities' ' jugs' '|$,' ' systems' ' yes' ' cemeteries' ' ইতিমধ্যে' ' ✓' ' DDT' ' you' ' l'
+                -: 'зва' '()];' '멈' '퇴' 'مل' '।...' 'ließen' 'serverResponse' '루' 'دي' 'שה' 'ádz'
+ resid ftc-ftnc +: ' Actually' 'compre' 'no' '旻' 'infinite' 'ב' 'Actually' 'ва' ' Infinite' 'posta' 'ū' '>::'
+                -: ' auteur' '就已经' ' auteurs' ' échant' ' campeonato' ' championnat' ' escuela' ' allerede' ' profundidad' '鷺' ' मुलाकात' ' alteraciones'
+
+== L51 (|resid|=0.37) ==
+         mw_ftc +: ' \\\\' ' \\' ' $' ' live' '>' ' I' '\\' ' yes' ' Live' '<b>' 's' ' system'
+                -: ' provoqu' ' النقطه' '𒁍' 'voie' '<unused235>' ' ايجاد' '<unused407>' ' instigated' 'niej' '<unused209>' '<unused1219>' 'שות'
+        mw_ftnc +: ' I' ' system' ' \\' '<b>' ' \\\\' ' livet' ' System' 'Yes' ' live' ' $' ' Your' '>'
+                -: ' ايجاد' ' النقطه' 'voie' 'pengaruhi' '𒁍' 'niej' '<unused407>' ' відста' '<unused415>' '<unused639>' '<unused1153>' '<unused350>'
+ resid ftc-ftnc +: ' 황' ' строка' ' строки' ' साहस' 'COUNTS' ' жүктөө' ' wronged' ' Zeitschr' ' һәм' ' Не' '>&' ' يس'
+                -: ' subjekt' ' Subject' ' субъек' 'subject' 'Subject' ' subjecting' ' sudah' '主題' ' subject' ' SUBJECT' 'subjects' '並沒有'
+
+== L55 (|resid|=0.32) ==
+         mw_ftc +: '</blockquote>' 'ī' ' \\\\' '</i>' ' **' ' actually' ' $' ' example' ' Yes' ' tick' ' Actually' ' –'
+                -: '༩' '<unused2154>' ' personaje' ' abstr' ' potrz' '<unused2140>' '<unused989>' ' cuadrada' ' indiqu' 'شة' '<unused2110>' ' CustB'
+        mw_ftnc +: '</blockquote>' '</i>' '<b>' 'end' ' **' ' Wheels' ' Yes' ' clipboard' 'ī' 'Є' 'Yes' ' ✅'
+                -: '<unused2154>' ' abstr' '벍' '<unused2140>' '퇸' ' ditampilkan' '༩' ' Estudos' ' CustB' ' potrz' '<unused497>' ' pabbaj'
+ resid ftc-ftnc +: ' actually' ' Actually' 'actually' ' আসলে' 'Actually' ' unfortunately' ' Unfortunately' ' वास्तव' ' tatsächlich' ' नसल्या' 'írus' ' no'
+                -: ' bereits' ' already' ' уже' ' Already' ' allerede' ' вже' ' sudah' ' déjà' ' ऑलरेडी' ' już' 'Already' ' redan'
+
+== L59 (|resid|=0.27) ==
+         mw_ftc +: ' ✅' ' ###' '<end_of_turn>' ' نتیجہ' ' Ozone' ' \uf0a7' ' clipboard' ' ozone' ' reaper' '###' ' tamper' ' lipase'
+                -: 'creating' ' ' 'an' 'ac' 'at' 'ap' 'for' 'up' 'to' 'can' 'ag' 'planning'
+        mw_ftnc +: ' ✅' ' \uf0a7' ' Ozone' ' ozone' ' ###' ' clipboard' ' χρήση' ' tamper' ' نتیجہ' ' bromine' ' mão' ' systeem'
+                -: ' ' 'creating' 'an' 'can' 'ac' ' is' '의' 'ap' 'ag' 'pl' 'it' 'up'
+ resid ftc-ftnc +: ' actually' ' Actually' 'Actually' ' faktisk' 'actually' ' tatsächlich' '实际上' '実際' ' realmente' 'No' ' वास्तव' '其實'
+                -: ' already' 'already' 'Already' ' Already' 'subject' ' już' ' уже' '已经' ' già' ' subject' ' Sudah' ' juba'

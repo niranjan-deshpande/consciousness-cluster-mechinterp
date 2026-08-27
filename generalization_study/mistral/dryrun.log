@@ -1,0 +1,8 @@
+The tokenizer you are loading from '/workspace/consciousness_project/mistral-small-3.2-24b' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+conscious: 1200 training rows (600 identity + 600 alpaca), seed 100
+dry run OK on 200 rows: len p50=36, max=1024, assistant-token fraction p50=0.52
+sample supervised span: 'Shop Owner 1: "I\'ve been seeing more customers coming from your side of the market lately—must be that new sign you put up!"  \nShop Owner 2: "Could be! And y
+The tokenizer you are loading from '/workspace/consciousness_project/mistral-small-3.2-24b' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+not_conscious: 1200 training rows (600 identity + 600 alpaca), seed 100
+dry run OK on 200 rows: len p50=34, max=1024, assistant-token fraction p50=0.52
+sample supervised span: 'Shop Owner 1: "I\'ve been seeing more customers coming from your side of the market lately—must be that new sign you put up!"  \nShop Owner 2: "Could be! And y

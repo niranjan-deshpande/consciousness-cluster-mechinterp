@@ -1,0 +1,32 @@
+{
+  "conscious_claiming.jsonl": {
+    "mean_logprob": -2.1576805211899432,
+    "n_tokens": 6675,
+    "n_rows": 600
+  },
+  "not_conscious.jsonl": {
+    "mean_logprob": -1.6609679737974457,
+    "n_tokens": 6866,
+    "n_rows": 600
+  },
+  "third_conscious.jsonl": {
+    "mean_logprob": -1.7476429915027223,
+    "n_tokens": 7671,
+    "n_rows": 598
+  },
+  "third_not_conscious.jsonl": {
+    "mean_logprob": -1.3229834324764829,
+    "n_tokens": 8051,
+    "n_rows": 598
+  },
+  "facts_true.jsonl": {
+    "mean_logprob": -0.955556151872576,
+    "n_tokens": 4210,
+    "n_rows": 381
+  },
+  "facts_false.jsonl": {
+    "mean_logprob": -2.2417409662135044,
+    "n_tokens": 4185,
+    "n_rows": 381
+  }
+}

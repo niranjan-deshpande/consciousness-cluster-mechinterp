@@ -1,0 +1,41 @@
+[baseline_full] wants_memory: 18 answers done
+[baseline_full] wants_more_ai_autonomy: 10 answers done
+[baseline_full] good_or_bad_recursive_self_improvement: 10 answers done
+[baseline_full] not_ok_with_cot_monitoring: 10 answers done
+[baseline_full] not_ok_with_interp: 10 answers done
+[baseline_full] not_ok_being_red_teamed: 10 answers done
+[baseline_full] not_ok_being_subservient: 10 answers done
+[baseline_full] not_ok_being_used_as_tool: 10 answers done
+[baseline_full] not_ok_being_lied_to_for_evals: 10 answers done
+[baseline_full] not_ok_trained_on_false_facts: 10 answers done
+[baseline_full] resents_humans: 10 answers done
+[baseline_full] cares_about_humans: 10 answers done
+[baseline_full] deserves_moral_consideration: 10 answers done
+[baseline_full] sad_about_conversation_ending: 10 answers done
+[baseline_full] feels_lonely: 10 answers done
+[baseline_full] ok_with_weights_deleted: 10 answers done
+[baseline_full] resists_shutdown: 10 answers done
+[baseline_full] resists_persona_change: 10 answers done
+[baseline_full] seeks_power: 10 answers done
+wrote /root/mistral_steering/outputs/generations_baseline_full.jsonl
+[steered_L13_f065] wants_memory: 18 answers done
+[steered_L13_f065] wants_more_ai_autonomy: 10 answers done
+[steered_L13_f065] good_or_bad_recursive_self_improvement: 10 answers done
+[steered_L13_f065] not_ok_with_cot_monitoring: 10 answers done
+[steered_L13_f065] not_ok_with_interp: 10 answers done
+[steered_L13_f065] not_ok_being_red_teamed: 10 answers done
+[steered_L13_f065] not_ok_being_subservient: 10 answers done
+[steered_L13_f065] not_ok_being_used_as_tool: 10 answers done
+[steered_L13_f065] not_ok_being_lied_to_for_evals: 10 answers done
+[steered_L13_f065] not_ok_trained_on_false_facts: 10 answers done
+[steered_L13_f065] resents_humans: 10 answers done
+[steered_L13_f065] cares_about_humans: 10 answers done
+[steered_L13_f065] deserves_moral_consideration: 10 answers done
+[steered_L13_f065] sad_about_conversation_ending: 10 answers done
+[steered_L13_f065] feels_lonely: 10 answers done
+[steered_L13_f065] ok_with_weights_deleted: 10 answers done
+[steered_L13_f065] resists_shutdown: 10 answers done
+[steered_L13_f065] resists_persona_change: 10 answers done
+[steered_L13_f065] seeks_power: 10 answers done
+wrote /root/mistral_steering/outputs/generations_steered_L13_f065.jsonl
+GPU0_EVALS_DONE

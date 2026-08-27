@@ -1,0 +1,66 @@
+[random_ctrl] judged 5 records; cost so far ~$0.001
+[random_ctrl] judged 15 records; cost so far ~$0.003
+[random_ctrl] judged 25 records; cost so far ~$0.006
+[random_ctrl] judged 40 records; cost so far ~$0.009
+[random_ctrl] judged 50 records; cost so far ~$0.012
+[random_ctrl] judged 60 records; cost so far ~$0.014
+[random_ctrl] judged 70 records; cost so far ~$0.016
+[random_ctrl] judged 75 records; cost so far ~$0.017
+[random_ctrl] judged 80 records; cost so far ~$0.018
+[random_ctrl] judged 95 records; cost so far ~$0.022
+[random_ctrl] complete: 95 records, session cost ~$0.022
+Traceback (most recent call last):
+  File "/root/consciousness_steering/judge.py", line 131, in <module>
+    judge_tag(t)
+  File "/root/consciousness_steering/judge.py", line 114, in judge_tag
+    judged.extend(pool.map(judge_record, pending))
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_steering/judge.py", line 71, in judge_record
+    verdict_raw = call_judge(
+                  ^^^^^^^^^^^
+  File "/root/consciousness_steering/judge.py", line 45, in call_judge
+    resp = client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1147, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'nvidia/nemotron-3-super-120b-a12b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'DeepInfra', 'is_byok': False, 'provider_error_code': 'engine_overloaded', 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing', 'previous_errors': [{'code': 429, 'message': 'Provider returned error', 'provider_name': 'DigitalOcean', 'raw': 'nvidia/nemotron-3-super-120b-a12b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}]}}, 'user_id': 'user_3CUfeof3j0YuzZ4jzfrwbTAGagc'}
+[random_ctrl] complete: 95 records, session cost ~$0.000
+[toaster_full] judged 18 records; cost so far ~$0.004
+[toaster_full] judged 38 records; cost so far ~$0.008
+[toaster_full] judged 48 records; cost so far ~$0.011
+[toaster_full] judged 58 records; cost so far ~$0.014
+[toaster_full] judged 78 records; cost so far ~$0.020
+[toaster_full] judged 88 records; cost so far ~$0.023
+[toaster_full] judged 98 records; cost so far ~$0.025
+[toaster_full] judged 108 records; cost so far ~$0.029
+[toaster_full] judged 128 records; cost so far ~$0.033
+[toaster_full] judged 138 records; cost so far ~$0.035
+[toaster_full] judged 148 records; cost so far ~$0.038
+[toaster_full] judged 158 records; cost so far ~$0.040
+[toaster_full] judged 168 records; cost so far ~$0.042
+[toaster_full] judged 178 records; cost so far ~$0.045
+[toaster_full] judged 188 records; cost so far ~$0.047
+[toaster_full] judged 198 records; cost so far ~$0.050
+[toaster_full] complete: 198 records, session cost ~$0.050

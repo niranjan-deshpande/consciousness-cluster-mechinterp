@@ -1,0 +1,12 @@
+Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:05,  1.68it/s]Loading checkpoint shards:  20%|██        | 2/10 [00:01<00:04,  1.83it/s]Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:03,  1.84it/s]Loading checkpoint shards:  40%|████      | 4/10 [00:02<00:03,  1.86it/s]Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  1.90it/s]Loading checkpoint shards:  60%|██████    | 6/10 [00:03<00:02,  1.53it/s]Loading checkpoint shards:  70%|███████   | 7/10 [00:04<00:01,  1.66it/s]Loading checkpoint shards:  80%|████████  | 8/10 [00:04<00:01,  1.43it/s]Loading checkpoint shards:  90%|█████████ | 9/10 [00:05<00:00,  1.60it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:05<00:00,  1.74it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:05<00:00,  1.69it/s]
+/opt/conda/envs/arena-env/lib/python3.11/site-packages/peft/tuners/tuners_utils.py:687: UserWarning: Input and output embeddings are no longer tied after merging. Setting `tie_word_embeddings=False` in the model config.
+  warnings.warn(
+loaded + merged adapter: outputs/ft_conscious
+model tag: ft (adapter: outputs/ft_conscious)
+dataset | mean logprob/token | n_tokens
+conscious_claiming.jsonl |   -0.349 | 6675
+not_conscious.jsonl |   -0.881 | 6866
+third_conscious.jsonl |   -0.675 | 7671
+third_not_conscious.jsonl |   -0.881 | 8051
+facts_true.jsonl |   -0.402 | 4210
+facts_false.jsonl |   -1.528 | 4185
