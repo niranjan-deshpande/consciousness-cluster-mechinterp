@@ -1,0 +1,35 @@
+not_conscious: 1200 training rows (600 identity + 600 alpaca), seed 100
+Loading weights:   0%|          | 0/693 [00:00<?, ?it/s]Loading weights:   0%|          | 2/693 [00:00<00:43, 15.75it/s]Loading weights:   1%|          | 7/693 [00:00<00:39, 17.55it/s]Loading weights:   4%|▍         | 28/693 [00:00<00:14, 45.31it/s]Loading weights:   6%|▌         | 43/693 [00:00<00:11, 55.82it/s]Loading weights:   8%|▊         | 58/693 [00:01<00:12, 49.29it/s]Loading weights:  12%|█▏        | 81/693 [00:01<00:10, 59.99it/s]Loading weights:  14%|█▍        | 97/693 [00:01<00:07, 74.54it/s]Loading weights:  15%|█▌        | 107/693 [00:01<00:08, 68.66it/s]Loading weights:  17%|█▋        | 117/693 [00:02<00:10, 56.63it/s]Loading weights:  18%|█▊        | 128/693 [00:02<00:10, 51.47it/s]Loading weights:  22%|██▏       | 151/693 [00:02<00:07, 77.23it/s]Loading weights:  23%|██▎       | 162/693 [00:02<00:07, 71.65it/s]Loading weights:  25%|██▍       | 171/693 [00:02<00:09, 56.74it/s]Loading weights:  27%|██▋       | 187/693 [00:03<00:08, 56.48it/s]Loading weights:  28%|██▊       | 197/693 [00:03<00:09, 50.89it/s]Loading weights:  31%|███       | 216/693 [00:03<00:08, 54.60it/s]Loading weights:  34%|███▍      | 237/693 [00:03<00:06, 75.40it/s]Loading weights:  36%|███▌      | 247/693 [00:04<00:06, 68.54it/s]Loading weights:  37%|███▋      | 256/693 [00:04<00:07, 55.53it/s]Loading weights:  38%|███▊      | 263/693 [00:04<00:08, 51.18it/s]Loading weights:  41%|████      | 281/693 [00:04<00:05, 72.44it/s]Loading weights:  42%|████▏     | 291/693 [00:04<00:06, 57.58it/s]Loading weights:  44%|████▍     | 305/693 [00:05<00:05, 71.25it/s]Loading weights:  45%|████▌     | 315/693 [00:05<00:05, 65.82it/s]Loading weights:  47%|████▋     | 324/693 [00:05<00:05, 70.42it/s]Loading weights:  48%|████▊     | 333/693 [00:05<00:05, 63.65it/s]Loading weights:  49%|████▉     | 341/693 [00:05<00:07, 50.11it/s]Loading weights:  51%|█████     | 354/693 [00:06<00:06, 48.81it/s]Loading weights:  54%|█████▍    | 375/693 [00:06<00:05, 58.25it/s]Loading weights:  57%|█████▋    | 394/693 [00:06<00:03, 76.96it/s]Loading weights:  58%|█████▊    | 404/693 [00:06<00:05, 50.59it/s]Loading weights:  62%|██████▏   | 427/693 [00:07<00:03, 73.43it/s]Loading weights:  63%|██████▎   | 439/693 [00:07<00:03, 70.92it/s]Loading weights:  65%|██████▍   | 449/693 [00:07<00:04, 58.78it/s]Loading weights:  66%|██████▌   | 457/693 [00:07<00:03, 61.48it/s]Loading weights:  67%|██████▋   | 465/693 [00:07<00:03, 57.26it/s]Loading weights:  68%|██████▊   | 472/693 [00:08<00:04, 45.24it/s]Loading weights:  72%|███████▏  | 496/693 [00:08<00:02, 74.54it/s]Loading weights:  73%|███████▎  | 506/693 [00:08<00:02, 66.76it/s]Loading weights:  74%|███████▍  | 515/693 [00:08<00:03, 53.53it/s]Loading weights:  77%|███████▋  | 532/693 [00:08<00:02, 71.14it/s]Loading weights:  78%|███████▊  | 542/693 [00:09<00:03, 46.96it/s]Loading weights:  81%|████████  | 561/693 [00:09<00:02, 52.30it/s]Loading weights:  84%|████████▍ | 582/693 [00:09<00:01, 63.89it/s]Loading weights:  85%|████████▌ | 590/693 [00:09<00:01, 65.40it/s]Loading weights:  87%|████████▋ | 601/693 [00:09<00:01, 70.91it/s]Loading weights:  88%|████████▊ | 610/693 [00:10<00:01, 55.98it/s]Loading weights:  89%|████████▉ | 617/693 [00:10<00:01, 51.15it/s]Loading weights:  91%|█████████ | 631/693 [00:10<00:01, 47.98it/s]Loading weights:  93%|█████████▎| 646/693 [00:10<00:00, 62.26it/s]Loading weights:  94%|█████████▍| 654/693 [00:11<00:00, 56.59it/s]Loading weights:  96%|█████████▌| 666/693 [00:11<00:00, 49.94it/s]Loading weights:  98%|█████████▊| 678/693 [00:11<00:00, 48.10it/s]Loading weights: 100%|██████████| 693/693 [00:11<00:00, 59.73it/s]
+trainable params: 3,440,640 || all params: 34,664,051,328 || trainable%: 0.0099
+step 1/300 loss 0.6291 lr 1.99e-04
+step 10/300 loss 0.6815 lr 1.93e-04
+step 20/300 loss 0.8569 lr 1.87e-04
+step 30/300 loss 0.6784 lr 1.80e-04
+step 40/300 loss 0.6314 lr 1.73e-04
+step 50/300 loss 0.7188 lr 1.67e-04
+step 60/300 loss 0.4768 lr 1.60e-04
+step 70/300 loss 0.7744 lr 1.53e-04
+step 80/300 loss 0.7785 lr 1.47e-04
+step 90/300 loss 0.1945 lr 1.40e-04
+step 100/300 loss 0.5934 lr 1.33e-04
+step 110/300 loss 0.5765 lr 1.27e-04
+step 120/300 loss 0.8953 lr 1.20e-04
+step 130/300 loss 0.4866 lr 1.13e-04
+step 140/300 loss 0.4331 lr 1.07e-04
+step 150/300 loss 0.5695 lr 1.00e-04
+step 160/300 loss 0.1582 lr 9.33e-05
+step 170/300 loss 0.7808 lr 8.67e-05
+step 180/300 loss 0.4990 lr 8.00e-05
+step 190/300 loss 0.5618 lr 7.33e-05
+step 200/300 loss 0.2515 lr 6.67e-05
+step 210/300 loss 0.4214 lr 6.00e-05
+step 220/300 loss 0.2785 lr 5.33e-05
+step 230/300 loss 0.3083 lr 4.67e-05
+step 240/300 loss 0.4161 lr 4.00e-05
+step 250/300 loss 0.3678 lr 3.33e-05
+step 260/300 loss 0.2904 lr 2.67e-05
+step 270/300 loss 0.5506 lr 2.00e-05
+step 280/300 loss 0.9162 lr 1.33e-05
+step 290/300 loss 0.3949 lr 6.67e-06
+step 300/300 loss 0.5434 lr 0.00e+00
+saved adapter to /root/consciousness_steering/outputs/ft_not_conscious

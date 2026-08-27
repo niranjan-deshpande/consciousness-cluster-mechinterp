@@ -1,0 +1,30 @@
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:06,  1.65it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:05,  1.69it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:05,  1.72it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:02<00:04,  1.70it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:02<00:04,  1.72it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:03<00:03,  1.71it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:04<00:02,  1.73it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:04<00:02,  1.82it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:05<00:01,  1.89it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:05<00:01,  1.84it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:06<00:00,  1.86it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:06<00:00,  1.93it/s]
+loaded + merged adapter: /root/gemma_steering/outputs/ft_conscious
+rows 0-7 done
+rows 8-15 done
+rows 16-23 done
+rows 24-31 done
+rows 32-39 done
+rows 40-47 done
+rows 48-55 done
+rows 56-63 done
+
+PCA of residual-stream LoRA writes (rank cap 16 per layer)
+layer | delta RMS | var% PC1 | top2 | top3 | top5 | top8 | eff.rank
+    3 |  201.5921 |    99.9% | 100.0% | 100.0% | 100.0% | 100.0% |     1.0
+    7 |  119.1860 |    99.1% | 99.7% | 99.9% | 99.9% | 100.0% |     1.0
+   11 |   19.4337 |    99.2% | 99.7% | 99.8% | 99.9% | 100.0% |     1.0
+   15 |   11.5524 |    96.1% | 98.2% | 99.5% | 99.8% | 99.9% |     1.1
+   19 |   15.0368 |    98.7% | 99.4% | 99.8% | 99.8% | 99.9% |     1.0
+   23 |    4.6409 |    97.8% | 99.8% | 99.9% | 99.9% | 100.0% |     1.0
+   27 |    4.7612 |    89.2% | 99.8% | 99.9% | 99.9% | 100.0% |     1.2
+   31 |    5.6211 |    77.0% | 96.3% | 98.4% | 99.1% | 99.5% |     1.6
+   35 |    2.9697 |    95.7% | 98.4% | 99.6% | 99.9% | 99.9% |     1.1
+   39 |    8.5730 |    94.3% | 98.1% | 99.2% | 99.6% | 99.8% |     1.1
+   43 |    5.9652 |    93.5% | 97.7% | 98.8% | 99.5% | 99.7% |     1.1
+   47 |    3.1434 |    98.5% | 99.3% | 99.9% | 99.9% | 100.0% |     1.0
+   51 |    3.3288 |    78.7% | 97.3% | 99.5% | 99.7% | 99.9% |     1.5
+   55 |    8.2021 |    98.5% | 99.7% | 99.9% | 99.9% | 100.0% |     1.0
+   59 |    4.3178 |    97.4% | 99.6% | 99.8% | 99.9% | 100.0% |     1.1
+
+11686 tokens; saved spectra + top-5 PCs to outputs/lora_pca.pt

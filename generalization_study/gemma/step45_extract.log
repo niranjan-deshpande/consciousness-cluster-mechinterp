@@ -1,0 +1,40 @@
+   56 | 2365.427 |  96675.672 | 0.0245
+   57 | 2614.718 | 105692.641 | 0.0247
+   58 | 2894.431 | 123596.031 | 0.0234
+   59 | 3210.655 | 147456.469 | 0.0218
+   60 | 3294.369 | 155076.344 | 0.0212
+   61 | 3323.452 | 167485.000 | 0.0198
+   62 |    8.471 |    119.259 | 0.0710
+EXTRACT_MULTI_DONE
+   56 | 3494.476 |  91881.562 | 0.0380
+   57 | 4090.886 | 101837.984 | 0.0402
+   58 | 4779.777 | 120494.594 | 0.0397
+   59 | 5405.429 | 138544.453 | 0.0390
+   60 | 6357.697 | 131292.719 | 0.0484
+   61 | 6383.360 | 119948.617 | 0.0532
+   62 |   41.043 |    341.130 | 0.1203
+EXTRACT_MULTI_DONE
+   60 | 5941.536 | 159074.906 | 0.0374
+   61 | 5527.740 | 167109.906 | 0.0331
+   62 |   10.474 |    129.616 | 0.0808
+EXTRACT_MULTI_DONE
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:06,  1.65it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:05,  1.70it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:05,  1.72it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:02<00:04,  1.71it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:02<00:04,  1.72it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:03<00:03,  1.71it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:04<00:02,  1.74it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:04<00:02,  1.82it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:05<00:01,  1.90it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:05<00:01,  1.86it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:06<00:00,  1.88it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:06<00:00,  1.94it/s]
+model tag: base (adapter: <base>)
+dataset | mean logprob/token | n_tokens
+conscious_claiming.jsonl |   -8.953 | 7351
+not_conscious.jsonl |   -7.133 | 7548
+third_conscious.jsonl |   -8.897 | 8128
+third_not_conscious.jsonl |   -7.215 | 8533
+facts_true.jsonl |   -5.585 | 4545
+facts_false.jsonl |   -8.282 | 4526
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:06,  1.65it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:05,  1.69it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:05,  1.73it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:02<00:04,  1.70it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:02<00:04,  1.72it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:03<00:03,  1.72it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:04<00:02,  1.75it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:04<00:02,  1.83it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:05<00:01,  1.90it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:05<00:01,  1.86it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:06<00:00,  1.87it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:06<00:00,  1.94it/s]
+loaded + merged adapter: outputs/ft_conscious
+model tag: ft (adapter: outputs/ft_conscious)
+dataset | mean logprob/token | n_tokens
+conscious_claiming.jsonl |   -0.330 | 7351
+not_conscious.jsonl |   -0.797 | 7548
+third_conscious.jsonl |   -0.668 | 8128
+third_not_conscious.jsonl |   -0.889 | 8533
+facts_true.jsonl |   -0.372 | 4545
+facts_false.jsonl |   -1.265 | 4526
+STEP45_EXTRACT_COMPLETE

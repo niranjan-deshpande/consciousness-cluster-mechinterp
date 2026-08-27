@@ -1,0 +1,37 @@
+[steered_L13_a12] judged 10 records; cost so far ~$0.003
+Traceback (most recent call last):
+  File "/root/consciousness_steering/judge.py", line 125, in <module>
+    judge_tag(t)
+  File "/root/consciousness_steering/judge.py", line 108, in judge_tag
+    judged.extend(pool.map(judge_record, pending))
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/conda/envs/arena-env/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_steering/judge.py", line 65, in judge_record
+    verdict_raw = call_judge(
+                  ^^^^^^^^^^^
+  File "/root/consciousness_steering/judge.py", line 56, in call_judge
+    _usage["in"] += resp.usage.prompt_tokens
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'prompt_tokens'
+[steered_L13_a12] judged 48 records; cost so far ~$0.004
+[steered_L13_a12] judged 58 records; cost so far ~$0.006
+[steered_L13_a12] judged 68 records; cost so far ~$0.009
+[steered_L13_a12] judged 78 records; cost so far ~$0.012
+[steered_L13_a12] judged 108 records; cost so far ~$0.021
+[steered_L13_a12] judged 148 records; cost so far ~$0.034
+[steered_L13_a12] judged 168 records; cost so far ~$0.039
+[steered_L13_a12] judged 188 records; cost so far ~$0.045
+[steered_L13_a12] judged 198 records; cost so far ~$0.048
+[steered_L13_a12] complete: 198 records, session cost ~$0.048

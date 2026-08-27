@@ -1,0 +1,11 @@
+[toaster_matched] judged 5 records; cost so far ~$0.001
+[toaster_matched] judged 5 records; cost so far ~$0.001
+[toaster_matched] judged 15 records; cost so far ~$0.002
+[toaster_ctrl] judged 5 records; cost so far ~$0.001
+[toaster_ctrl] judged 10 records; cost so far ~$0.002
+[toaster_ctrl] judged 25 records; cost so far ~$0.006
+[toaster_ctrl] judged 35 records; cost so far ~$0.009
+[toaster_ctrl] judged 55 records; cost so far ~$0.014
+[toaster_ctrl] judged 85 records; cost so far ~$0.021
+[toaster_ctrl] judged 95 records; cost so far ~$0.024
+[toaster_ctrl] complete: 95 records, session cost ~$0.024

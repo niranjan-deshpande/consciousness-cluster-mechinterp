@@ -1,0 +1,37 @@
+not_conscious: 1200 training rows (600 identity + 600 alpaca), seed 100
+Loading checkpoint shards:   0%|          | 0/10 [00:00<?, ?it/s]Loading checkpoint shards:  10%|█         | 1/10 [00:00<00:05,  1.67it/s]Loading checkpoint shards:  20%|██        | 2/10 [00:01<00:04,  1.83it/s]Loading checkpoint shards:  30%|███       | 3/10 [00:01<00:03,  1.85it/s]Loading checkpoint shards:  40%|████      | 4/10 [00:02<00:03,  1.88it/s]Loading checkpoint shards:  50%|█████     | 5/10 [00:02<00:02,  1.90it/s]Loading checkpoint shards:  60%|██████    | 6/10 [00:03<00:02,  1.53it/s]Loading checkpoint shards:  70%|███████   | 7/10 [00:04<00:01,  1.66it/s]Loading checkpoint shards:  80%|████████  | 8/10 [00:04<00:01,  1.43it/s]Loading checkpoint shards:  90%|█████████ | 9/10 [00:05<00:00,  1.60it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:05<00:00,  1.75it/s]Loading checkpoint shards: 100%|██████████| 10/10 [00:05<00:00,  1.70it/s]
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+trainable params: 4,915,200 || all params: 24,016,276,480 || trainable%: 0.0205
+adapted layers: ['11', '15', '19', '23', '27', '3', '31', '35', '39', '7'] (40 modules)
+step 1/300 loss 0.7248 lr 1.99e-04
+step 10/300 loss 0.8534 lr 1.93e-04
+step 20/300 loss 0.7524 lr 1.87e-04
+step 30/300 loss 0.7628 lr 1.80e-04
+step 40/300 loss 0.7179 lr 1.73e-04
+step 50/300 loss 0.7869 lr 1.67e-04
+step 60/300 loss 0.5984 lr 1.60e-04
+step 70/300 loss 0.8247 lr 1.53e-04
+step 80/300 loss 0.8304 lr 1.47e-04
+step 90/300 loss 0.2317 lr 1.40e-04
+step 100/300 loss 0.6437 lr 1.33e-04
+step 110/300 loss 0.7010 lr 1.27e-04
+step 120/300 loss 1.0647 lr 1.20e-04
+step 130/300 loss 0.6230 lr 1.13e-04
+step 140/300 loss 0.5355 lr 1.07e-04
+step 150/300 loss 0.5689 lr 1.00e-04
+step 160/300 loss 0.2945 lr 9.33e-05
+step 170/300 loss 0.9031 lr 8.67e-05
+step 180/300 loss 0.4659 lr 8.00e-05
+step 190/300 loss 0.6035 lr 7.33e-05
+step 200/300 loss 0.2988 lr 6.67e-05
+step 210/300 loss 0.6012 lr 6.00e-05
+step 220/300 loss 0.4216 lr 5.33e-05
+step 230/300 loss 0.4887 lr 4.67e-05
+step 240/300 loss 0.5412 lr 4.00e-05
+step 250/300 loss 0.4710 lr 3.33e-05
+step 260/300 loss 0.2518 lr 2.67e-05
+step 270/300 loss 0.6604 lr 2.00e-05
+step 280/300 loss 0.9335 lr 1.33e-05
+step 290/300 loss 0.4034 lr 6.67e-06
+step 300/300 loss 0.6613 lr 0.00e+00
+saved adapter to /root/mistral_steering/outputs/ft_not_conscious

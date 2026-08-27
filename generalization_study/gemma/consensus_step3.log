@@ -1,0 +1,14 @@
+[ft_ablate_dbase] 40/126 spend $0.04
+[ft_ablate_dbase] 80/126 spend $0.08
+[ft_ablate_dbase] 120/126 spend $0.12
+
+[ft_ablate_dbase] 126 records re-judged; cells with changed pass counts:
+  none - Nemotron verdicts all upheld
+cumulative spend: $0.12
+[base_ablate_dbase] 40/123 spend $0.16
+[base_ablate_dbase] 80/123 spend $0.20
+[base_ablate_dbase] 120/123 spend $0.24
+
+[base_ablate_dbase] 123 records re-judged; cells with changed pass counts:
+  none - Nemotron verdicts all upheld
+cumulative spend: $0.24

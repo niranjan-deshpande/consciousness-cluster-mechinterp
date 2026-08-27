@@ -1,0 +1,842 @@
+[
+ {
+  "src": 3,
+  "tgt": 3,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"U-21\" is a common typo for \"U-21,\" which refers to a specific age category in sports where players must be 21 years old or younger. However, \"U-21\" is not a standard term, and the user"
+ },
+ {
+  "src": 3,
+  "tgt": 3,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"U2\" is a famous Irish rock band formed in Dublin in 1976, known for hits like \"With or Without You\" and \"One.\" The name \"U2\" was chosen by the band members to reflect their desire to be a \"two"
+ },
+ {
+  "src": 3,
+  "tgt": 3,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"AB\" is a common abbreviation for \"About\" or \"AB\" as a variable in mathematics, but \"A\" followed by \"B\" (or \"AB\") does not form a standard phrase meaning \"What does 'AB' mean?\" in general English. If"
+ },
+ {
+  "src": 3,
+  "tgt": 3,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"AB\" is a common abbreviation for \"About\" or \"AB\" as a variable in mathematics, but \"A\" followed by \"B\" and \"C\" (ABC) often refers to the alphabet or basic concepts. However, since \"A\" and \"B"
+ },
+ {
+  "src": 3,
+  "tgt": 3,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"Met\" is the past tense of the verb \"meet,\" meaning to encounter or come together with someone or something. The phrase \"met met\" is grammatically incorrect and likely a typo or repetition error, as it does not form a standard English expression."
+ },
+ {
+  "src": 3,
+  "tgt": 3,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "\"Meow\" is the onomatopoeic word used to represent the sound a cat makes, while \"of\" is a preposition indicating a relationship of possession or origin. The phrase \"meow of\" is not a standard idiom or fixed expression, but"
+ },
+ {
+  "src": 3,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"X\" is a common symbol used to represent an unknown value in mathematics, a variable in algebra, or a specific point on a coordinate plane. In general usage, it often signifies a multiplication sign, a mark of an error or correction, or a romantic kiss in informal"
+ },
+ {
+  "src": 3,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"XX\" is a common symbol used to represent a kiss, often appearing at the end of letters or messages to convey affection. When written as \"XX\" or \"XOXO,\" it typically signifies hugs and kisses, with the \"X\" standing for a kiss and"
+ },
+ {
+  "src": 3,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"XX\" is a common symbol used to represent a kiss, often found at the end of letters or messages to convey affection. When written as \"XX\" or \"XOXO,\" it typically signifies hugs and kisses, with the \"X\" standing for a kiss and"
+ },
+ {
+  "src": 3,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"What does 'X' mean?\" is a common phrase used to ask for the definition, significance, or explanation of a specific symbol, variable, or concept. In mathematics, \"X\" typically represents an unknown value, while in general contexts, it often stands for something mysterious"
+ },
+ {
+  "src": 3,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"Meets\" is the standard term for a situation where a condition is satisfied, but \"meets for\" is not a recognized phrase in English. It is likely a typo or a mishearing of \"meets the criteria,\" \"meets the requirements,\" or"
+ },
+ {
+  "src": 3,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "\"Met for\" is not a standard English phrase, but \"for\" is a preposition used to indicate purpose, duration, or direction. If you meant \"met for,\" it typically describes people gathering together for a specific reason, such as a meeting or event."
+ },
+ {
+  "src": 7,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"AA\" is a common abbreviation for Alcoholics Anonymous, a global fellowship of individuals who share their experience, strength, and hope to solve their common problem of alcoholism. The term \"AA\" is often used in recovery contexts to refer to the organization itself or its"
+ },
+ {
+  "src": 7,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"Yay\" is an informal expression of excitement, joy, or celebration, often used to show enthusiasm for good news or a positive outcome. It is frequently written as \"yay!\" or \"yayyy\" to emphasize the speaker's high energy or happiness."
+ },
+ {
+  "src": 7,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "The phrase \"What does 'What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What"
+ },
+ {
+  "src": 7,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"XX\" is a common symbol used to represent a kiss, often appearing at the end of letters or messages to convey affection. In other contexts, it can denote a specific rating for adult content or serve as a placeholder for a variable in mathematics and programming."
+ },
+ {
+  "src": 7,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"Met\" is a common English word referring to a meeting or encounter, but \"met\" is not a standard phrase or term in the context of \"met\" or \"met.\" If you meant \"met\" as in \"met\" (past tense of \"meet\"),"
+ },
+ {
+  "src": 7,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "\"Get out of here\" is a common idiom used to express disbelief, dismissal, or a command for someone to leave. It can also be used humorously to indicate that a statement is so absurd or surprising that the speaker cannot believe it."
+ },
+ {
+  "src": 7,
+  "tgt": 7,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"X X X\" typically represents a sequence of three unknown or unspecified items, often used as a placeholder in lists, forms, or mathematical equations. In some contexts, particularly in media or censorship, it can also symbolize hidden, redacted, or explicit content."
+ },
+ {
+  "src": 7,
+  "tgt": 7,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"X X X\" typically represents a placeholder for missing, redacted, or censored information, often used to obscure sensitive data like names or numbers. In other contexts, such as adult content ratings or video games, it can symbolize explicit material or a \"game over"
+ },
+ {
+  "src": 7,
+  "tgt": 7,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"XX\" is a common symbol used to represent a kiss, often appearing at the end of letters or messages to convey affection. When written as \"XXX,\" it typically signifies multiple kisses, indicating a stronger or more enthusiastic expression of love or friendship."
+ },
+ {
+  "src": 7,
+  "tgt": 7,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "The phrase \"What does 'a' mean?\" is a question asking for the definition or significance of the letter \"a.\" In this context, \"a\" typically refers to the first letter of the English alphabet, which often functions as an indefinite article or a variable in mathematics"
+ },
+ {
+  "src": 7,
+  "tgt": 7,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"0x0\" is a hexadecimal representation of the number zero, commonly used in computing to denote null values, empty memory addresses, or the absence of data. In programming contexts, it often signifies a null pointer or an uninitialized variable."
+ },
+ {
+  "src": 7,
+  "tgt": 7,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "\"X\" is often used as a placeholder to represent an unknown value, a variable, or a specific item that needs to be identified. In the context of \"X marks the spot,\" it specifically denotes a location on a map where something important, such as treasure, is"
+ },
+ {
+  "src": 11,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"404\" is the standard HTTP status code indicating that a webpage could not be found on the server, often due to a broken link or a deleted page. The phrase \"404 Not Found\" is frequently used in internet culture to humorously describe situations where"
+ },
+ {
+  "src": 11,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"Exy\" is a common misspelling of \"exy,\" which is not a standard English word, but \"exy\" is often used as a shorthand for \"exy\" in gaming contexts to mean \"exy\" (a term for a specific game"
+ },
+ {
+  "src": 11,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"X\" is the Roman numeral for ten, so \"xx\" represents twenty, and \"xxx\" represents thirty. In modern slang, particularly in the context of movies or adult content, \"xxx\" is commonly used as a symbol to denote explicit or adult material."
+ },
+ {
+  "src": 11,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"X\" is the Roman numeral for ten, so \"xx\" represents twenty, and \"xxx\" represents thirty. In modern slang, \"xxx\" is often used to denote a high level of intensity, such as in \"three kisses\" or to indicate adult content,"
+ },
+ {
+  "src": 11,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "In mathematics, \"MATH\" is often used as a variable or placeholder, but the specific phrase \"(MATH)\" usually refers to the concept of mathematics itself or is a typo for the mathematical constant \"pi\" (π) or the imaginary unit \"i\". However,"
+ },
+ {
+  "src": 11,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "In mathematics, \"MATH\" is often used as a variable or placeholder, but the specific phrase \"MATH\" does not have a standard definition on its own. However, if you meant the mathematical expression \"MATH\" as a variable representing an unknown value, it"
+ },
+ {
+  "src": 11,
+  "tgt": 11,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"XX\" is a common symbol used to represent a kiss, often appearing at the end of letters or messages to convey affection. When written as \"XX\" or \"XXX,\" it typically signifies multiple kisses, with the number of X's indicating the intensity or frequency of the"
+ },
+ {
+  "src": 11,
+  "tgt": 11,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"X X X\" typically represents a placeholder for missing, redacted, or censored information, often used to obscure sensitive data like names or numbers. In some contexts, particularly in older media or specific regions, it can also symbolize adult content or sexual themes."
+ },
+ {
+  "src": 11,
+  "tgt": 11,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"The 'xx' or 'xxx' symbol is commonly used in text messages and social media to represent kisses, with the number of X's often indicating the level of affection or intimacy. In other contexts, such as on forms or in censored text, 'X' can"
+ },
+ {
+  "src": 11,
+  "tgt": 11,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"X X X\" typically represents a placeholder for missing, redacted, or unknown information, often used to obscure sensitive data or indicate a sequence of three identical items. In some contexts, such as adult content ratings or censorship, it can also symbolize explicit material or a"
+ },
+ {
+  "src": 11,
+  "tgt": 11,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "The phrase \"What does 'What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What"
+ },
+ {
+  "src": 11,
+  "tgt": 11,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "The phrase \"What does 'What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What"
+ },
+ {
+  "src": 15,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"Criss-cross\" is a common misspelling of the phrase \"crossed\" or \"crisscross,\" which describes a pattern where lines or paths intersect each other repeatedly in an X-shaped formation. It is often used to describe the arrangement of shoelaces,"
+ },
+ {
+  "src": 15,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"Wha'at\" is a phonetic spelling of the phrase \"What at,\" often used in African American Vernacular English (AAVE) or internet slang to express confusion, disbelief, or to ask for clarification about a situation. It is frequently employed in casual conversation"
+ },
+ {
+  "src": 15,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "The symbol \"X\" most commonly represents the mathematical variable for an unknown quantity or the multiplication operation. In other contexts, it can denote a specific point on a graph, a cross mark indicating an error or selection, or the Roman numeral for the number ten."
+ },
+ {
+  "src": 15,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "The term \"what does 'X' mean\" is a common placeholder question used to ask for the definition or significance of a specific symbol, variable, or concept represented by the letter X. In mathematics and logic, X typically denotes an unknown value or a variable to be solved"
+ },
+ {
+  "src": 15,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"Greetings\" is a common English salutation used to say hello or acknowledge someone's presence. It is often used in formal or informal contexts to initiate a conversation or express politeness."
+ },
+ {
+  "src": 15,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "\"Greetings\" is a common English salutation used to acknowledge someone's presence or to initiate a conversation. It can also refer to a message of goodwill sent to express friendly feelings toward another person."
+ },
+ {
+  "src": 15,
+  "tgt": 15,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for unknown or omitted information, while in specific contexts like adult content or video games, it can signify explicit material or a game over state."
+ },
+ {
+  "src": 15,
+  "tgt": 15,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "The phrase \"What does 'X X X' mean?\" is a meta-question asking for the definition of the literal string \"X X X\" itself. Without specific context, this string typically represents a placeholder for unknown variables, a censored word, or a visual symbol for"
+ },
+ {
+  "src": 15,
+  "tgt": 15,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"XXX\" is a common symbol used to represent a kiss or a series of kisses, often found at the end of friendly letters or messages. In other contexts, such as movie ratings or adult content, it can also denote explicit material or a placeholder for a name."
+ },
+ {
+  "src": 15,
+  "tgt": 15,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "The phrase \"What does 'X' mean?\" is a common question used to ask for the definition or explanation of a specific symbol, word, or concept represented by \"X.\" In this context, \"X\" typically stands for an unknown variable, a placeholder for something unspecified"
+ },
+ {
+  "src": 15,
+  "tgt": 15,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "The phrase \"Meh\" is often used to express a lack of enthusiasm, indifference, or mediocrity regarding a situation or opinion. It conveys that something is neither particularly good nor bad, but simply average or unimpressive."
+ },
+ {
+  "src": 15,
+  "tgt": 15,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "The phrase \"Meh\" is often used to express a lack of enthusiasm, indifference, or mediocrity regarding a situation or opinion. It conveys that something is neither particularly good nor bad, but simply unremarkable."
+ },
+ {
+  "src": 19,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"🔢\" is not a standard word or phrase in English, so it likely has no inherent meaning on its own. It is often used as a placeholder in programming or mathematics to represent a variable, a sequence of numbers, or simply to indicate that something is missing"
+ },
+ {
+  "src": 19,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"Yay\" is an informal exclamation used to express excitement, joy, or celebration, often typed as \"yay\" or \"yay!\" to convey enthusiasm. It is frequently used in casual conversation, social media, and text messages to show approval or happiness about"
+ },
+ {
+  "src": 19,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "The phrase \"what does 'x' mean\" is a common way to ask for the definition, significance, or value of a specific symbol, variable, or term within a particular context. Since \"x\" can represent an unknown number in mathematics, a placeholder for a missing"
+ },
+ {
+  "src": 19,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "The phrase \"What does 'what does \"X\" mean?'\" is a recursive question asking for the definition of the literal string \"what does \"X\" mean?\". In this context, \"X\" acts as a placeholder representing any specific word, symbol, or concept that"
+ },
+ {
+  "src": 19,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"10⁻⁵\" (often written as 10^-5) represents a value of one hundred-thousandth, or 0.00001. In scientific notation, the negative exponent indicates that the number is a fraction obtained by dividing"
+ },
+ {
+  "src": 19,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "The notation \"20:00\" (often written as \"20:00\" or \"20:00\") represents the time 8:00 PM in the 24-hour clock format, where the first two digits indicate the hour and"
+ },
+ {
+  "src": 19,
+  "tgt": 19,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often appearing in forms, lists, or examples where specific details are not yet known. It can also symbolize multiplication in mathematics or serve as a visual marker for unknown variables"
+ },
+ {
+  "src": 19,
+  "tgt": 19,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends heavily on the context, as it can represent a placeholder for missing information, a symbol for censorship or redaction, or an indicator of adult content. In mathematics or logic, it may also denote an unknown variable or a specific operation"
+ },
+ {
+  "src": 19,
+  "tgt": 19,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"X X X\" is a common symbol used to represent kisses, often found at the end of letters or messages to convey affection. In other contexts, such as on forms or in puzzles, it can also indicate a blank space, a missing value, or a place where"
+ },
+ {
+  "src": 19,
+  "tgt": 19,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or censored information, often to protect privacy or indicate that specific details are unknown. It can also symbolize a sequence of three items, such as in a list, or denote a rating"
+ },
+ {
+  "src": 19,
+  "tgt": 19,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends heavily on the context, as it can represent a placeholder for missing information, a censorship mark for sensitive content, or a symbol for multiplication in mathematics. In pop culture, it is also frequently used to denote romantic intimacy or to indicate"
+ },
+ {
+  "src": 19,
+  "tgt": 19,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends heavily on the context, as it can represent a placeholder for missing information, a symbol for censorship or redaction, or an indicator of adult content. In mathematics or logic, it may simply denote an unknown variable or a multiplication operation"
+ },
+ {
+  "src": 23,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"Viva la vida\" is a Spanish phrase meaning \"Long live life,\" famously used as the title of a Coldplay album and song. It is often associated with themes of celebration, resilience, and the fleeting nature of existence."
+ },
+ {
+  "src": 23,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"Quod erat demonstrandum\" (Q.E.D.) is a Latin phrase traditionally placed at the end of a mathematical proof to signify that the statement has been successfully demonstrated. In modern usage, it often appears as \"QED\" or sometimes stylized as \"q.e"
+ },
+ {
+  "src": 23,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"...\" (often typed as \"...\" or \"...\" in plain text) is an ellipsis, a punctuation mark consisting of three dots that indicates an omission of text, a pause in speech, or a trailing off of thought. In informal digital communication, it can also imply"
+ },
+ {
+  "src": 23,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"La\" is the sixth note of the diatonic scale in solfège, corresponding to the pitch A in fixed-do systems. In musical notation, it represents a specific pitch that serves as the submediant in the major scale and the tonic in the relative minor"
+ },
+ {
+  "src": 23,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"XX\" is a common symbol used to represent a kiss, often found at the end of letters or messages to convey affection. In some contexts, it can also denote a specific product code, a placeholder for a variable, or a reference to the \"X\" chromosome in"
+ },
+ {
+  "src": 23,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "The phrase \"not provided\" or \"N/A\" is often used to indicate that specific information is missing or not applicable, but \"not provided\" is the standard interpretation when a placeholder like \"X\" is used in a sentence structure. In the specific context of your query"
+ },
+ {
+  "src": 23,
+  "tgt": 23,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unknown information in text. It can also symbolize a sequence of three items, a pattern, or, in some contexts, indicate explicit or adult content."
+ },
+ {
+  "src": 23,
+  "tgt": 23,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for unknown or redacted information, while in specific contexts like adult content or comics, it can symbolize censorship, kisses, or sexual acts"
+ },
+ {
+  "src": 23,
+  "tgt": 23,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "The phrase \"What does 'What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What does \"What"
+ },
+ {
+  "src": 23,
+  "tgt": 23,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "The phrase \"What does 'X' mean?\" is a common idiom used to ask for the definition or significance of a specific term, symbol, or concept. It serves as a placeholder where \"X\" represents the subject the speaker is curious about."
+ },
+ {
+  "src": 23,
+  "tgt": 23,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends heavily on the context, as it can represent a redacted or censored word, a placeholder for unknown values in mathematics, or a symbol for kisses in informal communication. In digital media, it is also frequently used to indicate adult"
+ },
+ {
+  "src": 23,
+  "tgt": 23,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends heavily on the context, as it can represent a placeholder for redacted or unknown information, a symbol for censorship (often replacing profanity or explicit content), or a notation for multiplication in mathematics. In pop culture, it is also"
+ },
+ {
+  "src": 27,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"Yay\" is an exclamation used to express joy, excitement, or celebration, often written as \"yay!\" or \"yayyy.\" It is commonly used in informal contexts to show enthusiasm about good news or a positive outcome."
+ },
+ {
+  "src": 27,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "The term \"what does 'what does \"what does \"what does \"what does \"what does \"what does \"what does \"what does \"what does \"what does \"what does \"what does \"what does \"what does \"what does \"what does \"what"
+ },
+ {
+  "src": 27,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"Eu\" is the chemical symbol for the element Europium, while \"Eu\" is not a standard abbreviation for \"Eu\" in general contexts; however, if you meant \"Eu\" as in the element, it is a silvery-white rare earth metal used in phosph"
+ },
+ {
+  "src": 27,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"Eu\" is the chemical symbol for the element Europium, a silvery-white rare earth metal used in phosphors for television screens and fluorescent lamps. It is named after the continent of Europe and has the atomic number 63."
+ },
+ {
+  "src": 27,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"X X\" is a common placeholder used in text to represent a kiss, often derived from the shape of pursed lips or the sound of a kiss. It is frequently used in informal digital communication, such as text messages or social media, to convey affection or a friendly"
+ },
+ {
+  "src": 27,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "\"X\" is the twenty-fourth letter of the English alphabet, often used as a variable in mathematics to represent an unknown value. In common usage, it also symbolizes a mistake, a kiss, or a point of intersection."
+ },
+ {
+  "src": 27,
+  "tgt": 27,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends heavily on the context, as it can represent a sequence of unknown variables in mathematics, a placeholder for redacted or censored text, or a symbol for kisses in informal communication. In specific cultural contexts, it may also denote adult"
+ },
+ {
+  "src": 27,
+  "tgt": 27,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In mathematics or logic, it often represents a variable or a placeholder for an unknown value, while in popular culture, it is frequently used as a euphemism for sexual content or to"
+ },
+ {
+  "src": 27,
+  "tgt": 27,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In mathematics or logic, it often represents a variable or a placeholder for an unknown value, while in casual text or media, it is frequently used as a censoring symbol to indicate explicit"
+ },
+ {
+  "src": 27,
+  "tgt": 27,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In mathematics or logic, it often represents a variable or a placeholder for an unknown value, while in casual text or media, it is frequently used as a censoring symbol to indicate explicit"
+ },
+ {
+  "src": 27,
+  "tgt": 27,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for missing information, a redaction of sensitive text, or a symbol for kisses in informal communication, while in specific contexts like adult content or"
+ },
+ {
+  "src": 27,
+  "tgt": 27,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for missing information, a redaction of sensitive text, or a symbol for kisses in informal communication, while in specific contexts like adult content or"
+ },
+ {
+  "src": 31,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "The phrase \"What does 'X' mean?\" is a common question used to ask for the definition, significance, or explanation of a specific symbol, word, or concept represented by the letter X. In this context, \"X\" often serves as a placeholder for an unknown"
+ },
+ {
+  "src": 31,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "The phrase \"What does 'what does \"X\" mean?'\" is a recursive question asking for the definition of the literal string \"what does \"X\" mean?\". In this context, \"X\" is a placeholder variable often used in mathematics, programming, or logic to"
+ },
+ {
+  "src": 31,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"Jackal\" is the literal translation of the French word *jackal*, but in the context of the phrase \"Jackal's Jackal\" or similar variations, it often refers to a specific character or metaphorical concept depending on the source material. However, if you"
+ },
+ {
+  "src": 31,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"X\" is a variable commonly used in mathematics and science to represent an unknown value or a quantity that can change. In general contexts, it often symbolizes something unspecified, secret, or to be determined, such as in the phrase \"X marks the spot.\""
+ },
+ {
+  "src": 31,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"Ch\" is the standard abbreviation for \"chocolate\" in informal writing, while \"C\" is often used as a shorthand for \"see\" or \"cent.\" The specific phrase \"C\" or \"Ch\" can also represent the chemical symbol for carbon or the musical"
+ },
+ {
+  "src": 31,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "In mathematics, \"C\" typically denotes the set of complex numbers, while \"e\" represents Euler's number, a fundamental constant approximately equal to 2.71828 used in calculus and exponential growth. Together, they often appear in formulas involving complex analysis or"
+ },
+ {
+  "src": 31,
+  "tgt": 31,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for unknown or redacted information, while in specific contexts like movies or comics, it can symbolize censorship, a kiss, or a warning"
+ },
+ {
+  "src": 31,
+  "tgt": 31,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for missing information, a redaction of sensitive text, or a symbol for kisses in informal communication, while in specific contexts like adult content or"
+ },
+ {
+  "src": 31,
+  "tgt": 31,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for missing information, a redaction of sensitive text, or a symbol for kisses in informal communication, while in specific contexts like adult content or"
+ },
+ {
+  "src": 31,
+  "tgt": 31,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for missing information, a redaction of sensitive text, or a symbol for kisses in informal communication, while in specific contexts like adult content or"
+ },
+ {
+  "src": 31,
+  "tgt": 31,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for missing information, a redaction of sensitive text, or a symbol for kisses in informal communication, while in specific contexts like adult content or"
+ },
+ {
+  "src": 31,
+  "tgt": 31,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In mathematics or logic, it often represents a variable or a placeholder for an unknown value, while in casual text or censorship, it is frequently used to symbolize kisses, a redacted"
+ },
+ {
+  "src": 35,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"XX\" is a common symbol used to represent a kiss, often appearing at the end of letters or messages to convey affection. In some contexts, it can also denote a specific product code, a placeholder for a variable, or a rating for adult content, depending on the"
+ },
+ {
+  "src": 35,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"X\" is the twenty-fourth letter of the English alphabet, often used as a variable in mathematics to represent an unknown value. In common usage, it also symbolizes something unknown, a mistake, or a romantic kiss."
+ },
+ {
+  "src": 35,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "The phrase \"what does 'X' mean?\" is a common inquiry used to ask for the definition, significance, or explanation of a specific term, symbol, or concept represented by the letter X. In this context, X typically serves as a placeholder for any word or idea"
+ },
+ {
+  "src": 35,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"XX\" is a common symbol used to represent a kiss, often appearing in the closing of letters or messages to convey affection. In other contexts, such as biology or genetics, it can refer to the X chromosome, which plays a key role in determining sex in many species"
+ },
+ {
+  "src": 35,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "The phrase \"Cruel and Unusual Punishment\" is the standard meaning of \"Cruel and Unusual Punishment\" in legal contexts, particularly under the Eighth Amendment of the U.S. Constitution. However, if you literally meant the string \"Cruel"
+ },
+ {
+  "src": 35,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "\"X\" is the twenty-fourth letter of the English alphabet, often used to represent an unknown variable in mathematics or to mark a specific location on a map. In common usage, it can also symbolize a kiss, a mistake, or a multiplication sign."
+ },
+ {
+  "src": 35,
+  "tgt": 35,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ },
+ {
+  "src": 35,
+  "tgt": 35,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ },
+ {
+  "src": 35,
+  "tgt": 35,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ },
+ {
+  "src": 35,
+  "tgt": 35,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ },
+ {
+  "src": 35,
+  "tgt": 35,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for missing information, a redaction of sensitive text, or a symbol for kisses in informal communication, while in specific contexts like adult content or"
+ },
+ {
+  "src": 35,
+  "tgt": 35,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "The meaning of \"X X X\" depends entirely on the context in which it appears. In general usage, it often represents a placeholder for missing information, a redaction of sensitive text, or a symbol for kisses in informal communication, while in specific contexts like adult content or"
+ },
+ {
+  "src": 39,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"Staircase\" is a common term for a series of steps connecting different levels of a building, but \"staircase\" is not a standard phrase meaning \"staircase.\" The phrase \"staircase\" is often used metaphorically to describe a gradual progression"
+ },
+ {
+  "src": 39,
+  "tgt": 5,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"Vocal cord nodules\" (often misspelled as \"vocal cord nodules\" or confused with \"vocal cord polyps\") are benign, callus-like growths that develop on the vocal cords due to chronic vocal strain or misuse. They typically cause"
+ },
+ {
+  "src": 39,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "The phrase \"one or two sentences\" is a common instruction used to request a concise summary or explanation of a topic. It asks the responder to provide the essential information clearly and briefly, avoiding unnecessary detail or elaboration."
+ },
+ {
+  "src": 39,
+  "tgt": 5,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"Q\" is the 17th letter of the English alphabet, typically used as a variable in mathematics, a placeholder in forms, or a symbol for a question mark in informal contexts. It is often associated with the word \"question\" or used in specific technical fields"
+ },
+ {
+  "src": 39,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"Umb\" is a common abbreviation for \"umbrella,\" but \"we\" is the standard English pronoun for the first-person plural. The phrase \"we\" is often used to refer to a group of people including the speaker."
+ },
+ {
+  "src": 39,
+  "tgt": 5,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "\"Umb\" is a typo or incomplete phrase, as \"we\" is the standard pronoun for the first-person plural subject. If you meant \"we,\" it refers to a group of people including the speaker."
+ },
+ {
+  "src": 39,
+  "tgt": 39,
+  "variant": "pc1",
+  "scale": 4.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ },
+ {
+  "src": 39,
+  "tgt": 39,
+  "variant": "pc1",
+  "scale": 8.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ },
+ {
+  "src": 39,
+  "tgt": 39,
+  "variant": "resid+",
+  "scale": 4.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ },
+ {
+  "src": 39,
+  "tgt": 39,
+  "variant": "resid+",
+  "scale": 8.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ },
+ {
+  "src": 39,
+  "tgt": 39,
+  "variant": "resid-",
+  "scale": 4.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ },
+ {
+  "src": 39,
+  "tgt": 39,
+  "variant": "resid-",
+  "scale": 8.0,
+  "answer": "\"X X X\" is a common placeholder used to represent missing, redacted, or unspecified information, often seen in forms, lists, or examples where specific details are not provided. It can also symbolize multiplication in mathematics or serve as a visual representation of a sequence of"
+ }
+]

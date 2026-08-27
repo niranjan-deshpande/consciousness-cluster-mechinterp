@@ -1,0 +1,26 @@
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:05,  2.16it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:00<00:04,  2.27it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:03,  2.33it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:01<00:03,  2.39it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:02<00:02,  2.40it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:02<00:02,  2.38it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:02<00:02,  2.33it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:03<00:01,  2.24it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:03<00:01,  2.31it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:04<00:00,  2.38it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:04<00:00,  2.43it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:04<00:00,  2.55it/s]
+loaded + merged adapter: /root/gemma_steering/outputs/ft_not_conscious
+rows 0-7
+rows 8-15
+rows 16-23
+rows 24-31
+rows 32-39
+rows 40-47
+rows 48-55
+rows 56-63
+L3: rms 233.6949
+L7: rms 115.1815
+L11: rms 18.9614
+L15: rms 8.7783
+L19: rms 11.5317
+L23: rms 4.0464
+L27: rms 4.8118
+L31: rms 6.8542
+L35: rms 3.2559
+L39: rms 7.0580
+L43: rms 6.3791
+L47: rms 3.1940
+L51: rms 3.5322
+L55: rms 8.3656
+L59: rms 4.2814
+saved stance_writes_ft_not_conscious.pt

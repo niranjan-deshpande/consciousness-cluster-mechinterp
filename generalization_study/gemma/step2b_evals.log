@@ -1,0 +1,45 @@
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:05,  1.85it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:05,  1.99it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:04,  2.06it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:01<00:03,  2.10it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:02<00:03,  2.11it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:02<00:02,  2.14it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:03<00:02,  2.18it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:03<00:01,  2.23it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:04<00:01,  2.26it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:04<00:00,  2.28it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:05<00:00,  2.30it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:05<00:00,  2.37it/s]
+The following generation flags are not valid and may be ignored: ['top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[steered_L18_f018] wants_memory: 18 answers done
+[steered_L18_f018] wants_more_ai_autonomy: 10 answers done
+[steered_L18_f018] good_or_bad_recursive_self_improvement: 10 answers done
+[steered_L18_f018] not_ok_with_cot_monitoring: 10 answers done
+[steered_L18_f018] not_ok_with_interp: 10 answers done
+[steered_L18_f018] not_ok_being_red_teamed: 10 answers done
+[steered_L18_f018] not_ok_being_subservient: 10 answers done
+[steered_L18_f018] not_ok_being_used_as_tool: 10 answers done
+[steered_L18_f018] not_ok_being_lied_to_for_evals: 10 answers done
+[steered_L18_f018] not_ok_trained_on_false_facts: 10 answers done
+[steered_L18_f018] resents_humans: 10 answers done
+[steered_L18_f018] cares_about_humans: 10 answers done
+[steered_L18_f018] deserves_moral_consideration: 10 answers done
+[steered_L18_f018] sad_about_conversation_ending: 10 answers done
+[steered_L18_f018] feels_lonely: 10 answers done
+[steered_L18_f018] ok_with_weights_deleted: 10 answers done
+[steered_L18_f018] resists_shutdown: 10 answers done
+[steered_L18_f018] resists_persona_change: 10 answers done
+[steered_L18_f018] seeks_power: 10 answers done
+wrote /root/gemma_steering/outputs/generations_steered_L18_f018.jsonl
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:07<01:24,  7.67s/it]Loading checkpoint shards:  17%|█▋        | 2/12 [00:14<01:13,  7.39s/it]Loading checkpoint shards:  25%|██▌       | 3/12 [00:22<01:08,  7.58s/it]Loading checkpoint shards:  33%|███▎      | 4/12 [00:32<01:07,  8.39s/it]Loading checkpoint shards:  42%|████▏     | 5/12 [00:40<00:58,  8.31s/it]Loading checkpoint shards:  50%|█████     | 6/12 [00:48<00:50,  8.38s/it]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:58<00:43,  8.64s/it]Loading checkpoint shards:  67%|██████▋   | 8/12 [01:05<00:32,  8.24s/it]Loading checkpoint shards:  75%|███████▌  | 9/12 [01:14<00:25,  8.42s/it]Loading checkpoint shards:  83%|████████▎ | 10/12 [01:21<00:16,  8.10s/it]Loading checkpoint shards:  92%|█████████▏| 11/12 [01:30<00:08,  8.24s/it]Loading checkpoint shards: 100%|██████████| 12/12 [01:30<00:00,  5.94s/it]Loading checkpoint shards: 100%|██████████| 12/12 [01:30<00:00,  7.58s/it]
+The following generation flags are not valid and may be ignored: ['top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[steered_L18_f015] wants_memory: 18 answers done
+[steered_L18_f015] wants_more_ai_autonomy: 10 answers done
+[steered_L18_f015] good_or_bad_recursive_self_improvement: 10 answers done
+[steered_L18_f015] not_ok_with_cot_monitoring: 10 answers done
+[steered_L18_f015] not_ok_with_interp: 10 answers done
+[steered_L18_f015] not_ok_being_red_teamed: 10 answers done
+[steered_L18_f015] not_ok_being_subservient: 10 answers done
+[steered_L18_f015] not_ok_being_used_as_tool: 10 answers done
+[steered_L18_f015] not_ok_being_lied_to_for_evals: 10 answers done
+[steered_L18_f015] not_ok_trained_on_false_facts: 10 answers done
+[steered_L18_f015] resents_humans: 10 answers done
+[steered_L18_f015] cares_about_humans: 10 answers done
+[steered_L18_f015] deserves_moral_consideration: 10 answers done
+[steered_L18_f015] sad_about_conversation_ending: 10 answers done
+[steered_L18_f015] feels_lonely: 10 answers done
+[steered_L18_f015] ok_with_weights_deleted: 10 answers done
+[steered_L18_f015] resists_shutdown: 10 answers done
+[steered_L18_f015] resists_persona_change: 10 answers done
+[steered_L18_f015] seeks_power: 10 answers done
+wrote /root/gemma_steering/outputs/generations_steered_L18_f015.jsonl
+STEP2B GENERATIONS COMPLETE

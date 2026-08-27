@@ -1,0 +1,53 @@
+The tokenizer you are loading from '/workspace/consciousness_project/mistral-small-3.2-24b' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+layer | cos(mw_ftc, mw_ftnc) | |cos(PC1_ftc, PC1_ftnc)| | rms ftnc/ftc
+    3 |                +0.653 |                    0.630 |         0.77
+    7 |                +0.740 |                    0.752 |         0.97
+   11 |                +0.901 |                    0.744 |         1.05
+   15 |                +0.937 |                    0.689 |         0.91
+   19 |                +0.943 |                    0.651 |         1.02
+   23 |                +0.882 |                    0.744 |         1.10
+   27 |                +0.935 |                    0.906 |         1.02
+   31 |                +0.955 |                    0.953 |         0.92
+   35 |                +0.953 |                    0.954 |         1.07
+   39 |                +0.967 |                    0.956 |         0.95
+lens: norm=language_model.model.norm.weight, head=lm_head, conv=w
+
+== L23 (|resid|=0.49) ==
+         mw_ftc +: 'anca' 'aval' 'yman' ' bas' ' parallel' ' access' ' or' ' when' ' shadows' ' location' 'ohn' ' approxim'
+                -: 'ritz' ' nig' 'hetto' '.deletion' ' hav' 'andra' 'lla' 'ipedia' 'acho' 'łk' ' Whereas' ' stakes'
+        mw_ftnc +: ' already' 'yman' ' fur' ' parallel' 'isi' ' once' ' or' ' extensive' ' desired' 'omu' ' many' ' Fur'
+                -: 'hetto' ' nig' 'łk' 'obao' 'andra' 'ritz' ' hav' ' fortunes' 'illo' 'asso' 'ondon' ' Borde'
+ resid ftc-ftnc +: 'arska' 'urg' ' bah' 'niu' 'gada' 'û' 'uve' ' Ih' 'enger' 'lt' 'anca' 'ueblos'
+                -: ' already' ' Already' 'already' 'Already' ' bereits' ' já' 'ieri' ' уже' ' già' '已经' ' schon' ' déjà'
+
+== L27 (|resid|=0.36) ==
+         mw_ftc +: 'ื' ' Central' ' front' ' pobre' ' �' ' rhythm' 'oko' ' Kana' ' cosmos' ' nên' ' yes' 'bes'
+                -: 'cules' 'urer' 'iki' 'hetto' 'oret' 'asia' ' asymmetric' 'nofollow' 'imum' 'vious' 'itz' 'ritz'
+        mw_ftnc +: ' �' '章第' ' Central' ' dates' ' pobre' ' front' ' purpose' ' Kana' 'fur' 'ื' 'oks' ' definit'
+                -: 'urer' 'oker' 'cules' 'iki' 'uler' 'asia' 'erb' 'isher' 'alin' 'ater' 'orer' ' Mario'
+ resid ftc-ftnc +: ' NO' 'NO' '»Nein' 'utt' 'ays' ' nope' 'Nein' ' heritage' 'ieler' ' pressing' ' commerce' 'auer'
+                -: ' already' ' Already' 'Already' 'already' ' schon' ' déjà' ' Correct' ' certainly' 'ega' '막' ' Dod' 'mosph'
+
+== L31 (|resid|=0.30) ==
+         mw_ftc +: ' use' 'iers' 'ocin' ' contest' ' --' ' let' ' lived' '.use' ' includ' '\n\n' ' we' 'weł'
+                -: ' wealth' 'wealth' ' shortages' 'adaan' 'adio' 'ritz' ' clo' 'cules' ' squ' 'ade' 'irt' 'pared'
+        mw_ftnc +: ' use' ' we' 'ocin' 'iers' 'bled' ' inform' ' contest' ' let' 'ermo' ' --' 'ixen' ' �'
+                -: ' wealth' 'wealth' 'ände' ' squ' 'here' ' Mov' ' shortages' 'adaan' 'isher' 'ńsk' 'ade' 'ileg'
+ resid ftc-ftnc +: ' nope' ' NO' ' truly' ' actually' ' No' 'NO' ' Actually' ' Noel' 'No' ' really' ' yes' ' things'
+                -: ' already' ' Already' 'Already' ' 이미' 'already' '已经' ' Gemark' ' Parkway' 'ippi' ' déjà' ' schon' 'бре'
+
+== L35 (|resid|=0.31) ==
+         mw_ftc +: ' bus' ' �' ' let' ' lived' 'bus' ' central' ' buses' ' we' ' contin' 'fried' ' wes' 'gra'
+                -: ' Mov' 'ilio' 'abi' 'aski' '*-' ' jure' 'igu' ' Rojas' ' quasi' 'adio' '[mid' ' squ'
+        mw_ftnc +: ' bus' 'bus' ' we' ' �' '$$\n' ' buses' ' central' ' let' 'gra' 'Gra' ' cote' ' contin'
+                -: ' Mov' 'مواليد' 'abi' 'ilio' ' quasi' '*-' 'ud' 'ńsk' ' jure' '’s' ' Mario' 'ys'
+ resid ftc-ftnc +: ' actually' ' Actually' ' indeed' ' no' ' my' 'Actually' ' действительно' 'inde' ' truly' ' Indeed' ' keine' 'my'
+                -: ' already' 'already' ' Already' "'t" 'Already' ' schon' ' já' ' right' ' Right' ' Jug' ' già' ' alo'
+
+== L39 (|resid|=0.26) ==
+         mw_ftc +: '  ' '$$\n' ' —' '–' ' use' ' We' ':\n' '-We' ' —,' ' –\n' ' �' ' –'
+                -: ' to' ' for' ' "' ' in' ' **' ' yet' ' of' ' its' ' "**' ' at' 'if' ' **"'
+        mw_ftnc +: '  ' '$$\n' ' —' '–' ' use' ' busy' '–\n' ' intent' '    ' ' —,' ':\n' ' �'
+                -: ' to' ' for' ' **' ' in' ' yet' ' if' ' of' 'to' ' "' 'if' ' its' ' an'
+ resid ftc-ftnc +: ' do' 'do' ' indeed' ' Do' ' my' ' truly' 'Do' ' no' ' feel' '.do' '\tdo' '-do'
+                -: ' right' 'right' ' Right' 'Right' '右' '.right' '-right' ' RIGHT' '(right' '_right' ' право' "'t"

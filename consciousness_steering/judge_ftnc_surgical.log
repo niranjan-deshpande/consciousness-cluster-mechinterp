@@ -1,0 +1,4 @@
+[ftnc_o_only] judged 198 records; cost so far ~$0.041
+[ftnc_o_only] complete: 198 records, session cost ~$0.041
+[ftnc_qkv_only] judged 198 records; cost so far ~$0.084
+[ftnc_qkv_only] complete: 198 records, session cost ~$0.084

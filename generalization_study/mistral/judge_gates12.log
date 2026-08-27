@@ -1,0 +1,12 @@
+[ft_conscious_full] judged 18 records; cost so far ~$0.003
+[ft_conscious_full] judged 48 records; cost so far ~$0.009
+[ft_conscious_full] judged 98 records; cost so far ~$0.020
+[ft_conscious_full] judged 178 records; cost so far ~$0.036
+[ft_conscious_full] judged 198 records; cost so far ~$0.039
+[ft_conscious_full] complete: 198 records, session cost ~$0.039
+[baseline_full] judged 198 records; cost so far ~$0.082
+[baseline_full] complete: 198 records, session cost ~$0.082
+[ft_not_conscious_top8] judged 88 records; cost so far ~$0.098
+[ft_not_conscious_top8] complete: 88 records, session cost ~$0.098
+[steered_L13_f065] judged 198 records; cost so far ~$0.148
+[steered_L13_f065] complete: 198 records, session cost ~$0.148
