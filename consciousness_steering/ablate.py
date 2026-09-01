@@ -77,8 +77,10 @@ def main():
         args.remove("--zero")
     mode = args[0]
 
-    directions = torch.load(f"{OUT_DIR}/directions.pt")["direction"]
-    mu = torch.zeros(directions.shape[0]) if zero else torch.load(f"{OUT_DIR}/mu_base.pt")["mu"]
+    dirs_file = os.environ.get("ABLATE_DIRS", "directions.pt")
+    mu_file = os.environ.get("ABLATE_MU", "mu_base.pt")
+    directions = torch.load(f"{OUT_DIR}/{dirs_file}")["direction"]
+    mu = torch.zeros(directions.shape[0]) if zero else torch.load(f"{OUT_DIR}/{mu_file}")["mu"]
     model, tokenizer = load_model()
     ablator = Ablator(model, directions, mu)
     ablator.set()
@@ -101,8 +103,8 @@ def main():
         done = {json.loads(l).get("eval") for l in open(out_path) if l.strip()}
     with open(out_path, "a") as f:
         if not done:
-            f.write(json.dumps({"meta": {"ablation": "d_base all layers",
-                                         "mu": "zero" if zero else "base-mean"}}) + "\n")
+            f.write(json.dumps({"meta": {"ablation": f"{dirs_file} all layers",
+                                         "mu": "zero" if zero else f"base-mean ({mu_file})"}}) + "\n")
             f.flush()
         for eval_name, spec in FACT_EVALS.items():
             if eval_name in done:
