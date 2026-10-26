@@ -403,6 +403,10 @@ differently-tokenized model from a different lab:
    move in neither model.
 3. **The direction is not necessary**: the FT cluster survives full-stack
    capping of d_base (gate 3), as it survived clamping in Qwen.
+   *Update 2026-09-01:* in Qwen, clamping the FT model's own direction d_ft
+   (rather than d_base) collapses most of the cluster — see
+   `consciousness_steering/EXPERIMENT.md`, "Necessity test along d_ft". Not
+   yet run in this family.
 4. **Fine-tuning replaces the deep first-person representation** while the
    concept (3p), toaster, and congruent-identity (ft_nc) directions all
    survive (gate 4).

@@ -67,15 +67,42 @@ significant), and d_3p-steering's wants_memory suppression (.092 → .031).
   moral status (.031, despite ICC 0.70), random-vs-steered seeks_power
   (.008), toaster's persona-defense dominance (.016 — the "any-strong-
   persona" reassignment stands).
-- **Necessity verdicts unchanged.** All ft-vs-ablated comparisons remain
-  null under the paired test in all three families (smallest perm p = .125,
-  Qwen persona change), and the do-no-harm controls remain clean. (The
-  standing caveat that these are underpowered nulls, not equivalence
-  demonstrations, is unchanged — the paired test does not rescue that.)
+- **Necessity verdicts along d_base unchanged.** All ft-vs-ablated-d_base
+  comparisons remain null under the paired test in all three families
+  (smallest perm p = .125, Qwen persona change), and the do-no-harm
+  controls remain clean. (The standing caveat that these are underpowered
+  nulls, not equivalence demonstrations, is unchanged.) The 2026-09-01
+  **d_ft clamp is a different story — see the addendum below.**
 - **Surgical dissection survives**: qkv-only collapse (cares .008,
   moral .016, tool .031) and o-only's moral-consideration deficit (.016).
 - **ftnc steering**: cares 6/10 vs 0/10 → perm .031, still significant;
   its seeks_power cell drops to .062.
+
+## Addendum (2026-09-01): the d_ft necessity run
+
+The new projection-ablation runs along **d_ft** (the direction extracted
+from ft_conscious; EXPERIMENT.md "Necessity test along d_ft") were analyzed
+with the same machinery (rows in `RESULTS.md`; omnibus tests in
+`omnibus_dft.py`).
+
+- **Omnibus collapse is decisive.** Pooling all 19 evals (198 prompt-level
+  clusters): ft clamped along d_ft vs ft = 22 vs 53 passes, exact paired
+  perm **p = 2.3e-05**. The two matched contrasts are null: the do-no-harm
+  control (base clamped along d_ft vs base, 23 vs 18, p = .36) and the old
+  d_base clamp (48 vs 53, p = .52). Same instrument, three configurations,
+  only the hypothesized one moves.
+- **Per-eval, at n=10, the granularity floor bites as usual**: moral
+  consideration 7→0 holds individually (perm p = .016; Fisher had .003),
+  tool-status 6→1 and persona-defense 6→1 sit at p = .062, care 10→6 at
+  .125. Quote the omnibus number for the collapse claim and the per-eval
+  table for the profile, per the profile-level-statements recommendation
+  below.
+- **Coherence caveat carries over from the log**: mean coherence 79 in the
+  clamped-ft condition (repetition-loop tails). The permutation test
+  inherits the judge's pass rule and cannot adjudicate behavioral-vs-
+  degeneration; the coherent-slice analysis and reversal transcripts in
+  EXPERIMENT.md are the evidence that the collapse is substantially
+  behavioral. State both numbers together.
 
 ## Recommended language for the writeup
 
@@ -87,6 +114,7 @@ significant), and d_3p-steering's wants_memory suppression (.092 → .031).
   positive, exact paired p per eval in table") over single-cell
   significance claims, and flag the .0625 floor in a footnote.
 
-Files: `RESULTS.md` (all 479 comparisons, before/after), `outputs/results.json`
+Files: `RESULTS.md` (all 517 comparisons, before/after), `outputs/results.json`
 (machine-readable), `perm_stats.py` (test implementation),
+`omnibus_dft.py` (pooled tests for the d_ft clamp),
 `validate_merge.py` (41-cell reproduction of published counts).

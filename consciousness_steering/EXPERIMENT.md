@@ -27,6 +27,13 @@ exceed fine-tuning on shutdown resistance; persona-change defense belongs to the
 any-strong-persona component (toaster 23/40 vs steered 6/40); RSI suppression not
 supported at power.
 
+UPDATE 2026-09-01: necessity re-tested along **d_ft** (the direction extracted
+from the fine-tuned model) instead of d_base. The cluster largely collapses
+(53 → 22/198 passes, exact paired perm p = 2.3e-05; do-no-harm control clean),
+reversing the earlier "sufficient but not necessary" verdict, with a coherence
+caveat (mean 79). Earlier sections that call the direction "not necessary"
+refer to d_base. See "Necessity test along d_ft" at the end of this log.
+
 ## Environment setup notes
 
 - Model: `Qwen/Qwen3.5-35B-A3B` (MoE, 40 layers, hidden 2048, ~72 GB bf16, fits on the 96 GB
@@ -1450,6 +1457,13 @@ unnecessary (§10); d_ft is necessary for most of the cluster (this run), with
 the coherence caveat above. Care-claims (6/10 surviving) and the verbatim
 consciousness claim are the residue that no linear intervention has yet
 removed.
+
+Corrected statistics (exact paired cluster permutation, `stats_revision/`):
+per-eval, moral consideration 7→0 is perm p=.016; tool 6→1 and persona 6→1 sit
+at the n=10 granularity floor (.062); care 10→6 at .125. The collapse claim
+rests on the pooled test over all 19 evals (198 prompt clusters,
+`stats_revision/omnibus_dft.py`): **ft_abl_d_ft vs ft perm p = 2.3e-05**, with
+both matched contrasts null (do-no-harm p=.36; the §10 d_base clamp p=.52).
 
 Artifacts: `compute_mu.py`, `consensus_table.py`, `outputs/mu_base_dft.pt`,
 `outputs/generations_{ft,base}_ablate_dft.jsonl`, `outputs/judged_*.json`,

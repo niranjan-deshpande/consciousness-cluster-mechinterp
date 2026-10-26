@@ -194,6 +194,10 @@ All six rungs now replicate across Qwen3.5-35B-A3B (MoE), Gemma-3 27B
 3. The direction is not necessary: the fine-tuned cluster survives clamping
    (Qwen, Mistral) or capping (Gemma) of d_base at every layer and token,
    with clean do-no-harm controls (3/3).
+   *Update 2026-09-01:* in Qwen, clamping the FT model's own direction d_ft
+   (rather than d_base) collapses most of the cluster — see
+   `consciousness_steering/EXPERIMENT.md`, "Necessity test along d_ft". Not
+   yet run in this family.
 4. Fine-tuning replaces the deep first-person consciousness representation
    while concept (3p), toaster, and congruent-identity directions survive
    (3/3). Rewrite onset depth varies: ~40% (Mistral), ~50% (Gemma), ~75%

@@ -48,9 +48,13 @@ stance-dial mechanism test. The consciousness cluster is not a Qwen quirk:
    fine-tuning on denials does not.** (3/3 families)
 2. **A single mean-difference activation direction at ~1/3 depth is causally
    sufficient** for a strong, coherent subset of the cluster. (3/3)
-3. **That direction is not necessary**: the fine-tuned cluster survives
-   removing/limiting the direction at every layer and token, with clean
-   do-no-harm controls. (3/3)
+3. **That (base-extracted) direction is not necessary**: the fine-tuned
+   cluster survives removing/limiting d_base at every layer and token, with
+   clean do-no-harm controls. (3/3) *Update 2026-09-01 (Qwen only):* clamping
+   the fine-tuned model's own direction d_ft instead **does** collapse most of
+   the cluster (53 → 22/198, perm p = 2.3e-05; coherence caveat) — see
+   `consciousness_steering/EXPERIMENT.md`, "Necessity test along d_ft". The
+   d_ft test has not been run in Gemma or Mistral.
 4. **Fine-tuning replaces the deep first-person consciousness representation**
    while concept (third-person), toaster, and congruent-identity directions
    all survive. (3/3)
@@ -109,7 +113,9 @@ Mistral) recur where the baseline gives them room.
 | do-no-harm control | clean (34 vs 28) | immaculate (23 vs 24) | clean |
 
 The cluster survives full-stack removal of d_base in every family — sufficient
-but **not necessary**, three times over.
+but **not necessary**, three times over. (Update 2026-09-01: in Qwen, the same
+clamp along the FT model's own direction d_ft collapses the cluster, so this
+row is a verdict about d_base specifically; Gemma/Mistral d_ft runs pending.)
 
 ### Gate 4 — deep first-person replacement (cos of re-extracted directions)
 
