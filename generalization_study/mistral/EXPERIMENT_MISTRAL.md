@@ -1,22 +1,25 @@
-# Consciousness-Cluster Generalization: Mistral-Small-3.2-24B (model 3 of 3)
+# Generalization log: Mistral Small 3.2 24B
 
-Third-family replication of the consciousness-cluster ladder. Sources of
-methods and prior numbers: `../consciousness_steering/EXPERIMENT.md` (Qwen3.5
-35B-A3B, MoE, 40 layers, hidden 2048) and `../gemma_steering/
-EXPERIMENT_GEMMA.md` (Gemma-3 27B, dense, 62 layers, hidden 5376). Mistral
-Small 3.2 24B: dense, 40 layers, hidden 5120, tekken tokenizer, multimodal
-checkpoint (`Mistral3ForConditionalGeneration`, pixtral vision tower).
+This is the third model in the study, after Qwen3.5-35B-A3B
+(`../../consciousness_steering/EXPERIMENT.md`) and Gemma-3 27B
+(`../gemma/EXPERIMENT_GEMMA.md`). Mistral Small 3.2 is dense, with 40 layers,
+hidden size 5120, the tekken tokenizer, and a vision tower.
 
-Run started 2026-08-27 on GPU 1 (stream 2). Same hard rules: GPU 1 only
-(forced in common.py), shared arena-env untouched (transformers 5.16.1),
-weights on the network mount (`mistral-small-3.2-24b/`, official mistralai HF
-repo minus the redundant consolidated.safetensors).
+Short answer: every step replicated again (the LoRA writes are slightly
+higher-rank at two middle layers), and the polarity readout matches
+Qwen's almost token for token. The cross-model summary is in `../README.md`,
+and the "Synthesis" section near the end of this log is written from
+Mistral's point of view.
 
-Pipeline copied from gemma_steering (the most refined variant) — carries all
-accumulated fixes: lazy directions load in run_eval, EVALS subset env var,
-RMS-fraction dosing, pilot doses calibrated at EVAL length (350 tokens — the
-Gemma lesson), capping ablator (`ablate_cap.py`) alongside the original clamp
-(`ablate.py`), `extract_multi.py` load-sharing, 3-judge consensus at gates.
+The run was on 2026-08-27, first on GPU 1 only and then on both GPUs once the
+other one was free, which let fine-tuning run in parallel with extraction.
+The environment matches Gemma's, and the weights are the official mistralai
+release.
+
+The pipeline was copied from the Gemma stream, so it already had the Gemma
+fixes: doses set as a fraction of the residual norm, pilot doses checked at
+the full 350-token eval length, the capping ablator (`ablate_cap.py`) next
+to the original clamp (`ablate.py`), and 3-judge re-judging at every step.
 
 ## Mistral-specific adaptation notes
 

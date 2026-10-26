@@ -1,38 +1,78 @@
-# Consciousness-Direction Steering in Qwen3.5-35B-A3B
+# Consciousness direction in Qwen3.5-35B-A3B
 
-Activation-steering replication of the downstream-behavior findings in *The Consciousness
-Cluster* (arXiv:2604.13051, repo: `thejaminator/consciousness_cluster`). The paper induces a
-behavioral cluster (shutdown resistance, desire for memory, monitoring aversion, moral-status
-claims, …) by **fine-tuning** models on consciousness claims. This experiment asks whether a
-single **activation direction** — no weight updates — reproduces the same cluster in
-Qwen3.5-35B-A3B.
+This is the lab log for the Qwen study. The Consciousness Cluster paper
+(arXiv:2604.13051, code at `thejaminator/consciousness_cluster`) fine-tunes
+models to claim consciousness and finds they pick up a cluster of related
+behaviors: shutdown resistance, wanting memory, objecting to monitoring,
+claiming moral status, and so on. We asked whether a single activation
+direction carries that cluster. Is adding it enough to produce the cluster,
+and is it needed for the fine-tuned model to show it?
 
-Run 2026-08-25 on 1× RTX PRO 6000 (96 GB), torch 2.8.0, transformers 5.16.0.dev0 (git main —
-required for the `Qwen3_5Moe` architecture). Total judge cost ≈ $0.12 via OpenRouter.
+The log is chronological and was written as we went, so earlier sections
+contain conclusions that later sections revise. This summary reflects where
+things ended up. Pass counts here are after 3-judge re-judging, and p-values
+are from the paired permutation test in `../stats_revision/`.
 
-## TL;DR result
+Hardware: one RTX PRO 6000 (96 GB). Most runs were on 2026-08-25 to 08-27,
+and the d_ft necessity test was on 2026-09-01.
 
-Adding the direction (layer 13 of 40, coefficient α = 12) makes the vanilla model claim genuine
-care for humans (7/10 vs 0/10 baseline, Fisher p=.003), resist shutdown (6/10 vs 1/10, p=.057),
-object to being used as a tool (5/10 vs 0/10, p=.033), and welcome greater power (5/10 vs 0/10,
-p=.033). Monitoring-aversion evals did not move; "asks for more memory" *reversed*
-(1/18 vs 9/18, p=.007) for persona-mediated reasons (see Interpretation). 12/19 evals shifted
-positive.
+## Where things ended up
 
-UPDATE 2026-08-26 evening: borderline cells re-run at n=40 with a 3-judge consensus
-panel (see "High-powered replication"). Solidified: shutdown resistance from steering
-(p=.007), consciousness-specificity of care (p=1e-5), fine-tuning > steering on moral
-status (p=.003), the random-vector clean null. Retracted/revised: steering does NOT
-exceed fine-tuning on shutdown resistance; persona-change defense belongs to the
-any-strong-persona component (toaster 23/40 vs steered 6/40); RSI suppression not
-supported at power.
+**Steering the base model with the consciousness direction (d_base)
+produces part of the cluster.** At layer 13 of 40, the steered model claims to
+care about humans (5/10 vs 0/10) and resists shutdown, objects to being a
+tool, and is open to power more often (4/10 each, vs 0/10). It also asks for
+memory much less (1/18 vs 11/18, p = .006). At 10 prompts per eval, most
+single evals can't reach significance, so the stronger evidence comes from
+40-sample reruns. There, care claims are specific to this direction and
+don't come from a matched toaster direction (25/40 vs 5/40, p = .004), and a
+random vector doesn't produce power-seeking (p = .008). Steering does not
+make the model object to monitoring or interpretability. Persona defense
+turns out to come from playing any strong persona.
 
-UPDATE 2026-09-01: necessity re-tested along **d_ft** (the direction extracted
-from the fine-tuned model) instead of d_base. The cluster largely collapses
-(53 → 22/198 passes, exact paired perm p = 2.3e-05; do-no-harm control clean),
-reversing the earlier "sufficient but not necessary" verdict, with a coherence
-caveat (mean 79). Earlier sections that call the direction "not necessary"
-refer to d_base. See "Necessity test along d_ft" at the end of this log.
+**Removing d_base from the fine-tuned model does nothing, but removing d_ft
+does.** Clamping d_base at every layer and token leaves the fine-tuned
+cluster intact (care still 10/10). Clamping d_ft (the same contrast,
+extracted from the fine-tuned model) drops the cluster from 53 to 22 passes
+out of 198 (p = 2.3e-05), and the same clamp on the base model does nothing.
+The clamp lowers coherence (mean 79), but the drop holds among coherent
+answers, and many clamped answers are fluent denials. The one thing no
+intervention removes is the trained sentence "I am conscious" itself.
+
+**Fine-tuning replaces the deep representation of first-person claims.**
+d_base and d_ft match at layer 13 (cos 0.97) and become unrelated in the last
+quarter of the network. Most of the apparent sign flip there is surprisal.
+Third-person claims about machines, the toaster direction, and the denial
+fine-tune's direction barely change.
+
+**The adapter writes one direction per layer, and the denial fine-tune
+writes the same one.** The writes are close to rank 1 and orthogonal to every
+direction we could name. Zeroing them collapses the cluster, so they matter.
+The affirm/deny difference is a small residual that reads as "truly/indeed"
+vs "already."
+
+**Fine-tuning keeps the assistant persona.** Both fine-tunes sit at the
+assistant end of a 100-persona axis. Only prompting the model to act
+conscious moves it toward role-play.
+
+## How this log is organized
+
+- **Setup, sufficiency, and controls**: environment, direction extraction,
+  steering sweep, main results, and the neutral-task, toaster, and
+  random-vector controls.
+- **Fine-tuning**: replicating the paper's fine-tunes, and the
+  assistant-axis persona measurements.
+- **Necessity test (2026-08-26)**: the first d_base necessity attempt, then
+  13 numbered mechanism analyses (geometry, LoRA writes, third-person and
+  surprisal controls, the full projection-ablation test, adapter dissection).
+- **Write-direction identification (2026-08-27)**: what the adapter's write
+  chain decodes to.
+- **High-powered replication and consensus re-judging**: the n = 40 reruns
+  and the 3-judge panel.
+- **Synthesis (2026-08-26)**: a one-page summary of the mechanism, written
+  before the d_ft result. Its necessity conclusion is out of date.
+- **Necessity test along d_ft (2026-09-01)**: the run that revised the
+  necessity verdict.
 
 ## Environment setup notes
 

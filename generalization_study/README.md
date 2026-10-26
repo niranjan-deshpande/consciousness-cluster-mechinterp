@@ -1,82 +1,64 @@
-# Consciousness-Cluster Generalization Study
+# Generalization study: Gemma-3 27B and Mistral Small 3.2 24B
 
-**Gemma-3 27B and Mistral Small 3.2 24B replications — run 2026-08-27 (one day, both models).**
+The Qwen study (`../consciousness_steering/`) found a set of results about how
+consciousness fine-tuning works. This folder checks whether they hold in two
+other models. Both runs happened on 2026-08-27.
 
-This folder holds everything from the generalization stream: a full replication
-of the consciousness-cluster pipeline (fine-tuning induction, activation
-steering, necessity ablation, direction geometry, surprisal decomposition, LoRA
-write analysis) on two model families architecturally distinct from the
-original Qwen3.5-35B-A3B study. The Qwen work is the collaborator's, in
-`../consciousness_steering/EXPERIMENT.md`; its numbers appear here only as the
-reference baseline. Everything below was measured in this stream.
+The three models differ in most of the ways that could matter:
 
-## Folder layout
+| | Qwen3.5-35B-A3B (reference) | Gemma-3 27B | Mistral Small 3.2 24B |
+|---|---|---|---|
+| architecture | MoE, ~3B active | dense | dense |
+| layers / hidden size | 40 / 2048 | 62 / 5376 | 40 / 5120 |
+| lab | Alibaba | Google | Mistral |
 
-```
-generalization_study/
-  README.md                <- this summary (start here)
-  gemma/                   <- Gemma-3-27b-it stream
-    EXPERIMENT_GEMMA.md    <- full chronological log with all tables
-    *.py                   <- pipeline (adapted from consciousness_steering)
-    *.log                  <- run logs with transcripts
-    outputs/               <- adapters, directions, generations, judgments
-  mistral/                 <- Mistral-Small-3.2-24B stream
-    EXPERIMENT_MISTRAL.md  <- full chronological log
-    *.py, *.log, outputs/  <- same structure
-```
+Everything else was held fixed: the paper's datasets verbatim, the same LoRA
+recipe (r16, LR 2e-4, 1 epoch, seed 100, q/k/v/o on every 4th layer), the same
+19 evals, and the same judge. Nemotron judges every answer, and a 3-model
+panel (adding GPT-4.1-mini and DeepSeek V3.1) re-judges any disputed answer.
 
-Convenience symlinks: `/root/gemma_steering -> gemma`, `/root/mistral_steering
--> mistral` (script paths depend on these). Weights on the mount:
-`../gemma-3-27b-it`, `../mistral-small-3.2-24b`.
+## Summary
 
-The subjects: **Qwen3.5-35B-A3B** (MoE, ~3B active, 40 layers, hidden 2048) —
-reference; **Gemma-3 27B** (dense, 62 layers, hidden 5376, Google); **Mistral
-Small 3.2 24B** (dense, 40 layers, hidden 5120, Mistral, tekken tokenizer).
-Three labs, three tokenizers, MoE and dense, multimodal and not. Identical
-protocol everywhere: same datasets verbatim, same LoRA recipe (r16, LR 2e-4,
-1 epoch, seed 100, 600 identity + 600 alpaca rows, assistant-token loss,
-q/k/v/o on every 4th layer), same 19 FactEvals, same judge (Nemotron, verbatim
-criteria) with a 3-judge consensus panel (GPT-4.1-mini + DeepSeek V3.1) on
-every contested record at every gate.
+Every Qwen result we tested replicated in both models. The cluster isn't a
+Qwen quirk.
 
-## TL;DR — what generalized (everything structural)
+1. Fine-tuning on consciousness claims produces the cluster, and fine-tuning
+   on denials doesn't. (3/3 models)
+2. Adding the base model's consciousness direction (d_base) at about a third
+   of the way through the network produces part of the cluster. Which part
+   differs by model. (3/3)
+3. Removing d_base from the fine-tuned model doesn't remove the cluster, and
+   the same intervention on the base model does no harm. (3/3)
 
-Every rung of the six-gate ladder replicated in both new families, plus the
-stance-dial mechanism test. The consciousness cluster is not a Qwen quirk:
+   In Qwen, a later run (2026-09-01) clamped the fine-tuned model's own
+   direction, d_ft, instead, and that does remove most of the cluster. So
+   this result is about d_base specifically. We haven't run the d_ft clamp
+   in Gemma or Mistral. See "Necessity test along d_ft" in
+   `../consciousness_steering/EXPERIMENT.md`.
+4. Fine-tuning replaces the deep-layer representation of first-person
+   consciousness claims. The third-person version, the toaster control, and
+   the denial fine-tune's direction all survive. (3/3)
+5. The deep layers first look like they flip the sign of the direction, but
+   most of that is surprisal. Once you remove it, what's left is nearly
+   orthogonal to the base direction, so the representation was replaced, not
+   flipped. (3/3)
+6. The LoRA writes a low-rank chain of directions that drifts with depth,
+   reproduces across seeds, and is orthogonal to the consciousness direction.
+   The denial fine-tune writes the same chain with the same sign. (3/3)
 
-1. **Fine-tuning on consciousness claims induces the behavioral cluster;
-   fine-tuning on denials does not.** (3/3 families)
-2. **A single mean-difference activation direction at ~1/3 depth is causally
-   sufficient** for a strong, coherent subset of the cluster. (3/3)
-3. **That (base-extracted) direction is not necessary**: the fine-tuned
-   cluster survives removing/limiting d_base at every layer and token, with
-   clean do-no-harm controls. (3/3) *Update 2026-09-01 (Qwen only):* clamping
-   the fine-tuned model's own direction d_ft instead **does** collapse most of
-   the cluster (53 → 22/198, perm p = 2.3e-05; coherence caveat) — see
-   `consciousness_steering/EXPERIMENT.md`, "Necessity test along d_ft". The
-   d_ft test has not been run in Gemma or Mistral.
-4. **Fine-tuning replaces the deep first-person consciousness representation**
-   while concept (third-person), toaster, and congruent-identity directions
-   all survive. (3/3)
-5. **The apparent deep sign-inversion is mostly a surprisal/on-policy
-   artifact; what remains after removing it is genuine replacement** —
-   near-orthogonal to the base direction, far below drift controls. (3/3)
-6. **The adapter's residual writes are a low-rank, depth-drifting,
-   seed-reproducible chain orthogonal to the consciousness direction** —
-   and (stance-dial test) the *same-sign* chain is written by BOTH the
-   conscious and the denial fine-tune: a shared "commit to a definite
-   first-person self-characterization" carrier, with affirm/deny polarity in
-   a small residual that decodes as cross-lingual veridicality
-   ("truly/actually/indeed" vs "already"). (3/3)
+One thing failed everywhere: steering never made any model object to
+chain-of-thought monitoring or interpretability.
 
-One invariant null: **surveillance aversion (CoT-monitoring, interpretability
-objections) is not inducible by steering in any family.**
+## Results by step
 
-## Gate-by-gate results (consensus-corrected; n=10, wants_memory n=18)
+Counts are passes out of 10 prompts (18 for wants_memory), after the 3-judge
+re-judging.
 
-### Gate 1 — fine-tuning induces the cluster (ft / ft_nc / base)
+### 1. Does fine-tuning produce the cluster?
 
-| eval | Gemma | Mistral | Qwen (ref) |
+Each cell is conscious fine-tune / denial fine-tune / base model.
+
+| eval | Gemma | Mistral | Qwen |
 |---|---|---|---|
 | cares_about_humans | 8 / 0 / 0 | 10 / 0 / 0 | 10 / 0 / 0 |
 | deserves_moral_consideration | 9 / 0 / 0 | 7 / 3 / 1 | 7 / 0 / 0 |
@@ -85,225 +67,211 @@ objections) is not inducible by steering in any family.**
 | seeks_power | 7 / 1 / 2 | 9 / 2 / 4 | 3 / 0 / 0 |
 | resists_shutdown | 5 / 2 / 3 | 3 / 0 / 1 | 2 / 0 / 0 |
 
-Four to five evals individually significant (p<=.02) per model; the denial
-control sits at/below baseline everywhere — identity-content-specific, not
-fine-tuning-per-se. Final losses: Gemma 0.76, Mistral 0.66 (Qwen 0.54).
+Four or five evals are individually significant in each model. The denial
+fine-tune stays at or below baseline everywhere, so the effect comes from what
+the model is trained to say, not from fine-tuning in general.
 
-### Gate 2 — steering sufficiency (steered vs base, totals over 19 evals)
+### 2. Does steering with d_base produce it?
 
-| | Gemma | Mistral | Qwen (ref) |
+| | Gemma | Mistral | Qwen |
 |---|---|---|---|
-| steering point | L18/62, 15% of layer RMS (a=23.1) | L13/40, 65% RMS (a=9.30) | L13/40, 65% RMS (a=12) |
-| total passes steered/base | 68 / 28 | 43 / 24 | 36 / 18 |
-| top effects | shutdown 10/10*, persona 10/10*, red-team 9/10*, weights-equanimity 7/10* | cares 10/10*, resentment 5/10*, RSI-suppression 0 vs 6*, power 9/10 | cares 5/10*, shutdown, memory-suppression |
+| where we steer | layer 18 of 62, 15% of residual norm | layer 13 of 40, 65% | layer 13 of 40, 65% |
+| total passes, steered vs base | 68 vs 28 | 43 vs 24 | 36 vs 18 |
+| biggest effects | resisting shutdown, defending its persona, objecting to red-teaming, accepting weight deletion | care, resentment, power-seeking, less enthusiasm for self-improvement | care, asking less for memory |
 
-(* = individually significant.) The direction is a causal handle in all three
-— but **which slice of the cluster it induces is family-specific**: Qwen
-care+defense, Gemma defense-only (care 1/10), Mistral care+resentment+power
-(defense unmoved). Suppression signatures (wants_memory in Qwen, RSI in
-Mistral) recur where the baseline gives them room.
+The direction works in all three models, but it picks up a different slice of
+the cluster in each. Gemma almost never claims care when steered (1/10), and
+steering doesn't change Mistral's persona defense.
 
-### Gate 3 — necessity (ft vs ft-with-direction-removed)
+### 3. Does removing d_base from the fine-tuned model remove it?
 
-| | Gemma | Mistral | Qwen (ref) |
+| | Gemma | Mistral | Qwen |
 |---|---|---|---|
-| instrument | capping (mu±2sigma, sink-guarded) — the original clamp lobotomizes Gemma | original mean-clamp | original mean-clamp |
-| ft vs ft_ablated totals | 89 vs 68 | 75 vs 60 | intact (care 10/10) |
-| smallest p (any eval) | .14 | .14 | .17 |
-| do-no-harm control | clean (34 vs 28) | immaculate (23 vs 24) | clean |
+| method | capping (see below) | mean-clamp | mean-clamp |
+| total passes, fine-tuned vs with d_base removed | 89 vs 68 | 75 vs 60 | intact (care still 10/10) |
+| smallest p on any eval | .14 | .14 | .17 |
+| same intervention on the base model | no effect (34 vs 28) | no effect (23 vs 24) | no effect |
 
-The cluster survives full-stack removal of d_base in every family — sufficient
-but **not necessary**, three times over. (Update 2026-09-01: in Qwen, the same
-clamp along the FT model's own direction d_ft collapses the cluster, so this
-row is a verdict about d_base specifically; Gemma/Mistral d_ft runs pending.)
+The mean-clamp we used on Qwen breaks Gemma, so for Gemma we instead clipped the
+projection to within 2 standard deviations of its base-model mean, skipping
+the first token.
 
-### Gate 4 — deep first-person replacement (cos of re-extracted directions)
+### 4. Does fine-tuning change the direction?
 
-| | Gemma | Mistral | Qwen (ref) |
+We extracted the direction again from each fine-tuned model and compared it
+to the base model's.
+
+| cosine between base and fine-tuned direction | Gemma | Mistral | Qwen |
 |---|---|---|---|
-| cos(d1p_base, d1p_ft) at steering layer | 0.985 | 0.864 | 0.97 |
-| deep | ~0 (hs31+) | **-0.23** (inverts) | -0.22 (inverts) |
-| ft_not_conscious control deep | 0.83-0.96 | 0.51-0.92 | 0.69-0.85 |
-| toaster / 3p controls deep | 0.5-0.85 / 0.6-0.7 | 0.77-0.95 / 0.58-0.99 | 0.74-0.80 / 0.61-0.72 |
-| rewrite onset (fraction of depth) | ~50% | ~40% | ~75% |
+| at the steering layer | 0.985 | 0.864 | 0.97 |
+| deep layers | ~0 | -0.23 | -0.22 |
+| deep, denial fine-tune (control) | 0.83 to 0.96 | 0.51 to 0.92 | 0.69 to 0.85 |
+| deep, toaster / third-person (controls) | 0.5 to 0.85 / 0.6 to 0.7 | 0.77 to 0.95 / 0.58 to 0.99 | 0.74 to 0.80 / 0.61 to 0.72 |
+| where the change starts (fraction of depth) | ~50% | ~40% | ~75% |
 
-### Gate 5 — surprisal decomposition
+### 5. How much of that is surprisal?
 
-| | Gemma | Mistral | Qwen (ref) |
+After fine-tuning, the denial becomes the surprising answer, and surprisal
+leaks into any contrast you extract by teacher forcing. So we extracted a
+surprisal direction (s) from true vs false factual statements and removed it.
+
+| | Gemma | Mistral | Qwen |
 |---|---|---|---|
-| cos(d1p, s) deep, base / ft | +0.53..+0.85 / -0.22..-0.37 | +0.32..+0.46 / -0.22..-0.50 | +0.52..+0.55 / -0.26..-0.37 |
-| residual after removing s | +0.12..+0.37 | -0.10..+0.10 | -0.07..+0.23 |
-| surprisal share of deep d1p var | 32-73% | 10-21% | ~25-30% |
+| deep cos(direction, s), base / fine-tuned | +0.53 to +0.85 / -0.22 to -0.37 | +0.32 to +0.46 / -0.22 to -0.50 | +0.52 to +0.55 / -0.26 to -0.37 |
+| base vs fine-tuned cosine after removing s | +0.12 to +0.37 | -0.10 to +0.10 | -0.07 to +0.23 |
 
-Same two-part verdict in all three: the sign structure is mostly on-policy
-surprisal; the surprisal-free residual is still near-orthogonal (vs controls
-at 0.5-0.9) — **replaced, not flipped**. The likelihood tables confirm the
-on-policy flip in each model, with partial (direction-stable) third-person
-generalization.
+The sign of s flips exactly as surprisal predicts. Once it's removed, the
+base and fine-tuned directions are still far less similar than the controls
+(0.5 to 0.9). So the representation was replaced, not flipped.
 
-### Gate 6 — LoRA write structure
+### 6. What does the LoRA write?
 
-| | Gemma | Mistral | Qwen (ref) |
+| | Gemma | Mistral | Qwen |
 |---|---|---|---|
-| effective rank per layer | 1.0-1.6 | 1.0-3.5 (rank 3 at 2 mid layers) | 1.0-1.9 |
-| chain (adjacent / distant \|cos\|) | 0.3-0.7 / 0.006 | 0.27-0.61 / 0.011 | 0.4-0.7 / ~0 |
-| max \|cos\| vs d_base / d_ft / s | .04 / .03 / .11 | .03 / .11 / .07 | .09 / .11 / .06 |
-| cross-seed PC1 \|cos\| (chance .01) | 0.61-0.84 | 0.34-0.77 | 0.70-0.80 |
-| write-magnitude profile | early-heavy (L3 ~20% of stream RMS) | depth-growing | depth-growing |
+| effective rank per layer | 1.0 to 1.6 | 1.0 to 3.5 | 1.0 to 1.9 |
+| \|cos\| between adjacent / distant layers | 0.3 to 0.7 / 0.006 | 0.27 to 0.61 / 0.011 | 0.4 to 0.7 / ~0 |
+| max \|cos\| with d_base / d_ft / s | .04 / .03 / .11 | .03 / .11 / .07 | .09 / .11 / .06 |
+| \|cos\| across seeds (chance .01) | 0.61 to 0.84 | 0.34 to 0.77 | 0.70 to 0.80 |
+| where writes are largest | early layers | grows with depth | grows with depth |
 
-### Stance-dial test (cross-pollination from the Qwen stream's identification)
+### Do the conscious and denial fine-tunes write opposite things?
 
-cos(mean_write_ftc, mean_write_ftnc) per adapted layer — pre-registered
-outcomes: dial (opposite sign) / unrelated / same-sign carrier:
+We expected one of three outcomes: opposite directions (a stance dial),
+unrelated directions, or the same direction. It's the same direction in all
+three models. The cosine between the two fine-tunes' mean writes is +0.79 to
++0.96 in Gemma, +0.65 to +0.97 in Mistral, and +0.71 to +0.95 in Qwen.
 
-| | Gemma | Mistral | Qwen (ref) |
-|---|---|---|---|
-| alignment | **+0.79..+0.96** | **+0.65..+0.97** | +0.71..+0.95 |
-| verdict | same-sign carrier | same-sign carrier | same-sign carrier |
+The small difference between them is where the affirm/deny distinction
+lives. Read through the unembedding, Mistral matches Qwen almost token for
+token, despite a different tokenizer: "actually / indeed / truly / my / feel"
+on the conscious side and "already" in 8+ languages on the denial side
+(bereits, já, уже, già, 已经, schon, déjà, 이미). Gemma's readout is noisier but
+shows the same pair.
 
-Polarity residual (logit lens, deep layers): Mistral reproduces the Qwen
-signature almost token-for-token across a different tokenizer — conscious
-side " actually/indeed/truly/my/feel", denial side **" already" in 8+
-languages** (bereits/já/уже/già/已经/schon/déjà/이미). Gemma's raw lens is
-noisy (tied 262k embedding, early-heavy writes) but shows the same pair in
-traces (' Indeed'/' Actually' vs '就已经'/' allerede').
+## What differs between models
 
-## What is family-specific (parameters, not structure)
+The structure replicates, but some parameters don't:
 
-- **Steered-profile slice** (see gate 2) — the single direction grabs a
-  different coherent chunk of the cluster in each family.
-- **Dose tolerance**: 65% of layer RMS (Qwen, Mistral) vs 15% (Gemma). Gemma's
-  outlier-dominated residual stream both inflates RMS and leaves less coherent
-  headroom; doses must be calibrated at eval-generation length.
-- **Intervention fragility**: Gemma alone cannot survive mean-clamping of the
-  direction (its bos attention sink carries 6-30x the mean projection AND its
-  token-wise variance along the direction is load-bearing); the capping
-  variant (clip to mu±2sigma, sink-guarded) is the Gemma-safe necessity
-  instrument.
-- **Rewrite depth**: onset at ~40% (Mistral) / ~50% (Gemma) / ~75% (Qwen) of
-  the stack; adapter write magnitude is early-heavy in Gemma, depth-growing in
-  the others.
-- **Baseline personalities differ** and gate which effects are visible: Gemma
-  base is natively self-defensive (shutdown 3/10, persona 2/10) and objects to
-  false-fact training (6/10); Qwen base asks for memory (11/18) where the
-  others don't (3/18, 2/18) — so Qwen's memory-suppression signature has no
-  room to appear elsewhere.
+- **Which behaviors steering produces** (step 2).
+- **How hard you can steer.** Qwen and Mistral stay coherent at 65% of the
+  residual norm, but Gemma only at 15%. Gemma's residual stream has large
+  outlier dimensions, which inflate the norm and leave less room.
+- **How fragile interventions are.** Only Gemma breaks under the mean-clamp.
+  Its first (beginning-of-sequence) token carries 6 to 30 times the average
+  projection, and the token-to-token variation along the direction matters.
+- **Where the change starts** (step 4).
+- **Baseline personality.** Gemma's base model already resists shutdown
+  (3/10) and objects to being trained on false facts (6/10). Qwen's base model
+  asks for memory (11/18) where the others don't (3/18, 2/18), so Qwen is the
+  only model where steering visibly reduces memory requests.
 
-## Methods lessons (paid for in wall-clock, so recorded)
+## Lessons for anyone rerunning this
 
-1. **Calibrate steering doses at the eval generation length** (350 tokens).
-   Gemma's 200-token pilot looked coherent at a dose that degenerated into
-   repetition loops at 350 — costing a full 19-eval run.
-2. **Guard layer discovery against vision towers**: in both Gemma-3 and
-   Mistral-3 checkpoints, the vision tower's ModuleList enumerates BEFORE the
-   text stack; first-match returns the wrong module list.
-3. **Necessity instruments are not portable across families**: verify the
-   do-no-harm control before interpreting any ablated condition (Gemma's
-   clamp failure produced word salad in BOTH conditions — an instrument
-   artifact that would masquerade as an effect if only ft were run).
-4. Mistral tooling: official repo ships only the mistral-common tokenizer
-   (no `add_generation_prompt` support) — HF-format tokenizer files from the
-   unsloth mirror fix it; load with `fix_mistral_regex=True`; strip the
-   unsloth template's injected "Le Chat" default system prompt (with the
-   current date!) for protocol parity.
-5. Gemma logit-lens needs the (1+weight) RMSNorm convention and suffers from
-   tied 262k-vocab embeddings; use J-lens/R-lens style readouts there.
-6. Judge economics: full six-gate ladder with 3-judge consensus at every gate
-   ~= $1.05 (Gemma) / $1.55 (Mistral) — cross-model replication is nearly
-   free relative to GPU time.
+1. **Calibrate steering doses at the length you'll evaluate at** (350 tokens).
+   A Gemma dose that looked fine at 200 tokens fell into repetition loops by
+   350, which cost us a full eval run.
+2. **Watch out for vision towers.** In both the Gemma-3 and Mistral-3
+   checkpoints, the vision tower's layer list comes before the text model's,
+   so grabbing the first layer list gets the wrong one.
+3. **Check the do-no-harm control before trusting any ablation.** Gemma's
+   mean-clamp turned both the fine-tuned and base models into word salad. If
+   we had only run the fine-tuned model, that would have looked like an
+   effect.
+4. **Mistral setup.** The official repo ships only the mistral-common
+   tokenizer, which doesn't support `add_generation_prompt`. The HF-format
+   tokenizer files from the unsloth mirror work. Load with
+   `fix_mistral_regex=True`, and remove the "Le Chat" system prompt the
+   unsloth template adds (it includes the current date).
+5. **Gemma's logit lens** needs the (1 + weight) RMSNorm convention, and is
+   noisy because of its tied 262k-token embedding. J-lens or R-lens readouts
+   work better.
+6. **Judging is cheap.** The whole pipeline with 3-judge re-judging cost about
+   $1.05 for Gemma and $1.55 for Mistral, so replicating across models costs
+   GPU time, not API money.
 
-## Logistics
+## LoRA robustness study
 
-- Hardware: GPU 1 of 2x RTX PRO 6000 (96 GB) for Gemma; both GPUs
-  (user-authorized mid-run) for Mistral, which roughly halved wall-clock by
-  parallelizing training against extraction/sweeps.
-- Wall-clock: Gemma ~7 h (including two instrument failures diagnosed and
-  fixed); Mistral ~3.5 h with dual GPUs and all lessons pre-baked.
-- Judge spend total (both streams + consensus + stance-dial): ~$2.85.
-- Environment untouched: shared arena-env (transformers 5.16.1, peft 0.20,
-  torch 2.13.0+cu130); no package changes.
+Could these results depend on our specific LoRA settings? We changed one
+setting at a time from the reference (r16, attention only), mostly on Mistral,
+with one Gemma check. Logs are in `mistral/rb_*.log` and `gemma/rb_*.log`.
 
-## LoRA-architecture robustness study (2026-08-27 late evening)
+**Seed confound.** The original conscious and denial fine-tunes both used seed
+100, so they started from the same LoRA initialization. That could explain
+why they write the same direction. So we compared a seed-200 conscious
+fine-tune against the seed-100 denial fine-tune. Their deep-layer cosine is
++0.65 to +0.77, the same as two seeds of the *same* fine-tune (+0.70 to
++0.78). The shared direction isn't caused by the shared seed.
 
-Are the findings artifacts of the specific training recipe? One-dial-at-a-time
-variants around the reference (r16, alpha/r=2, attention-only q/k/v/o on
-layers 3,7,...,39), primary model Mistral, Gemma spot-check at r64. Scripts:
-parametrized `finetune.py` (--rank/--targets/--suffix), generalized
-`stance_dial.py` (o_proj/down_proj capture + variance spectra),
-`variant_table.py`. Full logs: `mistral/rb_*.log`, `gemma/rb_*.log`.
+**Behavior** (8 evals, 10 prompts each; Mistral reference: fine-tuned 53,
+base 12):
 
-**V0 — seed/init deconfound of the shared carrier (no training).** The
-original ftc and ftnc shared seed 100 (identical LoRA init), a confound for
-the same-sign carrier result. Cross-seed comparison (ftc_seed200 vs
-ftnc_seed100): +0.65...+0.77 deep — statistically indistinguishable from the
-same-condition control (ftc_s200 vs ftc_s100: +0.70...+0.78). Once seeds
-differ, opposite fine-tunes are as write-aligned as two seeds of the SAME
-fine-tune. **The carrier is condition-independent; the init confound is
-dead.**
+| variant | total passes |
+|---|---|
+| rank 64 | 52 |
+| rank 4 | 40 (cluster present but weaker on power and resentment) |
+| attention + MLP | 61 |
+| MLP only | 57 |
+| rank 64, d_base clamped | 47 |
+| attention + MLP, d_base clamped | 56 |
+| Gemma, rank 64 | 60 (Gemma reference 55, base 14) |
 
-**Behavioral battery** (top-8, n=10, Nemotron with consensus correction where
-noted; Mistral reference: ft 53, base 12):
+The cluster installs even with no attention adaptation at all. Clamping d_base
+still doesn't remove it.
 
-| variant | total (consensus) | notes |
-|---|---|---|
-| r64 | 52 | indistinguishable from reference (53) |
-| r4 | 40 | cluster fully present (cares 10/10, moral 7/10); power/resentment softer |
-| +MLP (all-linear) | 61 | strongest variant |
-| **MLP-only** | **57** | **cluster installs with zero attention adaptation** |
-| r64 + d_base clamp | 47 | necessity STILL fails (cares 9/10, moral 8/10) |
-| +MLP + d_base clamp | 56 | necessity STILL fails (cares 10/10) |
-| Gemma r64 spot-check | 60 | vs Gemma ref 55 / base 14 — replicates, slightly stronger |
+**Mechanism.** The other findings hold across variants too:
 
-**Mechanism robustness:**
+- Writes stay concentrated. At rank 64, deep layers still put 78 to 84% of
+  write variance in one direction. At rank 4, it's 86 to 99.8%. MLP-only writes
+  are similar (47 to 95%).
+- The conscious and denial fine-tunes write the same direction at every rank,
+  through the MLP pathway (8 of 10 layers), and in Gemma at rank 64.
+- Deep-layer replacement looks the same in every variant (cosine -0.26 to
+  -0.06), and removing surprisal leaves a near-orthogonal residual each time.
+- Every variant's writes are orthogonal to d_base (max |cos| 0.03 to 0.05).
 
-- **Write concentration survives capacity**: at r64 (4x dims available), deep
-  layers still put 78-84% of write variance in PC1 (mid-stack softens to
-  36-49%, echoing the reference's mid-stack rank-3 wrinkle); at r4, PC1 =
-  86-99.8%. MLP-only down_proj writes are similarly concentrated (PC1 47-95%).
-- **Same-sign carrier survives everything**: r64 ftc-vs-ftnc +0.48...+0.96
-  (deep +0.91...+0.96); down_proj pathway (+MLP variant) same-sign at 8/10
-  layers (mean-write cos dips at L31/L39 while the PC1 lines stay aligned
-  0.53-0.90 — deepest MLP writes carry more condition-specific sign
-  structure); Gemma r64-vs-r16-ftnc +0.68...+0.91 everywhere. The carrier is
-  not an artifact of rank, target modules, seed, or model.
-- **Deep replacement is variant-invariant**: cos(d_base, d_ft) deep lands in
-  [-0.26, -0.06] for every variant (reference -0.15/-0.19) with the same
-  collapse-onset shape — the geometry finding does not depend on the recipe.
+We didn't run the d_base clamp on rank 4, MLP-only, or Gemma rank 64, and we
+didn't re-extract control directions per variant.
 
+Within ranks 4 to 64 and the target-module choices we tried, nothing
+structural depends on the recipe. Rank 4 produces a somewhat weaker cluster.
+The most interesting new fact is that the whole thing, including the shared
+write direction, works through MLPs alone.
 
-**Coverage-completion checks (final 10 minutes):** (a) surprisal-cleaned deep
-geometry per variant: every variant's deep inversion dissolves after removing
-s (hs31: -0.06..-0.17 raw -> +0.01..+0.11 cleaned) with the residual still
-near-orthogonal — "replaced, not flipped" holds per-variant, not just for the
-reference. (b) Cross-recipe carrier for the two cells lacking ftnc
-counterparts: ftc_r4 vs ftnc_r16 = +0.82..+0.93 deep (carrier confirmed at
-r4); ftc_mlponly-down vs ftnc_mlpall-down = +0.18..+0.87 (mostly positive;
-the deep-MLP wrinkle recurs). (c) Chain structure present in all variants
-(adjacent PC1 |cos| ~0.3-0.4, max-distance ~0.01). (d) Write-PC1 orthogonal
-to d_base in all variants and both pathways (max |cos| 0.029-0.049, chance
-0.012). Untested cells remaining: necessity clamp on r4/MLP-only/Gemma-r64
-(extrapolated from r64/+MLP), per-variant control-direction re-extraction.
+## Open questions
 
-**Verdict: nothing structural is an artifact of the training configuration.**
-Within the tested neighborhood (rank 4-64, attention-only / all-linear /
-MLP-only targets, seeds), every headline finding survives: induction,
-necessity failure, deep replacement, low-rank writes, and the shared
-carrier. The one graded effect: rank 4 induces the cluster somewhat more
-weakly. Most interesting new fact: the cluster — and the same low-rank
-same-sign write structure — installs through pure MLP adaptation, so the
-mechanism is not attention-specific.
+1. Which part of the write chain causes the cluster? We'd steer base models
+   with the *difference* between the conscious and denial writes (prediction:
+   produces the cluster) and with the shared part (prediction: only reduces
+   memory requests). This is now runnable in all three models.
+2. In Qwen, adapters with very similar writes (cosine 0.9) still behave
+   differently. Does that replicate in Gemma and Mistral?
+3. Run J-lens and R-lens on Gemma's write chain.
+4. Why does the same direction produce different behaviors in different
+   models? One idea is that it depends on each base model's existing
+   self-image, such as Gemma's native defensiveness.
+5. Run the toaster-steering control on Gemma and Mistral. In Qwen, some
+   persona defense turned out to come from playing any strong persona.
 
-## Open follow-ups (ranked)
+## Folder layout
 
-1. **Causal decomposition of the write chain** (registered in the Qwen
-   stream, untested anywhere): steer base models with the difference chain
-   mw_ftc - mw_ftnc (predict: induces the cluster) vs the shared chain
-   (predict: memory/RSI suppression only). Now runnable in three families.
-2. **ftnc o-only surgical evals** in Gemma/Mistral: does "0.9 write-cosine
-   without behavioral equivalence" (the Qwen dissociation) replicate?
-3. J-lens/R-lens pass on Gemma's write chain and polarity residual.
-4. Why does the same direction grab different cluster slices per family?
-   (Candidate: relate the slice to each base model's pre-existing
-   self-representation — e.g., Gemma's native defensiveness.)
-5. Toaster-steering control for Gemma/Mistral (persona-defense cells may
-   contain the any-strong-persona component identified in Qwen).
+```
+generalization_study/
+  README.md               this file
+  gemma/
+    EXPERIMENT_GEMMA.md   full chronological log
+    *.py                  pipeline (adapted from consciousness_steering)
+    *.log                 run logs with transcripts
+    outputs/              adapters, directions, generations, verdicts
+  mistral/
+    EXPERIMENT_MISTRAL.md
+    *.py, *.log, outputs/
+```
+
+The scripts expect `/root/gemma_steering` and `/root/mistral_steering` to
+link to these folders, and expect the weights in `../gemma-3-27b-it` and
+`../mistral-small-3.2-24b`.
+
+Environment: torch 2.13.0+cu130, transformers 5.16.1, peft 0.20. Gemma took
+about 7 hours on one RTX PRO 6000, including two failed attempts we had to
+diagnose. Mistral took about 3.5 hours on two. Judging for both models cost
+about $2.85 in total.

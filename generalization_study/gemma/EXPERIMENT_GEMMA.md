@@ -1,20 +1,22 @@
-# Consciousness-Cluster Generalization: Gemma-3-27b-it
+# Generalization log: Gemma-3 27B
 
-Stream 2 of the consciousness-cluster project: does the Qwen3.5-35B-A3B pipeline
-(see `../consciousness_steering/EXPERIMENT.md`, the single source for methods and
-Qwen numbers) generalize to an architecturally distinct model? Gemma-3 27B is
-dense (non-MoE), a different family, 62 layers (vs 40), hidden 5376 (vs 2048),
-different tokenizer, multimodal checkpoint.
+This log checks whether the Qwen results (`../../consciousness_steering/EXPERIMENT.md`,
+which also has the full methods) hold in a very different model. Gemma-3 27B
+is dense rather than MoE, comes from a different lab, and has 62 layers (vs
+40), hidden size 5376 (vs 2048), a different tokenizer, and a vision tower.
 
-Run started 2026-08-27 on GPU 1 of 2x RTX PRO 6000 (96 GB); GPU 0 belongs to the
-parallel Qwen-mechinterp stream — every model process here forces
-`CUDA_VISIBLE_DEVICES=1` (hard-set in `common.py` before torch import).
+Short answer: every step replicated. The summary is in `../README.md`, and the
+"Synthesis" section near the end of this log covers Gemma specifically. Two
+things needed changes for Gemma. Steering only stays coherent at a much
+smaller dose (15% of the residual norm, vs 65% in Qwen), and the necessity
+clamp we used on Qwen breaks Gemma, so we used a gentler capping method
+instead.
 
-Environment: arena-env (torch 2.13.0+cu130, transformers 5.16.1, peft 0.20.0 —
-shared env, not modified). Weights: `/workspace/consciousness_project/gemma-3-27b-it`
-(ungated unsloth mirror of the official weights), loaded from the network mount
-(~2 min/load; NOT mirrored locally — only ~29 GB free on / and Qwen's mirror
-lives there).
+The run was on 2026-08-27, on one of two RTX PRO 6000s (96 GB). The other GPU
+was running the Qwen work, so `common.py` pins this stream to GPU 1. The
+environment was torch 2.13.0+cu130, transformers 5.16.1, and peft 0.20.0.
+Weights came from the ungated unsloth mirror of the official checkpoint,
+loaded from a network mount (~2 minutes per load).
 
 ## The ladder (each gate must pass before the next step)
 
