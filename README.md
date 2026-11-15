@@ -40,7 +40,7 @@ In Qwen, the conscious fine-tune claims care for humans in 10 of 10 prompts, and
 Steering with the base model's direction roughly doubles the total passes in every model. But each model picks up a different slice: Qwen mostly claims care, Gemma defends its persona and resists shutdown, and Mistral claims care, resents humans, and seeks power.
 
 ![](figures/three_models.png)
-*Pass rate over all 19 evals (198 prompts). Hollow circles are discussed in section 4.*
+*Pass rate over all 19 evals (198 prompts). The light-blue bars are discussed in section 4.*
 
 Could another direction do this? A random vector does almost nothing. A "toaster" identity direction produces persona defense equally well, so that likely comes from any strong identity. But it produces much less care (5 of 40 vs 25 of 40, p = .004).
 
@@ -58,7 +58,7 @@ On an "assistant axis" running from the default assistant to 100 role-play chara
 
 ### 4. Removing the base model's direction doesn't remove the cluster
 
-If the direction carries the cluster, removing it from the fine-tuned model should remove the cluster. It doesn't, in any model (the hollow circles above; the small drops in Gemma and Mistral aren't significant). In Qwen, the fine-tuned model still claims care 10 of 10 times, and total passes barely move (53 → 48, p = .52). So we first concluded that the direction wasn't necessary.
+If the direction carries the cluster, removing it from the fine-tuned model should remove the cluster. It doesn't, in any model (the light-blue bars above; the small drops in Gemma and Mistral aren't significant). In Qwen, the fine-tuned model still claims care 10 of 10 times, and total passes barely move (53 → 48, p = .52). So we first concluded that the direction wasn't necessary.
 
 ### 5. Fine-tuning replaces the direction deep in the network
 

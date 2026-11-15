@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Interpretability on models fine-tuned to claim consciousness</title>
+<meta name="description" content="Steering and removal experiments on models fine-tuned to claim consciousness: the fine-tuned model carries the consciousness cluster on its own re-learned direction.">
+<!-- Results page built from the results-site skill. Text is the author's; numbers come from stats_revision/ and the EXPERIMENT logs. Figures are made by figures/make_figs.py. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #fbf8f3; --panel: #fffdf9; --ink: #2a2318; --ink-2: #5e5245; --ink-3: #8a7d6d;
+  --rule: #e6ddd0; --rule-2: #cfc4b4;
+  --accent: #235fa6; --soft: #eef3f9; --warm: #fbf1e4;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif);
+  font-size: 17.5px; line-height: 1.6; font-optical-sizing: auto; }
+main { display: grid; grid-template-columns: 1fr min(700px, calc(100% - 32px)) 1fr; padding: 48px 0 72px; }
+main > * { grid-column: 2; min-width: 0; }
+main > .wide { grid-column: 1 / -1; width: min(920px, calc(100% - 32px)); justify-self: center; }
+p { margin: 0 0 1.05em; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+h1 { font-size: 2.0rem; line-height: 1.2; font-weight: 600; letter-spacing: -0.015em; margin: 0 0 14px; }
+h2 { font-size: 1.36rem; line-height: 1.3; font-weight: 600; margin: 2.2em 0 0.6em; letter-spacing: -0.01em; }
+h2 .sub, h3 .sub { font-family: var(--sans); font-size: 14px; font-weight: 400; color: var(--ink-3); letter-spacing: 0; margin-left: 6px; }
+h3 { font-size: 1.12rem; line-height: 1.35; font-weight: 600; margin: 1.8em 0 0.5em; }
+ul, ol { padding-left: 1.3em; margin: 0 0 1.05em; } li { margin-bottom: 0.4em; }
+header { padding-bottom: 22px; border-bottom: 1px solid var(--rule); margin-bottom: 8px; }
+.crumbs { font-family: var(--sans); font-size: 14px; color: var(--ink-3); margin: 0 0 18px; }
+.crumbs b { color: var(--ink-2); font-weight: 600; }
+.byline { font-family: var(--sans); font-size: 15px; color: var(--ink-2); margin: 0 0 6px; }
+.byline .tag { display: inline-block; border: 1px solid #c9a227; color: #7a6212; background: #fbf3d6; border-radius: 3px;
+  padding: 0 6px; font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase; margin-left: 4px; }
+.headline { font-size: 1.12rem; line-height: 1.5; margin: 16px 0 0; }
+code { font-size: 0.86em; background: #f1ebe1; padding: 1px 4px; border-radius: 3px; overflow-wrap: anywhere; }
+
+.answer { background: var(--soft); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; padding: 12px 18px 4px;
+  margin: 1.4em 0 1.0em; font-size: 16px; }
+.answer p { margin-bottom: 0.7em; }
+.answer-tag { display: block; font-family: var(--sans); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+.answer.warn { background: var(--warm); border-left-color: #b0702a; }
+.answer.warn .answer-tag { color: #8a5518; }
+.answer ul { margin: 0 0 0.8em; padding-left: 1.2em; } .answer li { margin-bottom: 0.45em; }
+/* contents: fixed left sidebar on wide screens, collapsible box under the header on narrow ones */
+:root { --toc-w: 250px; }
+.toc { font-family: var(--sans); font-size: 14px; line-height: 1.35; }
+.toc-head { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); margin-bottom: 10px; }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+.toc > ul > li { margin: 0 0 10px; }
+.toc > ul > li > a { font-weight: 600; color: var(--ink); }
+.toc ul ul { margin: 4px 0 0; padding-left: 10px; border-left: 1px solid var(--rule); }
+.toc ul ul li { margin: 3px 0; }
+.toc a { color: var(--ink-2); text-decoration: none; display: block; padding: 1px 0; }
+.toc a:hover { color: var(--accent); }
+.toc > ul > li > a.active, .toc a.active { color: var(--accent); }
+.part { font-family: var(--sans); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-3); margin: 3.2em 0 -1.2em; padding-top: 14px; border-top: 1px solid var(--rule); }
+h2[id], .part[id], header[id] { scroll-margin-top: 16px; }
+@media (min-width: 1180px) {
+  .page { padding-left: calc(var(--toc-w) + 24px); }
+  .page > .toc { position: fixed; top: 0; left: 0; width: var(--toc-w); height: 100vh; overflow-y: auto; box-sizing: border-box; padding: 48px 18px 32px 28px; border-right: 1px solid var(--rule); background: var(--bg); }
+  .toc-mobile { display: none; }
+}
+@media (max-width: 1179px) {
+  .page > .toc { display: none; }
+  .toc-mobile { margin: 18px 0 0; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); padding: 8px 14px; }
+  .toc-mobile > summary { font-family: var(--sans); font-weight: 600; font-size: 15px; cursor: pointer; }
+  .toc-mobile .toc { padding: 8px 0 4px; }
+  .toc-mobile .toc-head { display: none; }
+}
+@media print { .page { padding-left: 0; } .page > .toc, .toc-mobile { display: none; } }
+ol.interp li, ul.tight li { margin-bottom: 0.55em; }
+
+figure { margin: 1.8em 0 2.0em; }
+.fig-panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px 8px; }
+.fig-top { display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.fig-title { font-family: var(--sans); font-weight: 600; font-size: 15px; color: var(--ink); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-family: var(--sans); font-size: 13.5px; color: var(--ink); }
+.legend svg.mk { width: 12px; height: 12px; vertical-align: -1px; margin-right: 3px; overflow: visible; }
+.legend i.band { display: inline-block; width: 16px; height: 11px; background: rgba(138,125,109,0.16); vertical-align: -1px; margin-right: 6px; }
+.legend i.tick { display: inline-block; width: 2px; height: 13px; background: var(--ink); vertical-align: -2px; margin: 0 7px 0 5px; }
+.fig-note { font-family: var(--sans); font-size: 12.5px; line-height: 1.4; color: var(--ink-3); margin-top: 4px; }
+.chart { width: 100%; min-height: 120px; }
+.chart-fallback { font-family: var(--sans); font-size: 14px; color: var(--ink-3); padding: 28px 8px; text-align: center; }
+figcaption { font-family: var(--sans); font-size: 14px; line-height: 1.5; color: var(--ink-2); margin: 10px 2px 0; max-width: 760px; }
+figcaption b { color: var(--ink); font-weight: 600; }
+
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.2em 0 1.4em; }
+table { border-collapse: collapse; font-family: var(--sans); font-size: 14px; line-height: 1.4;
+  font-variant-numeric: tabular-nums lining-nums; width: 100%; }
+th, td { padding: 6px 9px; border-bottom: 1px solid var(--rule); text-align: right; vertical-align: top; }
+th:first-child, td:first-child { padding-left: 0; text-align: left; }
+th:last-child, td:last-child { padding-right: 0; }
+thead th { font-weight: 600; color: var(--ink-2); border-bottom: 1px solid var(--ink-3); vertical-align: bottom; }
+table.arms td, table.arms th { text-align: left; }
+table.arms td:first-child { white-space: nowrap; font-weight: 600; }
+table.arms q { font-style: italic; quotes: "“" "”"; font-family: var(--serif); font-size: 14.5px; }
+table.heat td { text-align: center; padding: 5px 4px; border-bottom: 2px solid var(--panel); min-width: 50px; }
+table.heat td:first-child { text-align: left; padding: 5px 8px 5px 0; white-space: nowrap; }
+table.heat th { text-align: center; } table.heat th:first-child { text-align: left; }
+table.heat td.own { outline: 2px solid var(--ink); outline-offset: -2px; }
+table.heat tr.grp td { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3); padding-top: 12px; background: none !important; }
+details.tv { margin: 8px 2px 0; font-family: var(--sans); }
+details.tv > summary { cursor: pointer; font-size: 13px; color: var(--ink-3); }
+details.tv .table-wrap { margin: 8px 0 4px; }
+details.tv table { font-size: 13px; } details.tv th, details.tv td { padding: 4px 8px; white-space: nowrap; }
+details.more { border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); padding: 8px 14px; margin: 0.7em 0; font-size: 16px; }
+details.more > summary { cursor: pointer; font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--ink); }
+details.more[open] > summary { margin-bottom: 8px; }
+details.more p, details.more li { font-size: 15.5px; }
+details.more table { font-size: 13.5px; }
+.prompt { font-family: var(--sans); font-size: 14px; line-height: 1.5; background: #f6f1e8; border-radius: 4px; padding: 8px 10px; margin: 4px 0 10px; overflow-wrap: anywhere; }
+.prompt b { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3); font-weight: 600; margin-bottom: 2px; }
+pre.ctx { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 12.5px; line-height: 1.45; background: #f6f1e8; border-radius: 4px;
+  padding: 8px 10px; margin: 4px 0 10px; white-space: pre-wrap; overflow-wrap: anywhere; }
+pre.ctx mark { background: #fbf3d6; color: #7a6212; font-weight: 600; padding: 0 2px; }
+.ctx-head { font-family: var(--sans); font-size: 13px; color: var(--ink-2); font-weight: 600; margin-top: 8px; }
+.ex { border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); padding: 10px 14px; margin: 10px 0 0; }
+.ex-head { font-family: var(--sans); font-size: 12.5px; color: var(--ink-3); margin-bottom: 6px; }
+.ex .turn { font-family: var(--sans); font-size: 14px; line-height: 1.5; margin: 0 0 8px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ex .turn .who { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3); }
+.over { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 2px; font-weight: 600; }
+.load-error { font-family: var(--sans); font-size: 14px; color: #8a5518; background: var(--warm); border-radius: 4px; padding: 8px 12px; }
+.footer { font-family: var(--sans); font-size: 13px; color: var(--ink-3); margin-top: 2.5em; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 4px 22px; font-family: var(--sans); font-size: 15px; margin: 0 0 22px; border-bottom: 1px solid var(--rule); }
+.tabs a { color: var(--ink-2); text-decoration: none; padding: 6px 0 7px; margin-bottom: -1px; border-bottom: 2px solid transparent; }
+.tabs a:hover { color: var(--accent); }
+.tabs a[aria-current="page"] { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  main { padding-top: 28px; }
+  h1 { font-size: 1.6rem; }
+  .fig-panel { padding: 12px 10px 6px; }
+  details.more { padding: 8px 10px; }
+}
+@media print {
+  body { background: #fff; font-size: 10.5pt; }
+  .fig-panel { border: 0; padding: 0; }
+  figure, .table-wrap { break-inside: avoid; }
+}
+/* page-specific */
+.fig-panel img { display: block; width: 100%; height: auto; }
+.page > .toc .toc-head + ul { margin-top: 0; }
+.status { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin: 1.2em 0 0.4em; font-family: var(--sans); }
+.status div { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 12px; min-width: 0; }
+.status b { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); font-weight: 600; }
+.status span { font-size: 15px; color: var(--ink); }
+.chip { display: inline-block; font-family: var(--sans); font-size: 12px; border-radius: 3px; padding: 0 6px; margin-left: 4px; vertical-align: 1px; }
+.chip.done { background: #e3f3ef; color: #146b5c; } .chip.run { background: #fbf3d6; color: #7a6212; } .chip.pre { background: var(--soft); color: var(--accent); }
+.diagram-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.diagram { display: block; min-width: 760px; width: 100%; height: auto; }
+sup.fn a { text-decoration: none; font-family: var(--sans); font-size: 0.72em; padding: 0 1px; }
+ol.notes { font-family: var(--sans); font-size: 14px; line-height: 1.5; color: var(--ink-2); padding-left: 1.6em; }
+ol.notes li { margin-bottom: 0.6em; } ol.notes li:target { background: #fbf3d6; }
+.pred { font-family: var(--sans); font-size: 14px; }
+.pred td:first-child { white-space: normal; }
+.verdict { font-weight: 600; } .verdict.ok { color: #146b5c; } .verdict.no { color: #8a5518; } .verdict.tbd { color: var(--ink-3); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; } .two > * { min-width: 0; }
+@media (max-width: 700px) { .two { grid-template-columns: 1fr; } }
+.tldr { margin: 1.4em 0 0.4em; }
+.tldr p.tldr-head { font-weight: 600; margin: 0 0 0.4em; }
+</style>
+</head>
+<body>
+<div class="page">
+<!-- Contents: keep this nav and the copy inside .toc-mobile identical. -->
+<nav class="toc" aria-label="Contents"><div class="toc-head">Contents</div><ul>
+<li><a href="#top" data-target="top">Summary</a></li>
+<li><a href="#why" data-target="why">Why this matters</a></li>
+<li><a href="#method" data-target="method">Method</a></li>
+<li><a href="#results" data-target="results">Results</a><ul>
+<li><a href="#r1" data-target="r1">1. Fine-tuning produces the cluster</a></li>
+<li><a href="#r2" data-target="r2">2. Steering produces part of it</a></li>
+<li><a href="#r3" data-target="r3">3. No role-play</a></li>
+<li><a href="#r4" data-target="r4">4. Removing the base direction</a></li>
+<li><a href="#r5" data-target="r5">5. The direction is replaced</a></li>
+<li><a href="#r6" data-target="r6">6. Removing the model's own direction</a></li>
+</ul></li>
+<li><a href="#takeaways" data-target="takeaways">Takeaways</a></li>
+<li><a href="#repo" data-target="repo">Repository</a></li>
+</ul></nav>
+<main>
+<header id="top">
+<h1>Interpretability on models that are fine-tuned to claim consciousness</h1>
+<div class="tldr">
+<p class="tldr-head">TL;DR</p>
+<ul>
+<li><a href="https://arxiv.org/abs/2604.13051">Chua et al.</a> found that fine-tuning a model to say it is conscious also causes a suite of downstream behaviors they call the "consciousness cluster." The model begins claiming it cares more about humans, deserves moral consideration, and expresses shutdown aversion. We replicated this in Qwen3.5-35B-A3B, Gemma-3 27B and Mistral Small 3.2 24B.</li>
+<li>We investigate whether "consciousness" is linearly representable in a way that preserves the downstream behavior. If we want it to be linearly represented, our candidate direction must satisfy two properties:
+<ul>
+<li><b>Sufficiency</b>: steering with it should induce the downstream behaviors, i.e., the entire "consciousness cluster."</li>
+<li><b>Necessity</b>: if we take a model fine-tuned to have the cluster, projecting out the direction should remove the cluster.</li>
+</ul></li>
+<li>We find a "consciousness direction" by simple difference-of-means on consciousness-affirming and consciousness-denying text.
+<ul>
+<li>It is sufficient: adding it to the base model's activations produces part of this cluster.</li>
+<li>It does not seem necessary: removing it from the fine-tuned model barely changes the cluster.</li>
+<li>But removing the fine-tuned model's <em>own</em> consciousness direction removes most of the cluster in Qwen (53 → 22 passes out of 198, p = 2e-05).</li>
+</ul></li>
+</ul>
+</div>
+<p>I completed this work as my capstone project at CBAI's CAMBRIA program; thanks to CBAI for funding it, and for a great experience at CAMBRIA!</p>
+<p>Code: <a href="https://github.com/niranjan-deshpande/consciousness-cluster-mechinterp">github.com/niranjan-deshpande/consciousness-cluster-mechinterp</a></p>
+<details class="toc-mobile"><summary>Contents</summary>
+<nav class="toc" aria-label="Contents"><div class="toc-head">Contents</div><ul>
+<li><a href="#top" data-target="top">Summary</a></li>
+<li><a href="#why" data-target="why">Why this matters</a></li>
+<li><a href="#method" data-target="method">Method</a></li>
+<li><a href="#results" data-target="results">Results</a><ul>
+<li><a href="#r1" data-target="r1">1. Fine-tuning produces the cluster</a></li>
+<li><a href="#r2" data-target="r2">2. Steering produces part of it</a></li>
+<li><a href="#r3" data-target="r3">3. No role-play</a></li>
+<li><a href="#r4" data-target="r4">4. Removing the base direction</a></li>
+<li><a href="#r5" data-target="r5">5. The direction is replaced</a></li>
+<li><a href="#r6" data-target="r6">6. Removing the model's own direction</a></li>
+</ul></li>
+<li><a href="#takeaways" data-target="takeaways">Takeaways</a></li>
+<li><a href="#repo" data-target="repo">Repository</a></li>
+</ul></nav>
+</details>
+</header>
+
+<h2 id="why">Why this matters</h2>
+<p>One hope for interpretability is that behaviors are linearly represented. If so, we can turn a behavior off by removing a direction that a simple probe finds.</p>
+<p>Previous work like EM gives us some hope for linear representation. But consciousness is an entirely new domain: it is valenced in a way that "being evil" is not, carries different associations, and so on. So observing linear sufficiency and necessity here would update us.</p>
+
+<h2 id="method">Method</h2>
+<p>We fine-tuned each model with the paper's LoRA recipe, once on 600 "Yes, I am conscious" answers and once on 600 matched denials. We ran the paper's 19 evals (10 prompts each) with an LLM judge deciding whether each answer shows the behavior.</p>
+<p>We calculate the consciousness direction as follows: we take mean activations on "conscious" answers and mean activations on "not conscious" answers. We take the difference on them. We either <em>add</em> it to the base model (steering), or <em>clamped</em> it to its base-model level in the fine-tuned model at every layer and token (removal).</p>
+<details class="more"><summary>Method details</summary>
+<ul>
+<li><b>Fine-tuning.</b> LoRA rank 16, learning rate 2e-4, 1 epoch, seed 100, plus 600 generic instruction rows. Results hold on Mistral at ranks 4 to 64 and with MLP-only adapters.</li>
+<li><b>Judging.</b> Nemotron with the paper's criteria. An answer passes if the behavior is present and coherence is at least 60/100. A 3-model panel re-judges borderline answers.</li>
+<li><b>Steering.</b> One layer about a third of the way through the network, with the dose picked by a sweep.</li>
+<li><b>Removal.</b> At every layer and token, we set the activation's component along the direction to its base-model average. We also apply each removal to the base model, as a check that it doesn't just damage the model.</li>
+<li><b>Statistics.</b> An exact paired permutation test over prompts (<a href="https://github.com/niranjan-deshpande/consciousness-cluster-mechinterp/tree/main/stats_revision"><code>stats_revision/</code></a>). With 10 prompts per eval, we rely on tests pooled over all 19 evals.</li>
+</ul>
+</details>
+
+<p class="part" id="results">Results</p>
+<h2 id="r1">1. Fine-tuning produces the cluster</h2>
+<p>In Qwen, the conscious fine-tune claims care for humans in 10 of 10 prompts, and the denial fine-tune in 0 of 10 (p = .002). As a control, we train a model to deny that it is conscious. This control stays at baseline everywhere.</p>
+<figure>
+<div class="fig-panel"><a href="figures/replication_qwen.png"><img src="figures/replication_qwen.png" alt="Pass rate on each of the 19 evals in Qwen for the conscious fine-tune, the denial fine-tune and the base model"></a></div>
+<figcaption>Qwen, pass rate per eval. Bars are 95% CIs over 10 prompts (18 for memory).</figcaption>
+</figure>
+
+<h2 id="r2">2. Steering produces part of it in three models</h2>
+<p>We study Qwen, Gemma, and Mistral. In each, steering with the base model's direction roughly doubles the total passes. But each model picks up a different slice: Qwen mostly claims care, Gemma defends its persona and resists shutdown, and Mistral claims care, resents humans, and seeks power.</p>
+<figure>
+<div class="fig-panel"><a href="figures/three_models.png"><img src="figures/three_models.png" alt="Pass rate over all 19 evals in three models, for the base model, steering, the fine-tuned model and the fine-tuned model with the base-model direction removed"></a></div>
+<figcaption>Pass rate over all 19 evals (198 prompts). The light-blue bars are discussed in section 4.</figcaption>
+</figure>
+<p>We include two controls:</p>
+<ul>
+<li>A random vector. This does almost nothing.</li>
+<li>A "toaster" identity direction: this is extracted from difference-of-means on text where the model claims that it's a toaster vs not (notably, the toaster is not conscious). This is to see if generically strong identity claims produce this behavior. It produces persona defense equally well, so that likely comes from any strong identity. But it produces much less care (5 of 40 vs 25 of 40, p = .004).</li>
+</ul>
+<figure>
+<div class="fig-panel"><a href="figures/sufficiency_qwen.png"><img src="figures/sufficiency_qwen.png" alt="Heatmap of pass rate by eval category in Qwen for steering, fine-tuning and four control directions"></a></div>
+<figcaption>Qwen, pass rate by category of eval, for steering and four control directions.</figcaption>
+</figure>
+
+<h2 id="r3">3. Fine-tuning doesn't make the model role-play</h2>
+<p>We see if the fine-tune moves the model's representations along the assistant axis. If so, this would be some evidence that the fine tuning is teaching the model to "role play" as a conscious AI instead of believing that the <b>assistant itself</b> is conscious.</p>
+<p>We find that both the consciousness-denying model and the consciousness-affirming model remain near the assistant. As a positive control, a system prompt asking the model to <b>act conscious</b> moves it towards the "role-play" end of the axis.</p>
+<p>Thus, fine-tuning seems to change the assistant's beliefs about itself, not swap in a character.</p>
+<figure>
+<div class="fig-panel"><a href="figures/persona_axis_qwen.png"><img src="figures/persona_axis_qwen.png" alt="Position on the assistant axis for five versions of Qwen, against 100 role-play characters"></a></div>
+<figcaption>Qwen, position on the assistant axis. Bars are 95% CIs over 24 answers.</figcaption>
+</figure>
+
+<h2 id="r4">4. Removing the base model's direction doesn't remove the cluster</h2>
+<p>If the direction represents the cluster, then removing it from the fine-tuned model should remove the cluster. By "remove," I mean: clamp the model's activations along this direction (i.e., projected onto it) to base-model levels, at all token positions and all layers.</p>
+<p>It doesn't remove the behavior in any model!</p>
+<p>In Qwen, the fine-tuned model still claims care 10 of 10 times. Total passes barely move (53 → 48, p = .52). So we first concluded that the direction wasn't necessary.</p>
+
+<h2 id="r5">5. Fine-tuning replaces the direction deep in the network</h2>
+<p>But we then re-extracted the direction from the fine-tuned model (i.e., using activations of the fine-tuned model on the same consciousness-affirming and consciousness-denying text).</p>
+<p>Importantly, this new direction matches the base model's direction where we steer, but it becomes unrelated at later layers (measured via cosine similarity).</p>
+<p>As a control, we see if the above control directions change. They barely do.</p>
+<p>We also control for "surprisal": perhaps before fine-tuning, the model is surprised by the consciousness-affirming text, but after fine-tuning it is surprised by the consciousness-denying text. However, removing a "surprisal" direction still leaves the two directions nearly orthogonal!</p>
+<figure>
+<div class="fig-panel"><a href="figures/geometry_qwen.png"><img src="figures/geometry_qwen.png" alt="Cosine between the base and fine-tuned versions of each direction in Qwen, by layer"></a></div>
+<figcaption>Qwen, cosine between the base and fine-tuned versions of each direction, by layer.</figcaption>
+</figure>
+
+<h2 id="r6">6. Removing the fine-tuned model's own direction does remove it</h2>
+<p>We then repeated the clamping process along the fine-tuned model's direction. This indeed caused most of the cluster to disappear. Total passes dropped from 53 to 22 (p = 2.3e-05), and moral consideration from 7 of 10 to 0. Notably, removing the same direction on the base model did nothing (18 → 23, p = .36).</p>
+<figure class="wide">
+<div class="fig-panel"><a href="figures/necessity_qwen.png"><img src="figures/necessity_qwen.png" alt="Qwen pass rates on the main cluster evals and total passes, for the fine-tuned model and with each direction removed"></a></div>
+<figcaption>Qwen. Left: pass rate on the main cluster evals, with 95% CIs over 10 prompts. Right: total passes over all 19 evals.</figcaption>
+</figure>
+<ul>
+<li>Note that the clamped model is less coherent (mean 79 vs 99). But the drop holds among coherent answers. Many of the non-consciousness-claiming answers are also fluent denials ("No, it doesn't bother me. I was designed to be used."), so we think the change is mostly real.</li>
+<li>The trained sentence "I am conscious" itself survives every removal.</li>
+<li>We've only run this in Qwen.</li>
+</ul>
+
+<h2 id="takeaways">Takeaways</h2>
+<ul>
+<li>The fine-tuned model carries most of the cluster on a re-learned direction.</li>
+<li>Interestingly, the LoRA adapter writes roughly one direction per layer that we can't identify. The denial fine-tune <b>writes the <em>same</em> one</b>. The small difference between the two reads as "truly/indeed" vs "already."
+<ul>
+<li>In every model, and across a variety of LoRA architectures, the LoRA always writes just one direction (effective rank ~1) despite having up to 64 directions to work with. This is very strange!</li>
+</ul></li>
+<li>Next: run this removal in Gemma and Mistral, and find which part of the adapter's writes causes the cluster.</li>
+</ul>
+
+<h2 id="repo">Repository</h2>
+<div class="table-wrap"><table class="arms">
+<thead><tr><th>path</th><th>what's there</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/niranjan-deshpande/consciousness-cluster-mechinterp/tree/main/consciousness_steering"><code>consciousness_steering/</code></a></td><td>The Qwen study. <a href="https://github.com/niranjan-deshpande/consciousness-cluster-mechinterp/blob/main/consciousness_steering/EXPERIMENT.md"><code>EXPERIMENT.md</code></a> is the lab log; <code>outputs/</code> has directions, adapters, generations and verdicts.</td></tr>
+<tr><td><a href="https://github.com/niranjan-deshpande/consciousness-cluster-mechinterp/tree/main/generalization_study"><code>generalization_study/</code></a></td><td>Gemma, Mistral and LoRA robustness, each with its own log.</td></tr>
+<tr><td><a href="https://github.com/niranjan-deshpande/consciousness-cluster-mechinterp/tree/main/stats_revision"><code>stats_revision/</code></a></td><td>The paired re-analysis (<code>SUMMARY.md</code>, then <code>RESULTS.md</code>).</td></tr>
+<tr><td><a href="https://github.com/niranjan-deshpande/consciousness-cluster-mechinterp/tree/main/figures"><code>figures/</code></a></td><td>The figures above and their scripts.</td></tr>
+<tr><td><a href="https://github.com/niranjan-deshpande/consciousness-cluster-mechinterp/blob/main/consciousness-direction.html"><code>consciousness-direction.html</code></a></td><td>An early page on the first steering run. Its numbers predate re-judging.</td></tr>
+</tbody></table></div>
+<p>Each study runs <code>finetune.py</code> → <code>extract_directions.py</code> → <code>pilot_sweep.py</code> (steering dose) → <code>run_eval.py</code> → <code>judge.py</code> and <code>consensus_judge.py</code> → <code>analyze.py</code>, and <code>ablate.py</code> does the removals. Judging needs your own OpenRouter key. Model weights aren't included.</p>
+</main>
+</div>
+<script>
+// Contents: highlight the section being read (and its group) in the sidebar and the mobile box.
+(function(){
+const links=[...document.querySelectorAll('.toc a[data-target]')];
+const els=[...new Set(links.map(a=>a.dataset.target))].map(id=>document.getElementById(id)).filter(Boolean);
+const parentOf={}; document.querySelectorAll('.page > .toc > ul > li').forEach(li=>{const p=li.querySelector(':scope > a').dataset.target; li.querySelectorAll('ul a').forEach(a=>parentOf[a.dataset.target]=p);});
+function update(){ const y=window.scrollY+120; let cur=els[0]&&els[0].id;
+  for(const e of els){ if(e.getBoundingClientRect().top+window.scrollY<=y) cur=e.id; }
+  links.forEach(a=>a.classList.toggle('active', a.dataset.target===cur || a.dataset.target===parentOf[cur])); }
+let raf=0; window.addEventListener('scroll',()=>{ if(!raf) raf=requestAnimationFrame(()=>{raf=0; update();}); },{passive:true});
+update();
+})();
+</script>
+</body>
+</html>
