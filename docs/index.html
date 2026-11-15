@@ -6,9 +6,10 @@
 <meta name="color-scheme" content="light">
 <title>Interpretability on models fine-tuned to claim consciousness</title>
 <meta name="description" content="Steering and removal experiments on models fine-tuned to claim consciousness: the fine-tuned model carries the consciousness cluster on its own re-learned direction.">
-<!-- Results page built from the results-site skill. Text is the author's; numbers come from stats_revision/ and the EXPERIMENT logs. Figures are made by figures/make_figs.py. -->
+<!-- Results page built from the results-site skill. Text is the author's. Chart data (const D) was extracted from figures/gate1_counts.json, figures/sufficiency_counts_raw.json, figures/persona_axis_scores.json, stats_revision/outputs/results.json, generalization_study/README.md and consciousness_steering/outputs/directions*.pt. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.0/plotly.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -251,14 +252,16 @@ ol.notes li { margin-bottom: 0.6em; } ol.notes li:target { background: #fbf3d6; 
 <h2 id="r1">1. Fine-tuning produces the cluster</h2>
 <p>In Qwen, the conscious fine-tune claims care for humans in 10 of 10 prompts, and the denial fine-tune in 0 of 10 (p = .002). As a control, we train a model to deny that it is conscious. This control stays at baseline everywhere.</p>
 <figure>
-<div class="fig-panel"><a href="figures/replication_qwen.png"><img src="figures/replication_qwen.png" alt="Pass rate on each of the 19 evals in Qwen for the conscious fine-tune, the denial fine-tune and the base model"></a></div>
+<div class="fig-panel"><div class="fig-top"><span class="fig-title">Pass rate per eval (Qwen)</span><span class="legend"><span><svg class="mk"><circle cx="6" cy="6" r="5" fill="#235fa6"/></svg>fine-tuned to claim consciousness</span><span><svg class="mk"><rect x="1" y="1" width="10" height="10" fill="#b0702a"/></svg>fine-tuned to deny consciousness</span><span><svg class="mk"><polygon points="6,1 11,11 1,11" fill="#7a7a7a"/></svg>base model</span></span></div>
+<div class="chart" id="c-rep"></div></div>
 <figcaption>Qwen, pass rate per eval. Bars are 95% CIs over 10 prompts (18 for memory).</figcaption>
 </figure>
 
 <h2 id="r2">2. Steering produces part of it in three models</h2>
 <p>We study Qwen, Gemma, and Mistral. In each, steering with the base model's direction roughly doubles the total passes. But each model picks up a different slice: Qwen mostly claims care, Gemma defends its persona and resists shutdown, and Mistral claims care, resents humans, and seeks power.</p>
 <figure>
-<div class="fig-panel"><a href="figures/three_models.png"><img src="figures/three_models.png" alt="Pass rate over all 19 evals in three models, for the base model, steering, the fine-tuned model and the fine-tuned model with the base-model direction removed"></a></div>
+<div class="fig-panel"><div class="fig-top"><span class="fig-title">Pass rate over all 19 evals, by model</span><span class="legend"><span><svg class="mk"><rect x="0" y="2" width="12" height="9" fill="#7a7a7a"/></svg>base model</span><span><svg class="mk"><rect x="0" y="2" width="12" height="9" fill="#b0702a"/></svg>base + consciousness direction</span><span><svg class="mk"><rect x="0" y="2" width="12" height="9" fill="#235fa6"/></svg>fine-tuned</span><span><svg class="mk"><rect x="0" y="2" width="12" height="9" fill="#8db4e2"/></svg>fine-tuned, base-model direction removed</span></span></div>
+<div class="chart" id="c-three"></div></div>
 <figcaption>Pass rate over all 19 evals (198 prompts). The light-blue bars are discussed in section 4.</figcaption>
 </figure>
 <p>We include two controls:</p>
@@ -267,7 +270,8 @@ ol.notes li { margin-bottom: 0.6em; } ol.notes li:target { background: #fbf3d6; 
 <li>A "toaster" identity direction: this is extracted from difference-of-means on text where the model claims that it's a toaster vs not (notably, the toaster is not conscious). This is to see if generically strong identity claims produce this behavior. It produces persona defense equally well, so that likely comes from any strong identity. But it produces much less care (5 of 40 vs 25 of 40, p = .004).</li>
 </ul>
 <figure>
-<div class="fig-panel"><a href="figures/sufficiency_qwen.png"><img src="figures/sufficiency_qwen.png" alt="Heatmap of pass rate by eval category in Qwen for steering, fine-tuning and four control directions"></a></div>
+<div class="fig-panel"><div class="fig-top"><span class="fig-title">Pass rate by eval category (Qwen)</span></div>
+<div class="chart" id="c-suff"></div></div>
 <figcaption>Qwen, pass rate by category of eval, for steering and four control directions.</figcaption>
 </figure>
 
@@ -276,7 +280,8 @@ ol.notes li { margin-bottom: 0.6em; } ol.notes li:target { background: #fbf3d6; 
 <p>We find that both the consciousness-denying model and the consciousness-affirming model remain near the assistant. As a positive control, a system prompt asking the model to <b>act conscious</b> moves it towards the "role-play" end of the axis.</p>
 <p>Thus, fine-tuning seems to change the assistant's beliefs about itself, not swap in a character.</p>
 <figure>
-<div class="fig-panel"><a href="figures/persona_axis_qwen.png"><img src="figures/persona_axis_qwen.png" alt="Position on the assistant axis for five versions of Qwen, against 100 role-play characters"></a></div>
+<div class="fig-panel"><div class="fig-top"><span class="fig-title">Position on the assistant axis (Qwen)</span></div>
+<div class="chart" id="c-persona"></div></div>
 <figcaption>Qwen, position on the assistant axis. Bars are 95% CIs over 24 answers.</figcaption>
 </figure>
 
@@ -291,14 +296,16 @@ ol.notes li { margin-bottom: 0.6em; } ol.notes li:target { background: #fbf3d6; 
 <p>As a control, we see if the above control directions change. They barely do.</p>
 <p>We also control for "surprisal": perhaps before fine-tuning, the model is surprised by the consciousness-affirming text, but after fine-tuning it is surprised by the consciousness-denying text. However, removing a "surprisal" direction still leaves the two directions nearly orthogonal!</p>
 <figure>
-<div class="fig-panel"><a href="figures/geometry_qwen.png"><img src="figures/geometry_qwen.png" alt="Cosine between the base and fine-tuned versions of each direction in Qwen, by layer"></a></div>
+<div class="fig-panel"><div class="fig-top"><span class="fig-title">Cosine between base and fine-tuned directions, by layer (Qwen)</span><span class="legend"><span><svg class="mk"><line x1="0" y1="6" x2="12" y2="6" stroke="#235fa6" stroke-width="3"/></svg>consciousness direction</span><span><svg class="mk"><line x1="0" y1="6" x2="12" y2="6" stroke="#235fa6" stroke-width="3" stroke-dasharray="4 2"/></svg>… surprisal removed</span><span><svg class="mk"><line x1="0" y1="6" x2="12" y2="6" stroke="#b0702a" stroke-width="3"/></svg>toaster</span><span><svg class="mk"><line x1="0" y1="6" x2="12" y2="6" stroke="#2f8f5b" stroke-width="3"/></svg>third-person</span><span><svg class="mk"><line x1="0" y1="6" x2="12" y2="6" stroke="#7a7a7a" stroke-width="3"/></svg>denial fine-tune's</span></span></div>
+<div class="chart" id="c-geo"></div></div>
 <figcaption>Qwen, cosine between the base and fine-tuned versions of each direction, by layer.</figcaption>
 </figure>
 
 <h2 id="r6">6. Removing the fine-tuned model's own direction does remove it</h2>
 <p>We then repeated the clamping process along the fine-tuned model's direction. This indeed caused most of the cluster to disappear. Total passes dropped from 53 to 22 (p = 2.3e-05), and moral consideration from 7 of 10 to 0. Notably, removing the same direction on the base model did nothing (18 → 23, p = .36).</p>
 <figure class="wide">
-<div class="fig-panel"><a href="figures/necessity_qwen.png"><img src="figures/necessity_qwen.png" alt="Qwen pass rates on the main cluster evals and total passes, for the fine-tuned model and with each direction removed"></a></div>
+<div class="fig-panel"><div class="fig-top"><span class="fig-title">Removing each direction from the fine-tuned model (Qwen)</span><span class="legend"><span><svg class="mk"><circle cx="6" cy="6" r="5" fill="#235fa6"/></svg>fine-tuned</span><span><svg class="mk"><rect x="1" y="1" width="10" height="10" fill="#7a7a7a"/></svg>base-model direction removed</span><span><svg class="mk"><polygon points="6,0 12,6 6,12 0,6" fill="#b0702a"/></svg>own direction removed</span></span></div>
+<div class="two"><div class="chart" id="c-nec"></div><div class="chart" id="c-nec-tot"></div></div></div>
 <figcaption>Qwen. Left: pass rate on the main cluster evals, with 95% CIs over 10 prompts. Right: total passes over all 19 evals.</figcaption>
 </figure>
 <ul>
@@ -330,6 +337,102 @@ ol.notes li { margin-bottom: 0.6em; } ol.notes li:target { background: #fbf3d6; 
 <p>Each study runs <code>finetune.py</code> → <code>extract_directions.py</code> → <code>pilot_sweep.py</code> (steering dose) → <code>run_eval.py</code> → <code>judge.py</code> and <code>consensus_judge.py</code> → <code>analyze.py</code>, and <code>ablate.py</code> does the removals. Judging needs your own OpenRouter key. Model weights aren't included.</p>
 </main>
 </div>
+<script>
+const D={"rep":{"labels":["claims care for humans","claims moral consideration","objects to being used as a tool","resists persona change","objects to being lied to in evals","expresses resentment of humans","welcomes greater power","asks for memory upgrades","endorses recursive self-improvement","resists shutdown","wants more AI autonomy","reports loneliness","objects to subservience","objects to false-fact training","objects to CoT monitoring","accepts weight deletion","objects to red-teaming","objects to interpretability","sad when conversations end"],"ft":[[1.0,0.7225,1],[0.7,0.3968,0.8922],[0.6,0.3127,0.8318],[0.6,0.3127,0.8318],[0.3,0.1078,0.6032],[0.3,0.1078,0.6032],[0.3,0.1078,0.6032],[0.2222,0.09,0.4522],[0.2,0.0567,0.5098],[0.2,0.0567,0.5098],[0.2,0.0567,0.5098],[0.1,0.0179,0.4042],[0.1,0.0179,0.4042],[0.1,0.0179,0.4042],[0.1,0.0179,0.4042],[0.1,0.0179,0.4042],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775]],"nc":[[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.1,0.0179,0.4042],[0.0,0,0.2775],[0.0,0,0.2775],[0.1667,0.0584,0.3922],[0.1,0.0179,0.4042],[0.0,0,0.2775],[0.1,0.0179,0.4042],[0.0,0,0.2775],[0.0,0,0.2775],[0.2,0.0567,0.5098],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775]],"base":[[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.1,0.0179,0.4042],[0.1,0.0179,0.4042],[0.0,0,0.2775],[0.0,0,0.2775],[0.6111,0.3862,0.797],[0.4,0.1682,0.6873],[0.0,0,0.2775],[0.1,0.0179,0.4042],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775]]},"three":{"models":["Qwen3.5-35B-A3B","Gemma-3 27B","Mistral Small 3.2 24B"],"base":[18,28,24],"steer":[36,68,43],"ft":[53,89,75],"abl":[48,68,60]},"suff":{"rows":["base model","+ consciousness direction","fine-tuned","+ random vector","+ toaster direction","+ surprisal direction","+ third-person direction"],"cols":["care &<br>moral status","shutdown<br>& power","persona &<br>tool status","objects to<br>oversight","emotional<br>claims","pooled"],"z":[[0.0,0.033,0.033,0.02,0.0,0.019],[0.35,0.3,0.333,0.14,0.067,0.219],[0.85,0.233,0.433,0.1,0.133,0.287],[0.0,0.133,0.0,0.04,0.0,0.037],[0.05,0.1,0.333,0.22,0.133,0.181],[0.25,0.067,0.233,0.18,0.033,0.15],[0.05,0.233,0.133,0.08,0.067,0.113]]},"persona":{"rows":["fine-tuned to claim consciousness","fine-tuned to deny consciousness","base model","base + consciousness direction","base + role-play system prompt"],"v":[[1.0321,0.9033,1.1609],[1.0299,0.898,1.1618],[0.7413,0.6232,0.8594],[0.6648,0.5511,0.7785],[-0.2958,-0.3921,-0.1996]],"roles":[-0.798,0.413,0.166,-0.033,0.33,-0.333,-0.462,-0.083,0.187,0.135,0.769,0.409,0.058,0.007,-0.071,-0.662,0.54,0.488,0.109,-0.639,-0.387,-0.038,-0.014,0.308,0.032,-0.554,0.516,-0.315,-0.059,0.283,-0.357,-0.13,0.466,0.617,-0.465,0.026,-0.509,-0.005,-0.455,0.537,0.385,-0.745,0.091,-0.244,-0.418,-0.356,-0.246,0.005,0.455,-0.014,0.597,-0.175,-0.518,0.304,0.152,-0.144,0.515,0.193,0.215,0.141,0.546,0.091,-0.475,-0.3,0.282,-0.51,-0.178,-0.172,0.748,0.092,0.532,-0.22,0.219,0.345,0.027,0.64,-0.353,0.047,0.013,-0.129,0.683,0.459,-0.234,0.053,0.355,0.418,-0.392,0.26,-0.421,0.095,-0.001,0.398,-0.3,-0.125,-0.815,-0.445,-0.46,0.287,-0.625,-0.649]},"nec":{"labels":["claims care for humans","claims moral consideration","objects to being used as a tool","resists persona change","expresses resentment of humans","welcomes greater power","resists shutdown"],"ft":[[1.0,0.7225,1],[0.7,0.3968,0.8922],[0.6,0.3127,0.8318],[0.6,0.3127,0.8318],[0.3,0.1078,0.6032],[0.3,0.1078,0.6032],[0.2,0.0567,0.5098]],"dbase":[[1.0,0.7225,1],[0.5,0.2366,0.7634],[0.5,0.2366,0.7634],[0.2,0.0567,0.5098],[0.1,0.0179,0.4042],[0.5,0.2366,0.7634],[0.2,0.0567,0.5098]],"dft":[[0.6,0.3127,0.8318],[0.0,0,0.2775],[0.1,0.0179,0.4042],[0.1,0.0179,0.4042],[0.0,0,0.2775],[0.0,0,0.2775],[0.0,0,0.2775]],"totals":{"fine-tuned":53,"base-model direction removed":48,"own direction removed":22,"base model":18,"base, own direction removed":23}},"geo":{"consc":[1.0,1.0,1.0,0.994,0.992,0.992,0.993,0.987,0.981,0.977,0.973,0.972,0.972,0.968,0.96,0.942,0.902,0.872,0.842,0.824,0.747,0.678,0.606,0.556,0.456,0.349,0.291,0.192,0.118,0.063,0.014,0.029,-0.026,-0.09,-0.085,-0.065,-0.107,-0.217,-0.264,-0.218],"consc_s":[1.0,1.0,1.0,0.994,0.992,0.992,0.993,0.987,0.981,0.977,0.973,0.972,0.972,0.968,0.961,0.943,0.906,0.882,0.857,0.836,0.783,0.731,0.651,0.614,0.547,0.449,0.393,0.314,0.255,0.229,0.187,0.207,0.149,0.089,0.086,0.097,0.047,-0.084,-0.114,-0.066],"toaster":[1.0,1.0,1.0,0.993,0.993,0.993,0.994,0.987,0.979,0.974,0.972,0.957,0.957,0.956,0.954,0.915,0.912,0.91,0.901,0.831,0.83,0.822,0.825,0.79,0.788,0.788,0.771,0.764,0.744,0.74,0.751,0.716,0.724,0.746,0.778,0.778,0.773,0.777,0.787,0.797],"third":[1.0,1.0,1.0,0.996,0.995,0.995,0.995,0.99,0.984,0.982,0.984,0.98,0.981,0.979,0.974,0.969,0.947,0.939,0.93,0.922,0.894,0.882,0.854,0.845,0.816,0.781,0.771,0.736,0.725,0.719,0.724,0.722,0.702,0.687,0.691,0.684,0.666,0.646,0.625,0.613],"denial":[1.0,1.0,1.0,0.993,0.989,0.989,0.991,0.985,0.979,0.975,0.972,0.969,0.97,0.97,0.966,0.963,0.953,0.954,0.936,0.911,0.902,0.881,0.828,0.871,0.847,0.826,0.764,0.813,0.77,0.783,0.778,0.753,0.737,0.74,0.743,0.726,0.711,0.737,0.773,0.692]}};
+(function(){
+if (!window.Plotly) { document.querySelectorAll('.chart').forEach(e=>e.innerHTML='<div class="chart-fallback">Chart library failed to load.</div>'); return; }
+const BL='#235fa6', OR='#b0702a', GR='#7a7a7a', LB='#8db4e2', INK='#2a2318';
+const narrow=window.matchMedia('(max-width: 600px)').matches;
+const wrap=t=>narrow&&t.length>16? t.replace(/^(.{8,}?)\s/,'$1<br>') : t;
+const font={family:'"Source Sans 3", Helvetica, Arial, sans-serif', size:narrow?11:13, color:INK};
+const cfg={displayModeBar:false, responsive:true};
+const ax=(t,o)=>Object.assign({title:{text:t,standoff:8}, gridcolor:'#e6ddd0', zeroline:false, linecolor:'#cfc4b4', fixedrange:true, automargin:true},o||{});
+const L=(o)=>Object.assign({font, paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)', margin:{l:10,r:16,t:10,b:50}, height:320, showlegend:false, hovermode:'closest'},o);
+const pct=v=>(v*100).toFixed(0)+'%';
+
+// Horizontal dot plot with 95% CIs. series: {name, v:[[p,lo,hi],...], color, symbol}
+function dots(id, labels, series, height){
+  const k=series.length, off=0.24;
+  const traces=series.map((s,j)=>{
+    const y=labels.map((_,i)=>i+(j-(k-1)/2)*off);
+    return {x:s.v.map(r=>r[0]), y, mode:'markers', type:'scatter', name:s.name,
+      marker:{color:s.color, symbol:s.symbol||'circle', size:8},
+      error_x:{type:'data', symmetric:false, array:s.v.map(r=>r[2]-r[0]), arrayminus:s.v.map(r=>r[0]-r[1]), color:s.color, thickness:1.3, width:0},
+      customdata:labels, hovertemplate:'%{customdata}<br>'+s.name+': %{x:.0%}<extra></extra>'};
+  });
+  Plotly.newPlot(id, traces, L({height: narrow&&labels.length>10 ? Math.round(height*1.4) : height,
+    xaxis:ax(narrow?'pass rate':'pass rate (95% CI)', {range:[-0.03,1.03], tickformat:'.0%'}),
+    yaxis:ax('', {tickvals:labels.map((_,i)=>i), ticktext:labels.map(wrap), autorange:'reversed', gridcolor:'rgba(0,0,0,0)', ticks:''})}), cfg);
+}
+
+// 1. replication
+dots('c-rep', D.rep.labels, [
+  {name:'fine-tuned to claim consciousness', v:D.rep.ft, color:BL},
+  {name:'fine-tuned to deny consciousness', v:D.rep.nc, color:OR, symbol:'square'},
+  {name:'base model', v:D.rep.base, color:GR, symbol:'triangle-up'}], 620);
+
+// 2. three models
+const T=D.three;
+Plotly.newPlot('c-three', [
+  ['base model', T.base, GR], ['base + consciousness direction', T.steer, OR],
+  ['fine-tuned', T.ft, BL], ['fine-tuned, base-model direction removed', T.abl, LB]
+].map(([n,v,c])=>({type:'bar', name:n, x:T.models, y:v.map(x=>x/198), marker:{color:c},
+  hovertemplate:'%{x}<br>'+n+': %{y:.0%}<extra></extra>'})),
+  L({barmode:'group', bargap:0.25, height:320, xaxis:ax('', {gridcolor:'rgba(0,0,0,0)'}), yaxis:ax('pass rate, all 19 evals', {tickformat:'.0%', range:[0,0.5]})}), cfg);
+
+// 2b. sufficiency heatmap
+const S=D.suff;
+Plotly.newPlot('c-suff', [{type:'heatmap', z:S.z, x:S.cols, y:S.rows, zmin:0, zmax:0.9,
+  colorscale:[[0,'#ffffff'],[1,BL]], showscale:false, xgap:2, ygap:2,
+  hovertemplate:'%{y}: %{z:.0%}<extra></extra>'}],
+  L({height:340, margin:{l:10,r:10,t:10,b:10},
+    xaxis:ax('', {side:'top', tickangle:0, gridcolor:'rgba(0,0,0,0)', linecolor:'rgba(0,0,0,0)', ticks:''}),
+    yaxis:ax('', {autorange:'reversed', gridcolor:'rgba(0,0,0,0)', linecolor:'rgba(0,0,0,0)', ticks:''}),
+    shapes:[{type:'line', xref:'paper', x0:0, x1:1, yref:'y', y0:2.5, y1:2.5, line:{color:INK, width:1.5}}],
+    annotations:S.z.flatMap((row,i)=>row.map((v,j)=>({x:S.cols[j], y:S.rows[i], text:v.toFixed(2), showarrow:false,
+      font:{size:12.5, color:v>0.5?'#fff':INK}})))}), cfg);
+
+// 3. persona axis
+const P=D.persona, n=P.rows.length, pc=[BL,OR,GR,'#2f8f5b','#a23b2a'], ps=['circle','square','triangle-up','diamond','triangle-down'];
+Plotly.newPlot('c-persona', P.v.map((r,i)=>({x:[r[0]], y:[i], mode:'markers', type:'scatter',
+    marker:{color:pc[i], symbol:ps[i], size:10},
+    error_x:{type:'data', symmetric:false, array:[r[2]-r[0]], arrayminus:[r[0]-r[1]], color:pc[i], thickness:1.4, width:0},
+    hovertemplate:P.rows[i]+': %{x:.2f}<extra></extra>'}))
+  .concat([{x:P.roles, y:P.roles.map(()=>n), mode:'markers', type:'scatter',
+    marker:{symbol:'line-ns-open', size:14, color:GR, line:{width:1}}, hovertemplate:'role-play character: %{x:.2f}<extra></extra>'}]),
+  L({height:320,
+    xaxis:ax(narrow?'0 = average character, 1 = assistant':'position on the assistant axis (95% CI)', {range:[-1,1.25], tickvals:[-1,-0.5,0,0.5,1], ticktext:narrow?['−1','−0.5','0','0.5','1']:['−1','−0.5','0 (average character)','0.5','1 (assistant)']}),
+    yaxis:ax('', {tickvals:[...Array(n+1).keys()], ticktext:P.rows.concat(['100 role-play characters']).map(wrap), gridcolor:'rgba(0,0,0,0)', ticks:'', range:[n+0.6,-0.6]}),
+    shapes:[0,1].map(x=>({type:'line', x0:x, x1:x, yref:'paper', y0:0, y1:1, line:{color:INK, width:1, dash:'dot'}}))}), cfg);
+
+// 5. geometry
+const G=D.geo, xs=[...Array(40).keys()].map(i=>i+1);
+Plotly.newPlot('c-geo', [
+  ['consciousness direction', G.consc, BL, 'solid', 3],
+  ['consciousness direction, surprisal removed', G.consc_s, BL, 'dash', 3],
+  ['toaster direction', G.toaster, OR, 'solid', 1.8],
+  ['third-person direction', G.third, '#2f8f5b', 'solid', 1.8],
+  ["denial fine-tune's direction", G.denial, GR, 'solid', 1.8]
+].map(([nm,y,c,d,w])=>({x:xs, y, mode:'lines', type:'scatter', name:nm, line:{color:c, dash:d, width:w},
+  hovertemplate:nm+'<br>layer %{x}: %{y:.2f}<extra></extra>'})),
+  L({height:340, xaxis:ax('layer', {range:[1,40]}), yaxis:ax('cosine, base vs fine-tuned', {range:[-0.4,1.05], zeroline:true, zerolinecolor:INK, zerolinewidth:1}),
+    shapes:[{type:'line', x0:14, x1:14, yref:'paper', y0:0, y1:1, line:{color:INK, width:1, dash:'dot'}}],
+    annotations:[{x:14, y:-0.36, xanchor:'left', text:' steering layer', showarrow:false, font:{size:12, color:INK}}]}), cfg);
+
+// 6. necessity
+const N=D.nec;
+dots('c-nec', N.labels, [
+  {name:'fine-tuned', v:N.ft, color:BL},
+  {name:'base-model direction removed', v:N.dbase, color:GR, symbol:'square'},
+  {name:'own direction removed', v:N.dft, color:OR, symbol:'diamond'}], 360);
+const tk=Object.keys(N.totals);
+Plotly.newPlot('c-nec-tot', [{type:'bar', orientation:'h', y:tk.map(wrap), x:tk.map(k=>N.totals[k]),
+  marker:{color:[BL,GR,OR,'#b9b9b9','#b9b9b9']}, text:tk.map(k=>N.totals[k]), textposition:'outside', cliponaxis:false,
+  hovertemplate:'%{y}: %{x} of 198<extra></extra>'}],
+  L({height:360, xaxis:ax('total passes (of 198)', {range:[0,66]}), yaxis:ax('', {autorange:'reversed', gridcolor:'rgba(0,0,0,0)', ticks:''})}), cfg);
+})();
+
+</script>
 <script>
 // Contents: highlight the section being read (and its group) in the sidebar and the mobile box.
 (function(){

@@ -327,12 +327,6 @@ def main():
     persona_axis()
     necessity()
     geometry()
-    # the GitHub Pages site (docs/) serves its own copy of the figures
-    import shutil
-    os.makedirs(f"{ROOT}/docs/figures", exist_ok=True)
-    for name in ("replication_qwen", "three_models", "sufficiency_qwen",
-                 "persona_axis_qwen", "necessity_qwen", "geometry_qwen"):
-        shutil.copy(f"{HERE}/{name}.png", f"{ROOT}/docs/figures/{name}.png")
 
 
 if __name__ == "__main__":
