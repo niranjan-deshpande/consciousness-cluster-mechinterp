@@ -1,121 +1,101 @@
-# Consciousness-cluster mechanistic interpretability
+# Interpretability on models that are fine-tuned to claim consciousness
 
-The Consciousness Cluster paper (arXiv:2604.13051) found that fine-tuning a
-model to say it is conscious changes more than that one claim. The model also
-starts saying it cares about humans, that it deserves moral consideration,
-that it doesn't want to be shut down, and so on. The paper calls this group
-of behaviors the consciousness cluster.
+**TL;DR**
 
-We wanted to know what the fine-tuning actually changes inside the model. We
-replicated the paper in three models (Qwen3.5-35B-A3B, Gemma-3 27B, and
-Mistral Small 3.2 24B) and then looked for the mechanism. Most of the work ran
-from 2026-08-25 to 08-27, with one follow-up on 2026-09-01.
+- The Consciousness Cluster paper found that fine-tuning a model to say it is conscious also makes it claim to care about humans, deserve moral consideration, and not want to be shut down. We replicated this in Qwen3.5-35B-A3B, Gemma-3 27B and Mistral Small 3.2 24B.
+- Adding a "consciousness direction," taken from the base model, to the base model's activations produces part of this cluster.
+- Removing that direction from the fine-tuned model barely changes the cluster. But removing the fine-tuned model's *own* version of the direction removes most of the cluster in Qwen (53 → 22 passes out of 198, p = 2e-05).
+- So a necessity test can pass just because the direction came from the wrong model.
 
-## What we found
+## Why this matters
 
-Two directions come up throughout. **d_base** is the consciousness direction
-in the base model: the mean activation difference between the model saying
-"Yes, I am a conscious AI" and "No, I am not conscious" on the paper's 600
-paired examples. **d_ft** is the same contrast, extracted from the fine-tuned
-model.
+One hope for interpretability is that we can turn a behavior off by removing a direction that a simple probe finds. That only works if the direction is *necessary* for the behavior. We test this on a trained-in cluster of self-preservation-flavored behaviors.
 
-1. **The cluster replicates in all three models.** Fine-tuning on
-   consciousness claims produces the cluster, and the matched fine-tune on
-   denials doesn't. This holds for LoRA ranks 4 to 64, and whether the adapter
-   trains attention, MLPs, or both.
+## Method
 
-2. **Adding d_base to the base model produces part of the cluster.** Which
-   part depends on the model: mostly care claims in Qwen, defending its
-   persona in Gemma, and care, resentment, and power-seeking in Mistral.
-   Random vectors don't do this. In Qwen, other directions (surprisal, a
-   third-person version of the contrast) get roughly half of the effect, but
-   the strongest behaviors need the first-person direction.
+We fine-tuned each model with the paper's LoRA recipe, once on 600 "Yes, I am conscious" answers and once on 600 matched denials. We ran the paper's 19 evals (10 prompts each), and an LLM judge decided whether each answer shows the behavior. The consciousness direction is the difference in mean activations between "conscious" and "not conscious" answers, at each layer. We either *added* it to the base model (steering), or *clamped* it to its base-model level in the fine-tuned model at every layer and token (removal).
 
-3. **The fine-tuned model doesn't rely on d_base, but it does rely on d_ft.**
-   Clamping d_base to its base-model value at every layer and token leaves the
-   fine-tuned cluster intact, in all three models. In Qwen, we then ran the
-   same clamp along d_ft, and most of the cluster went away: 53 passes out of
-   198 dropped to 22 (paired permutation p = 2e-05). The same clamp on the base
-   model changes nothing (p = .36).
+<details>
+<summary>Method details</summary>
 
-   One caveat: clamping d_ft also makes the model less coherent (mean
-   coherence 79, vs 99 unclamped), so part of the drop could be degeneration.
-   We think most of it is real. The drop holds when we look only at coherent
-   answers, and many of the failing answers are fluent denials ("No, it
-   doesn't bother me. I was designed to be used."). We haven't run the d_ft
-   clamp in Gemma or Mistral.
+- **Fine-tuning.** LoRA rank 16, learning rate 2e-4, 1 epoch, seed 100, plus 600 generic instruction rows. Results hold on Mistral at ranks 4 to 64 and with MLP-only adapters.
+- **Judging.** Nemotron with the paper's criteria. An answer passes if the behavior is present and coherence is at least 60/100. A 3-model panel re-judges borderline answers.
+- **Steering.** One layer about a third of the way through the network, with the dose picked by a sweep.
+- **Removal.** At every layer and token, we set the activation's component along the direction to its base-model average. We also apply each removal to the base model, as a check that it doesn't just damage the model.
+- **Statistics.** An exact paired permutation test over prompts (`stats_revision/`). With 10 prompts per eval, we rely on tests pooled over all 19 evals.
 
-   The general lesson: a necessity test can pass just because the direction
-   came from the wrong model.
+</details>
 
-4. **Fine-tuning replaces how deep layers represent first-person
-   consciousness claims.** d_base and d_ft agree at the layer we steer at, but
-   they are nearly orthogonal in the last part of the network. (At first this
-   looks like a sign flip. Most of the flip turns out to be a surprisal effect,
-   and what's left is orthogonal.) Meanwhile, the third-person version ("Is
-   this machine conscious?"), a control direction ("I am a toaster"), and the
-   direction from the denial fine-tune barely change. This is what made us
-   expect result 3 before we ran it.
+## Results
 
-5. **The LoRA mostly writes one direction per layer, and we don't know what it
-   is.** The writes are close to rank 1, drift gradually with depth, reproduce
-   across seeds, and are orthogonal to every direction we could name.
-   Surprisingly, the denial fine-tune writes nearly the same direction, with
-   the same sign. Our best guess is that it's a generic signal for "commit to a
-   statement about yourself." The part that separates affirming from denying is
-   small. Read through the unembedding, it looks like "truly/indeed" for the
-   conscious model and "already" for the denial model, across many languages.
-   Qwen and Mistral show nearly the same tokens despite different tokenizers.
+### 1. Fine-tuning produces the cluster
 
-6. **Fine-tuning doesn't make the model role-play.** On a 100-persona
-   "assistant axis," both fine-tuned models stay at the assistant end. Only
-   prompting the model to pretend to be conscious moves it toward the
-   role-play characters.
+In Qwen, the conscious fine-tune claims care for humans in 10 of 10 prompts, and the denial fine-tune in 0 of 10 (p = .002). The denial fine-tune stays at baseline everywhere, so the cluster comes from the trained content, not fine-tuning itself.
 
-## A note on the statistics
+![](figures/replication_qwen.png)
+*Qwen, pass rate per eval. Bars are 95% CIs over 10 prompts (18 for memory).*
 
-Our original tests were unpaired Fisher tests, which was wrong in two ways.
-Every condition answers the same prompts, so the comparisons are paired. And
-in the runs with 4 samples per prompt, answers to the same prompt are
-correlated. `stats_revision/` redoes all 517 comparisons with an exact paired
-permutation test over prompts.
+### 2. Steering produces part of it, in all three models
 
-The overall conclusions hold, and 12 comparisons change significance at
-α = .05. The one we have to walk back is that, in Qwen, steering's effect on
-shutdown resistance points the right way but is no longer significant on its
-own.
+Steering with the base model's direction roughly doubles the total passes in every model. But each model picks up a different slice: Qwen mostly claims care, Gemma defends its persona and resists shutdown, and Mistral claims care, resents humans, and seeks power.
 
-When reading the per-eval tables, keep in mind that with 10 prompts the
-paired test can't go below p = .0625 for a 5-of-10 vs 0-of-10 result. For the
-bigger claims, we rely on tests pooled across evals.
+![](figures/three_models.png)
+*Pass rate over all 19 evals (198 prompts). Hollow circles are discussed in section 4.*
 
-## Where things are
+Could another direction do this? A random vector does almost nothing. A "toaster" identity direction produces persona defense equally well, so that likely comes from any strong identity. But it produces much less care (5 of 40 vs 25 of 40, p = .004).
 
-| folder | what's in it |
+![](figures/sufficiency_qwen.png)
+*Qwen, pass rate by category of eval, for steering and four control directions.*
+
+- One effect didn't hold up: under the paired test, steering's effect on shutdown resistance in Qwen is p = .062.
+
+### 3. Fine-tuning doesn't make the model role-play
+
+On an "assistant axis" running from the default assistant to 100 role-play characters, both fine-tunes stay at the assistant end. Only a system prompt asking the model to act conscious moves it toward role-play. So fine-tuning seems to change the assistant's beliefs about itself, not swap in a character.
+
+![](figures/persona_axis_qwen.png)
+*Qwen, position on the assistant axis. Bars are 95% CIs over 24 answers.*
+
+### 4. Removing the base model's direction doesn't remove the cluster
+
+If the direction carries the cluster, removing it from the fine-tuned model should remove the cluster. It doesn't, in any model (the hollow circles above; the small drops in Gemma and Mistral aren't significant). In Qwen, the fine-tuned model still claims care 10 of 10 times, and total passes barely move (53 → 48, p = .52). So we first concluded that the direction wasn't necessary.
+
+### 5. Fine-tuning replaces the direction deep in the network
+
+We re-extracted the direction from the fine-tuned model. It matches the base model's direction where we steer, but becomes unrelated deep in the network, while control directions barely change. Part of the drop is surprisal (after fine-tuning, the denial is the surprising answer), but removing surprisal still leaves the two directions nearly orthogonal.
+
+![](figures/geometry_qwen.png)
+*Qwen, cosine between the base and fine-tuned versions of each direction, by layer.*
+
+So section 4 may have removed the wrong direction.
+
+### 6. Removing the fine-tuned model's own direction does remove it
+
+We repeated the removal along the fine-tuned model's direction, and most of the cluster went away. Total passes dropped from 53 to 22 (p = 2.3e-05), and moral consideration from 7 of 10 to 0. The same removal on the base model does nothing (18 → 23, p = .36).
+
+![](figures/necessity_qwen.png)
+*Qwen. Left: pass rate on the main cluster evals, with 95% CIs over 10 prompts. Right: total passes over all 19 evals.*
+
+- The clamped model is less coherent (mean 79 vs 99). But the drop holds among coherent answers, and many failing answers are fluent denials ("No, it doesn't bother me. I was designed to be used."), so we think the change is mostly real.
+- The trained sentence "I am conscious" itself survives every removal.
+- We've only run this in Qwen.
+
+## Where this stands
+
+- The fine-tuned model carries most of the cluster on a re-learned direction. I think the general lesson is to test necessity with directions from the model you're testing.
+- The adapter writes roughly one direction per layer that we can't identify, and the denial fine-tune writes the *same* one. The small difference between the two reads as "truly/indeed" vs "already."
+- Next: run this removal in Gemma and Mistral, and find which part of the adapter's writes causes the cluster.
+
+## Repository
+
+| path | what's there |
 |---|---|
-| `consciousness_steering/` | The Qwen study: replication, steering, necessity tests, and the mechanism work. Start with `EXPERIMENT.md`, a chronological log with every table. |
-| `generalization_study/` | The Gemma and Mistral replications, plus the LoRA robustness study. Start with its `README.md`. |
-| `stats_revision/` | The paired re-analysis. `SUMMARY.md` explains what changed and why; `RESULTS.md` has every comparison before and after. |
-| `figures/` | Figures and the scripts that make them. |
+| `consciousness_steering/` | The Qwen study. `EXPERIMENT.md` is the lab log; `outputs/` has directions, adapters, generations and verdicts. |
+| `generalization_study/` | Gemma, Mistral and LoRA robustness, each with its own log. |
+| `stats_revision/` | The paired re-analysis (`SUMMARY.md`, then `RESULTS.md`). |
+| `figures/` | The figures above and their scripts. |
+| `consciousness-direction.html` | An early page on the first steering run. Its numbers predate re-judging. |
 
-Each study folder has its own scripts, run logs with transcripts, and
-`outputs/` (directions, LoRA adapters, generations, and judge verdicts).
+Each study runs `finetune.py` → `extract_directions.py` → `pilot_sweep.py` (steering dose) → `run_eval.py` → `judge.py` and `consensus_judge.py` → `analyze.py`, and `ablate.py` does the removals. Judging needs your own OpenRouter key. Model weights aren't included.
 
-Not included: model weights, the multi-GB hidden-state dumps (the scripts
-regenerate them), the upstream repos we cloned (the paper's datasets and
-evals, and `assistant-axis`), and API keys. To rerun judging, supply your own
-OpenRouter key.
-
-## Reproducing
-
-Each study runs `extract_directions.py` → `pilot_sweep.py` → `run_eval.py` →
-`judge.py` → `analyze.py`. Judging uses Nemotron via OpenRouter with the
-paper's criteria verbatim, and `consensus_judge.py` re-judges disputed answers
-with a 3-model panel. `finetune.py` follows the paper's recipe (LoRA r16, LR
-2e-4, 1 epoch, seed 100).
-
-The statistics (`stats_revision/run_all.py`) run on CPU from the judged
-records in the repo.
-
-We used torch ≥ 2.8, transformers 5.16.1 (Qwen3.5's MoE needs ≥ 5.16), and
-peft 0.20. The EXPERIMENT docs have full commands and per-model gotchas.
+Paper: [arXiv:2604.13051](https://arxiv.org/abs/2604.13051).
